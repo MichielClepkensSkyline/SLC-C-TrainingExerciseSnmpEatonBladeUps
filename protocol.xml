@@ -1449,26 +1449,6 @@ no concept of bandwidth, this object should be zero.]]>
 				<Type>number</Type>
 			</Measurement>
 		</Param>
-		<Param id="107">
-			<Name>interfaceCalculatedSpeed</Name>
-			<Description>Calculated Speed (Interface)</Description>
-			<Type>write</Type>
-			<Interprete>
-				<RawType>numeric text</RawType>
-				<Type>double</Type>
-				<LengthType>next param</LengthType>
-			</Interprete>
-			<Display>
-				<RTDisplay>true</RTDisplay>
-				<Units>Mbps</Units>
-				<Range>
-					<Low>0</Low>
-				</Range>
-			</Display>
-			<Measurement>
-				<Type>number</Type>
-			</Measurement>
-		</Param>
 	</Params>
 
 	<QActions>

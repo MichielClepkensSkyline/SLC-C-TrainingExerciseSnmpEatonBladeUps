@@ -60,11 +60,6 @@ public static class Parameter
 		public const int interfaceadminstatus_105 = 105;
 		/// <summary>PID: 105 | Type: write</summary>
 		public const int interfaceadminstatus = 105;
-		/// <summary>PID: 107 | Type: write</summary>
-		[EditorBrowsable(EditorBrowsableState.Never)]
-		public const int interfacecalculatedspeed_107 = 107;
-		/// <summary>PID: 107 | Type: write</summary>
-		public const int interfacecalculatedspeed = 107;
 	}
 	public class Interfacetable
 	{
@@ -159,8 +154,6 @@ public class WriteParameters
 {
 	/// <summary>PID: 105  | Type: write | DISCREETS: Up = 1, Down = 2, Testing = 3</summary>
 	public System.Object Interfaceadminstatus {get { return Protocol.GetParameter(105); }set { Protocol.SetParameter(105, value); }}
-	/// <summary>PID: 107  | Type: write</summary>
-	public System.Object Interfacecalculatedspeed {get { return Protocol.GetParameter(107); }set { Protocol.SetParameter(107, value); }}
 	public SLProtocolExt Protocol;
 	public WriteParameters(SLProtocolExt protocol)
 	{
@@ -207,7 +200,6 @@ public interface SLProtocolExt : SLProtocol
 	object Interfacecalculatedspeed_57 { get; set; }
 	object Interfacecalculatedspeed { get; set; }
 	object Interfaceadminstatus_105 { get; set; }
-	object Interfacecalculatedspeed_107 { get; set; }
 	WriteParameters Write { get; set; }
 }
 public class ConcreteSLProtocolExt : ConcreteSLProtocol, SLProtocolExt
@@ -303,9 +295,6 @@ public class ConcreteSLProtocolExt : ConcreteSLProtocol, SLProtocolExt
 	/// <summary>PID: 105  | Type: write | DISCREETS: Up = 1, Down = 2, Testing = 3</summary>
 	[EditorBrowsable(EditorBrowsableState.Never)]
 	public System.Object Interfaceadminstatus_105 {get { return GetParameter(105); }set { SetParameter(105, value); }}
-	/// <summary>PID: 107  | Type: write</summary>
-	[EditorBrowsable(EditorBrowsableState.Never)]
-	public System.Object Interfacecalculatedspeed_107 {get { return GetParameter(107); }set { SetParameter(107, value); }}
 	public WriteParameters Write { get; set; }
 	public ConcreteSLProtocolExt()
 	{
