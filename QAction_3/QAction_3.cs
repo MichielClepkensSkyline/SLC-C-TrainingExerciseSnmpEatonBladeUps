@@ -1,9 +1,9 @@
 using System;
-using System.Collections.Generic;
-using System.Globalization;
-using System.Text;
 
+using Skyline.DataMiner.Net.Messages;
 using Skyline.DataMiner.Scripting;
+
+using Parameter = Skyline.DataMiner.Scripting.Parameter;
 
 /// <summary>
 /// DataMiner QAction Class: Calculate Speed.
@@ -20,10 +20,8 @@ public static class QAction
 	{
 		try
 		{
-			protocol.Log($"QA{protocol.QActionID}|Starting to retrieve columns data.", LogType.Information, LogLevel.NoLogging);
-
 			object[] columnsData = (object[])protocol.NotifyProtocol(
-				321,
+				(int)NotifyType.NT_GET_TABLE_COLUMNS,
 				Parameter.Interfacetable.tablePid,
 				new uint[]
 				{
@@ -37,8 +35,6 @@ public static class QAction
 				protocol.Log($"QA{protocol.QActionID}|Unexpected number of columns retrieved. Expected 3, got {columnsData.Length}.", LogType.Error, LogLevel.NoLogging);
 				return;
 			}
-
-			// protocol.Log($"QA{protocol.QActionID}|Successfully retrieved columns data, starting to calculate interface speed.", LogType.Error, LogLevel.NoLogging);
 
 			object[] primaryKeys = (object[])columnsData[0];
 			object[] columnSpeed = (object[])columnsData[1];
@@ -57,8 +53,6 @@ public static class QAction
 			}
 
 			protocol.interfacetable.SetColumn(Parameter.Interfacetable.Pid.interfacecalculatedspeed_57, primaryKeysString, calculatedSpeed);
-
-			// protocol.Log($"QA{protocol.QActionID}|Successfully calculated and set Calculated Interface Speed", LogType.Error, LogLevel.NoLogging);
 		}
 		catch (Exception ex)
 		{
