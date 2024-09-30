@@ -55,7 +55,9 @@ Any inquiries can be addressed to:
 	<DeviceOID>1001</DeviceOID>
 	<ElementType>UPS</ElementType>
 	<Type relativeTimers="true">snmpv2</Type>
+	<!-- SuppressValidator 1.22.6 WebInterface not provided in this exercise -->
 	<Display defaultPage="General" pageOrder="General" wideColumnPages="General"/>
+	<!-- /SuppressValidator 1.22.6 -->
 	<SNMP includepages="true">auto</SNMP>
 
 	<Compliancies>
@@ -64,12 +66,32 @@ Any inquiries can be addressed to:
 	</Compliancies>
 
 	<Params>
-		<Param id="2">
-			<Name>AfterStartup</Name>
-			<Description>After Startup</Description>
-			<Type>dummy</Type>
-		</Param>
 		
+		<Param id="8">
+			<Name>Title_End_Generic</Name>
+			<Type>fixed</Type>
+			<Display>
+				<RTDisplay>true</RTDisplay>
+				<!--Note that by adding multiple positions,
+					the same title end can be re-used for closing different group boxes.
+					Indeed, Cube only uses the positions in order to potentially group a title begin to a title end.-->
+				<Positions>
+					<Position>
+						<Page>General</Page>
+						<Column>0</Column>
+						<Row>14</Row>
+					</Position>
+					<Position>
+						<Page>General</Page>
+						<Column>0</Column>
+						<Row>3</Row>
+					</Position>
+				</Positions>
+			</Display>
+			<Measurement>
+				<Type options="end">title</Type>
+			</Measurement>
+		</Param>
 		
 		<Param id="9">
 			<Name>systemTitle</Name>
@@ -165,7 +187,7 @@ re-initialized.]]>
 				<Type options="time">number</Type>
 			</Measurement>
 		</Param>
-
+		
 		<Param id="12">
 			<Name>upsDeviceTitle</Name>
 			<Description>UPS Device Monitoring</Description>
@@ -176,7 +198,7 @@ re-initialized.]]>
 					<Position>
 						<Page>General</Page>
 						<Column>0</Column>
-						<Row>4</Row>
+						<Row>6</Row>
 					</Position>
 				</Positions>
 			</Display>
@@ -213,7 +235,7 @@ re-initialized.]]>
 					<Position>
 						<Page>General</Page>
 						<Column>0</Column>
-						<Row>5</Row>
+						<Row>7</Row>
 					</Position>
 				</Positions>
 			</Display>
@@ -250,7 +272,7 @@ re-initialized.]]>
 					<Position>
 						<Page>General</Page>
 						<Column>0</Column>
-						<Row>6</Row>
+						<Row>8</Row>
 					</Position>
 				</Positions>
 			</Display>
@@ -448,7 +470,6 @@ re-initialized.]]>
 			</Measurement>
 		</Param>
 		
-		
 		<Param id="50" trending="false">
 			<Name>interfaceTable</Name>
 			<Description>Interface</Description>
@@ -478,12 +499,12 @@ given by the value of ifNumber.]]>
 					<Position>
 						<Page>General</Page>
 						<Column>0</Column>
-						<Row>15</Row>
+						<Row>16</Row>
 					</Position>
 				</Positions>
 			</Display>
 			<Measurement>
-				<Type options="tab=columns:51|0-52|1-53|2-55|4-54|3-56|5-57|6,width:100-113-144-100-100-115-239,sort:INT-STRING-INT-INT-INT-INT-INT,lines:5,filter:true">table</Type>
+				<Type options="tab=columns:51|0-52|1-53|2-55|4-54|3-56|5-57|6,width:100-116-144-100-120-109-239,sort:INT-STRING-INT-INT-INT-INT-INT,lines:5,filter:true">table</Type>
 			</Measurement>
 		</Param>
 		<Param id="51" trending="false">
@@ -1276,7 +1297,7 @@ no concept of bandwidth, this object should be zero.]]>
 			</SNMP>
 			<Display>
 				<RTDisplay>true</RTDisplay>
-				<Units>Mbps</Units>
+				<Units>Bps</Units>
 				<Range>
 					<Low>0</Low>
 				</Range>
@@ -1452,20 +1473,11 @@ no concept of bandwidth, this object should be zero.]]>
 
 	<QActions>
 		<QAction id="1" name="Precompiled Code" encoding="csharp" options="precompile" />
-		<QAction id="2" name="After Startup" encoding="csharp" triggers="2"/>
 		<QAction id="3" name="Calculate Speed" encoding="csharp" triggers="50">
 		</QAction>
 	</QActions>
 
 	<Groups>
-		<Group id="2">
-			<Name>After Startup</Name>
-			<Description>After Startup</Description>
-			<Type>poll action</Type>
-			<Content>
-				<Action>2</Action>
-			</Content>
-		</Group>
 		<Group id="10">
 			<Name>System/Manufacturer Data</Name>
 			<Description>System/Manufacturer Data</Description>
@@ -1507,28 +1519,10 @@ no concept of bandwidth, this object should be zero.]]>
 	</Groups>
 
 	<Triggers>
-		<Trigger id="1">
-			<Name>After Startup</Name>
-			<On>protocol</On>
-			<Time>after startup</Time>
-			<Type>action</Type>
-			<Content>
-				<Id>1</Id>
-			</Content>
-		</Trigger>
 	</Triggers>
 
 	<Actions>
-		<Action id="1">
-			<Name>After Startup Group</Name>
-			<On id="2">group</On>
-			<Type>execute next</Type>
-		</Action>
-		<Action id="2">
-			<Name>After Startup QAction</Name>
-			<On id="2">parameter</On>
-			<Type>run actions</Type>
-		</Action>
+
 	</Actions>
 
 	<Timers>

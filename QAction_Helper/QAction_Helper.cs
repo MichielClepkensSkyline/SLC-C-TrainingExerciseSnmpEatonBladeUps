@@ -171,7 +171,7 @@ public interface SLProtocolExt : SLProtocol
 {
 	/// <summary>PID: 50</summary>
 	InterfacetableQActionTable interfacetable { get; set; }
-	object Afterstartup_dummy { get; set; }
+	object Title_end_generic__fixed { get; set; }
 	object Systemtitle__fixed { get; set; }
 	object Systemdescription_10 { get; set; }
 	object Systemdescription { get; set; }
@@ -214,8 +214,8 @@ public class ConcreteSLProtocolExt : ConcreteSLProtocol, SLProtocolExt
 {
 	/// <summary>PID: 50</summary>
 	public InterfacetableQActionTable interfacetable { get; set; }
-	/// <summary>PID: 2  | Type: dummy</summary>
-	public System.Object Afterstartup_dummy {get { return GetParameter(2); }set { SetParameter(2, value); }}
+	/// <summary>PID: 8  | Type: fixed</summary>
+	public System.Object Title_end_generic__fixed {get { return GetParameter(8); }set { SetParameter(8, value); }}
 	/// <summary>PID: 9  | Type: fixed</summary>
 	public System.Object Systemtitle__fixed {get { return GetParameter(9); }set { SetParameter(9, value); }}
 	/// <summary>PID: 10  | Type: read</summary>

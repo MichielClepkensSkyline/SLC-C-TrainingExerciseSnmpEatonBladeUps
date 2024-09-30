@@ -52,7 +52,7 @@ public static class QAction
 			for (int i = 0; i < numofRows; i++)
 			{
 				uint speedValue = Convert.ToUInt32(columnSpeed[i]);
-				calculatedSpeed[i] = speedValue == MaxIntegerValue ? columnExtendedSpeed[i] : columnSpeed[i];
+				calculatedSpeed[i] = speedValue < MaxIntegerValue ? Convert.ToDouble(columnSpeed[i])/1_000_000 : columnExtendedSpeed[i];
 				primaryKeysString[i] = Convert.ToString(primaryKeys[i]);
 			}
 
