@@ -69,22 +69,11 @@ Any inquiries can be addressed to:
 			<Description>After Startup</Description>
 			<Type>dummy</Type>
 		</Param>
-		<Param id="3">
-			<Name>fixedMaxIntegerValue</Name>
-			<Description>Represents Maximum Integer Value</Description>
-			<Type>fixed</Type>
-			<Interprete>
-				<RawType>numeric text</RawType>
-				<Type>double</Type>
-				<LengthType>fixed</LengthType>
-				<Length>10</Length>
-				<Value>4294967295</Value>
-			</Interprete>
-		</Param>
+		
 		
 		<Param id="9">
-			<Name>titleSystemInfo</Name>
-			<Description>System/Manufacturer</Description>
+			<Name>systemTitle</Name>
+			<Description>System Information</Description>
 			<Type>fixed</Type>
 			<Display>
 				<RTDisplay>true</RTDisplay>
@@ -142,7 +131,7 @@ and networking software.]]>
 		</Param>
 		<Param id="11" trending="false">
 			<Name>systemUpTime</Name>
-			<Description>System Up Time</Description>
+			<Description>System up Time</Description>
 			<Information>
 				<Subtext>
 					<![CDATA[The time (in hundredths of a second) since the
@@ -176,8 +165,27 @@ re-initialized.]]>
 				<Type options="time">number</Type>
 			</Measurement>
 		</Param>
-		<Param id="12" trending="false">
-			<Name>xupsIdentManufacturer</Name>
+
+		<Param id="12">
+			<Name>upsDeviceTitle</Name>
+			<Description>UPS Device Monitoring</Description>
+			<Type>fixed</Type>
+			<Display>
+				<RTDisplay>true</RTDisplay>
+				<Positions>
+					<Position>
+						<Page>General</Page>
+						<Column>0</Column>
+						<Row>4</Row>
+					</Position>
+				</Positions>
+			</Display>
+			<Measurement>
+				<Type options="begin">title</Type>
+			</Measurement>
+		</Param>
+		<Param id="13" trending="false">
+			<Name>upsDeviceIdentManufacturer</Name>
 			<Description>Manufacturer</Description>
 			<Information>
 				<Subtext>
@@ -205,7 +213,7 @@ re-initialized.]]>
 					<Position>
 						<Page>General</Page>
 						<Column>0</Column>
-						<Row>3</Row>
+						<Row>5</Row>
 					</Position>
 				</Positions>
 			</Display>
@@ -213,8 +221,8 @@ re-initialized.]]>
 				<Type>string</Type>
 			</Measurement>
 		</Param>
-		<Param id="13" trending="false">
-			<Name>xupsIdentModel</Name>
+		<Param id="14" trending="false">
+			<Name>upsDeviceIdentityModel</Name>
 			<Description>Model</Description>
 			<Information>
 				<Subtext>
@@ -242,7 +250,7 @@ re-initialized.]]>
 					<Position>
 						<Page>General</Page>
 						<Column>0</Column>
-						<Row>4</Row>
+						<Row>6</Row>
 					</Position>
 				</Positions>
 			</Display>
@@ -250,13 +258,202 @@ re-initialized.]]>
 				<Type>string</Type>
 			</Measurement>
 		</Param>
+		<Param id="15" trending="false">
+			<Name>upsDeviceBatCapacity</Name>
+			<Description>Battery Capacity</Description>
+			<Information>
+				<Subtext>
+					<![CDATA[Battery percent charge.]]>
+				</Subtext>
+			</Information>
+			<Type>read</Type>
+			<Interprete>
+				<RawType>numeric text</RawType>
+				<Type>double</Type>
+				<LengthType>next param</LengthType>
+			</Interprete>
+			<SNMP>
+				<Enabled>true</Enabled>
+				<OID type="complete">1.3.6.1.4.1.534.1.2.4.0</OID>
+				<Type>integer32</Type>
+			</SNMP>
+			<Display>
+				<RTDisplay>true</RTDisplay>
+				<Units>%</Units>
+				<Range>
+					<Low>0</Low>
+					<High>100</High>
+				</Range>
+				<Positions>
+					<Position>
+						<Page>General</Page>
+						<Column>0</Column>
+						<Row>9</Row>
+					</Position>
+				</Positions>
+			</Display>
+			<Measurement>
+				<Type>number</Type>
+			</Measurement>
+		</Param>
+		<Param id="16" trending="false">
+			<Name>upsDeviceInputFrequency</Name>
+			<Description>Input Frequency</Description>
+			<Information>
+				<Subtext>
+					<![CDATA[The utility line frequency in tenths of Hz.]]>
+				</Subtext>
+			</Information>
+			<Type>read</Type>
+			<Interprete>
+				<RawType>numeric text</RawType>
+				<Type>double</Type>
+				<LengthType>next param</LengthType>
+			</Interprete>
+			<SNMP>
+				<Enabled>true</Enabled>
+				<OID type="complete">1.3.6.1.4.1.534.1.3.1.0</OID>
+				<Type>integer32</Type>
+			</SNMP>
+			<Display>
+				<RTDisplay>true</RTDisplay>
+				<Units>Hz</Units>
+				<Range>
+					<Low>0</Low>
+					<High>2147483647</High>
+				</Range>
+				<Positions>
+					<Position>
+						<Page>General</Page>
+						<Column>0</Column>
+						<Row>10</Row>
+					</Position>
+				</Positions>
+			</Display>
+			<Measurement>
+				<Type>number</Type>
+			</Measurement>
+		</Param>
+		<Param id="17" trending="false">
+			<Name>upsDeviceInputNumPhases</Name>
+			<Description>Input Number of Phases</Description>
+			<Information>
+				<Subtext>
+					<![CDATA[The number of input phases (normally 1 to 3).]]>
+				</Subtext>
+			</Information>
+			<Type>read</Type>
+			<Interprete>
+				<RawType>other</RawType>
+				<Type>string</Type>
+				<LengthType>next param</LengthType>
+			</Interprete>
+			<SNMP>
+				<Enabled>true</Enabled>
+				<OID type="complete">1.3.6.1.4.1.534.1.3.3.0</OID>
+				<Type>integer32</Type>
+			</SNMP>
+			<Display>
+				<RTDisplay>true</RTDisplay>
+				<Range>
+					<Low>0</Low>
+					<High>6</High>
+				</Range>
+				<Positions>
+					<Position>
+						<Page>General</Page>
+						<Column>0</Column>
+						<Row>11</Row>
+					</Position>
+				</Positions>
+			</Display>
+			<Measurement>
+				<Type>string</Type>
+			</Measurement>
+		</Param>
+		<Param id="18" trending="false">
+			<Name>upsDeviceOutputLoad</Name>
+			<Description>Output Load</Description>
+			<Information>
+				<Subtext>
+					<![CDATA[The UPS output load in percent of rated capacity.]]>
+				</Subtext>
+			</Information>
+			<Type>read</Type>
+			<Interprete>
+				<RawType>numeric text</RawType>
+				<Type>double</Type>
+				<LengthType>next param</LengthType>
+			</Interprete>
+			<SNMP>
+				<Enabled>true</Enabled>
+				<OID type="complete">1.3.6.1.4.1.534.1.4.1.0</OID>
+				<Type>integer32</Type>
+			</SNMP>
+			<Display>
+				<RTDisplay>true</RTDisplay>
+				<Units>%</Units>
+				<Range>
+					<Low>0</Low>
+					<High>200</High>
+				</Range>
+				<Positions>
+					<Position>
+						<Page>General</Page>
+						<Column>0</Column>
+						<Row>12</Row>
+					</Position>
+				</Positions>
+			</Display>
+			<Measurement>
+				<Type>number</Type>
+			</Measurement>
+		</Param>
+		<Param id="19" trending="false">
+			<Name>upsDeviceOutputFrequency</Name>
+			<Description>Output Frequency</Description>
+			<Information>
+				<Subtext>
+					<![CDATA[The measured UPS output frequency in tenths of Hz.]]>
+				</Subtext>
+			</Information>
+			<Type>read</Type>
+			<Interprete>
+				<RawType>numeric text</RawType>
+				<Type>double</Type>
+				<LengthType>next param</LengthType>
+			</Interprete>
+			<SNMP>
+				<Enabled>true</Enabled>
+				<OID type="complete">1.3.6.1.4.1.534.1.4.2.0</OID>
+				<Type>integer32</Type>
+			</SNMP>
+			<Display>
+				<RTDisplay>true</RTDisplay>
+				<Units>Hz</Units>
+				<Range>
+					<Low>0</Low>
+					<High>2147483647</High>
+				</Range>
+				<Positions>
+					<Position>
+						<Page>General</Page>
+						<Column>0</Column>
+						<Row>13</Row>
+					</Position>
+				</Positions>
+			</Display>
+			<Measurement>
+				<Type>number</Type>
+			</Measurement>
+		</Param>
 		
 		
 		<Param id="50" trending="false">
-			<Name>ifTable</Name>
+			<Name>interfaceTable</Name>
 			<Description>Interface</Description>
 			<Type>array</Type>
-			<ArrayOptions index="0">
+			<ArrayOptions index="0" options=";naming=/52">
 				<ColumnOption idx="0" pid="51" type="snmp" options="" />
 				<ColumnOption idx="1" pid="52" type="snmp" options=";save" />
 				<ColumnOption idx="2" pid="53" type="snmp" options="" />
@@ -281,7 +478,7 @@ given by the value of ifNumber.]]>
 					<Position>
 						<Page>General</Page>
 						<Column>0</Column>
-						<Row>13</Row>
+						<Row>15</Row>
 					</Position>
 				</Positions>
 			</Display>
@@ -320,7 +517,7 @@ initialization.
 		</Param>
 		<Param id="52" trending="false">
 			<Name>interfaceDescription</Name>
-			<Description>Description [Idx] (Interface)</Description>
+			<Description>Description [IDX] (Interface)</Description>
 			<Information>
 				<Subtext>
 					<![CDATA[A textual string containing information about the
@@ -396,7 +593,7 @@ convention.]]>
 						<Value>4</Value>
 					</Discreet>
 					<Discreet>
-						<Display>Rfc 877 X 25</Display>
+						<Display>RFC 877 X 25</Display>
 						<Value>5</Value>
 					</Discreet>
 					<Discreet>
@@ -420,7 +617,7 @@ convention.]]>
 						<Value>10</Value>
 					</Discreet>
 					<Discreet>
-						<Display>Star Lan</Display>
+						<Display>Star LAN</Display>
 						<Value>11</Value>
 					</Discreet>
 					<Discreet>
@@ -436,15 +633,15 @@ convention.]]>
 						<Value>14</Value>
 					</Discreet>
 					<Discreet>
-						<Display>Fddi</Display>
+						<Display>FDDI</Display>
 						<Value>15</Value>
 					</Discreet>
 					<Discreet>
-						<Display>Lapb</Display>
+						<Display>LAPB</Display>
 						<Value>16</Value>
 					</Discreet>
 					<Discreet>
-						<Display>Sdlc</Display>
+						<Display>SDLC</Display>
 						<Value>17</Value>
 					</Discreet>
 					<Discreet>
@@ -464,11 +661,11 @@ convention.]]>
 						<Value>21</Value>
 					</Discreet>
 					<Discreet>
-						<Display>Prop Point To Point Serial</Display>
+						<Display>Prop Point to Point Serial</Display>
 						<Value>22</Value>
 					</Discreet>
 					<Discreet>
-						<Display>Ppp</Display>
+						<Display>PPP</Display>
 						<Value>23</Value>
 					</Discreet>
 					<Discreet>
@@ -524,7 +721,7 @@ convention.]]>
 						<Value>36</Value>
 					</Discreet>
 					<Discreet>
-						<Display>Atm</Display>
+						<Display>ATM</Display>
 						<Value>37</Value>
 					</Discreet>
 					<Discreet>
@@ -540,7 +737,7 @@ convention.]]>
 						<Value>40</Value>
 					</Discreet>
 					<Discreet>
-						<Display>Iso 88022 Llc</Display>
+						<Display>Iso 88022 LLC</Display>
 						<Value>41</Value>
 					</Discreet>
 					<Discreet>
@@ -596,7 +793,7 @@ convention.]]>
 						<Value>54</Value>
 					</Discreet>
 					<Discreet>
-						<Display>Ieee 80212</Display>
+						<Display>IEEE 80212</Display>
 						<Value>55</Value>
 					</Discreet>
 					<Discreet>
@@ -628,7 +825,7 @@ convention.]]>
 						<Value>62</Value>
 					</Discreet>
 					<Discreet>
-						<Display>Isdn</Display>
+						<Display>ISDN</Display>
 						<Value>63</Value>
 					</Discreet>
 					<Discreet>
@@ -640,11 +837,11 @@ convention.]]>
 						<Value>65</Value>
 					</Discreet>
 					<Discreet>
-						<Display>G 703 At 64 K</Display>
+						<Display>G 703 at 64 K</Display>
 						<Value>66</Value>
 					</Discreet>
 					<Discreet>
-						<Display>G 703 At 2 Mb</Display>
+						<Display>G 703 at 2 Mb</Display>
 						<Value>67</Value>
 					</Discreet>
 					<Discreet>
@@ -660,7 +857,7 @@ convention.]]>
 						<Value>70</Value>
 					</Discreet>
 					<Discreet>
-						<Display>Ieee 80211</Display>
+						<Display>IEEE 80211</Display>
 						<Value>71</Value>
 					</Discreet>
 					<Discreet>
@@ -688,7 +885,7 @@ convention.]]>
 						<Value>77</Value>
 					</Discreet>
 					<Discreet>
-						<Display>Ip Switch</Display>
+						<Display>IP Switch</Display>
 						<Value>78</Value>
 					</Discreet>
 					<Discreet>
@@ -696,7 +893,7 @@ convention.]]>
 						<Value>79</Value>
 					</Discreet>
 					<Discreet>
-						<Display>Atm Logical</Display>
+						<Display>ATM Logical</Display>
 						<Value>80</Value>
 					</Discreet>
 					<Discreet>
@@ -752,7 +949,7 @@ convention.]]>
 						<Value>93</Value>
 					</Discreet>
 					<Discreet>
-						<Display>Adsl</Display>
+						<Display>ADSL</Display>
 						<Value>94</Value>
 					</Discreet>
 					<Discreet>
@@ -792,39 +989,39 @@ convention.]]>
 						<Value>103</Value>
 					</Discreet>
 					<Discreet>
-						<Display>Voice Over Ip</Display>
+						<Display>Voice Over IP</Display>
 						<Value>104</Value>
 					</Discreet>
 					<Discreet>
-						<Display>Atm Dxi</Display>
+						<Display>ATM Dxi</Display>
 						<Value>105</Value>
 					</Discreet>
 					<Discreet>
-						<Display>Atm Funi</Display>
+						<Display>ATM Funi</Display>
 						<Value>106</Value>
 					</Discreet>
 					<Discreet>
-						<Display>Atm Ima</Display>
+						<Display>ATM Ima</Display>
 						<Value>107</Value>
 					</Discreet>
 					<Discreet>
-						<Display>Ppp Multilink Bundle</Display>
+						<Display>PPP Multilink Bundle</Display>
 						<Value>108</Value>
 					</Discreet>
 					<Discreet>
-						<Display>Ip Over Cdlc</Display>
+						<Display>IP Over Cdlc</Display>
 						<Value>109</Value>
 					</Discreet>
 					<Discreet>
-						<Display>Ip Over Claw</Display>
+						<Display>IP Over Claw</Display>
 						<Value>110</Value>
 					</Discreet>
 					<Discreet>
-						<Display>Stack To Stack</Display>
+						<Display>Stack to Stack</Display>
 						<Value>111</Value>
 					</Discreet>
 					<Discreet>
-						<Display>Virtual Ip Address</Display>
+						<Display>Virtual IP Address</Display>
 						<Value>112</Value>
 					</Discreet>
 					<Discreet>
@@ -832,7 +1029,7 @@ convention.]]>
 						<Value>113</Value>
 					</Discreet>
 					<Discreet>
-						<Display>Ip Over Atm</Display>
+						<Display>IP Over ATM</Display>
 						<Value>114</Value>
 					</Discreet>
 					<Discreet>
@@ -848,11 +1045,11 @@ convention.]]>
 						<Value>117</Value>
 					</Discreet>
 					<Discreet>
-						<Display>Hdlc</Display>
+						<Display>HDLC</Display>
 						<Value>118</Value>
 					</Discreet>
 					<Discreet>
-						<Display>Lapf</Display>
+						<Display>LAPF</Display>
 						<Value>119</Value>
 					</Discreet>
 					<Discreet>
@@ -868,7 +1065,7 @@ convention.]]>
 						<Value>122</Value>
 					</Discreet>
 					<Discreet>
-						<Display>Trasnp Hdlc</Display>
+						<Display>Trasnp HDLC</Display>
 						<Value>123</Value>
 					</Discreet>
 					<Discreet>
@@ -880,7 +1077,7 @@ convention.]]>
 						<Value>125</Value>
 					</Discreet>
 					<Discreet>
-						<Display>Ip</Display>
+						<Display>IP</Display>
 						<Value>126</Value>
 					</Discreet>
 					<Discreet>
@@ -912,11 +1109,11 @@ convention.]]>
 						<Value>133</Value>
 					</Discreet>
 					<Discreet>
-						<Display>Atm Sub Interface</Display>
+						<Display>ATM Sub Interface</Display>
 						<Value>134</Value>
 					</Discreet>
 					<Discreet>
-						<Display>L 2 Vlan</Display>
+						<Display>L 2 VLAN</Display>
 						<Value>135</Value>
 					</Discreet>
 					<Discreet>
@@ -932,7 +1129,7 @@ convention.]]>
 						<Value>138</Value>
 					</Discreet>
 					<Discreet>
-						<Display>Media Mail Over Ip</Display>
+						<Display>Media Mail Over IP</Display>
 						<Value>139</Value>
 					</Discreet>
 					<Discreet>
@@ -944,7 +1141,7 @@ convention.]]>
 						<Value>141</Value>
 					</Discreet>
 					<Discreet>
-						<Display>Ip Forward</Display>
+						<Display>IP Forward</Display>
 						<Value>142</Value>
 					</Discreet>
 					<Discreet>
@@ -952,7 +1149,7 @@ convention.]]>
 						<Value>143</Value>
 					</Discreet>
 					<Discreet>
-						<Display>Ieee 1394</Display>
+						<Display>IEEE 1394</Display>
 						<Value>144</Value>
 					</Discreet>
 					<Discreet>
@@ -960,7 +1157,7 @@ convention.]]>
 						<Value>145</Value>
 					</Discreet>
 					<Discreet>
-						<Display>Dvb Rcc Mac Layer</Display>
+						<Display>Dvb Rcc MAC Layer</Display>
 						<Value>146</Value>
 					</Discreet>
 					<Discreet>
@@ -972,11 +1169,11 @@ convention.]]>
 						<Value>148</Value>
 					</Discreet>
 					<Discreet>
-						<Display>Atm Virtual</Display>
+						<Display>ATM Virtual</Display>
 						<Value>149</Value>
 					</Discreet>
 					<Discreet>
-						<Display>Mpls Tunnel</Display>
+						<Display>MPLS Tunnel</Display>
 						<Value>150</Value>
 					</Discreet>
 					<Discreet>
@@ -984,7 +1181,7 @@ convention.]]>
 						<Value>151</Value>
 					</Discreet>
 					<Discreet>
-						<Display>Voice Over Atm</Display>
+						<Display>Voice Over ATM</Display>
 						<Value>152</Value>
 					</Discreet>
 					<Discreet>
@@ -1012,15 +1209,15 @@ convention.]]>
 						<Value>158</Value>
 					</Discreet>
 					<Discreet>
-						<Display>Rfc 1483</Display>
+						<Display>RFC 1483</Display>
 						<Value>159</Value>
 					</Discreet>
 					<Discreet>
-						<Display>Usb</Display>
+						<Display>USB</Display>
 						<Value>160</Value>
 					</Discreet>
 					<Discreet>
-						<Display>Ieee 8023 Ad Lag</Display>
+						<Display>IEEE 8023 Ad Lag</Display>
 						<Value>161</Value>
 					</Discreet>
 					<Discreet>
@@ -1040,11 +1237,11 @@ convention.]]>
 						<Value>165</Value>
 					</Discreet>
 					<Discreet>
-						<Display>Mpls</Display>
+						<Display>MPLS</Display>
 						<Value>166</Value>
 					</Discreet>
 					<Discreet>
-						<Display>Mf Sig Link</Display>
+						<Display>MF Sig Link</Display>
 						<Value>167</Value>
 					</Discreet>
 				</Discreets>
@@ -1079,6 +1276,10 @@ no concept of bandwidth, this object should be zero.]]>
 			</SNMP>
 			<Display>
 				<RTDisplay>true</RTDisplay>
+				<Units>Mbps</Units>
+				<Range>
+					<Low>0</Low>
+				</Range>
 			</Display>
 			<Measurement>
 				<Type>number</Type>
@@ -1195,6 +1396,10 @@ no concept of bandwidth, this object should be zero.]]>
 			</SNMP>
 			<Display>
 				<RTDisplay>true</RTDisplay>
+				<Units>Mbps</Units>
+				<Range>
+					<Low>0</Low>
+				</Range>
 			</Display>
 			<Measurement>
 				<Type>number</Type>
@@ -1205,6 +1410,7 @@ no concept of bandwidth, this object should be zero.]]>
 			<Description>Calculated Speed (Interface)</Description>
 			<Type>read</Type>
 			<Information>
+				<Subtext>Represents correct interface speed which is calculated based on interface and extended interface speed.</Subtext>
 			</Information>
 			<Interprete>
 				<RawType>numeric text</RawType>
@@ -1222,209 +1428,21 @@ no concept of bandwidth, this object should be zero.]]>
 				<Type>number</Type>
 			</Measurement>
 		</Param>
-		
-		<Param id="149">
-			<Name>titleUps</Name>
-			<Description>UPS Device</Description>
-			<Type>fixed</Type>
-			<Display>
-				<RTDisplay>true</RTDisplay>
-				<Positions>
-					<Position>
-						<Page>General</Page>
-						<Column>0</Column>
-						<Row>6</Row>
-					</Position>
-				</Positions>
-			</Display>
-			<Measurement>
-				<Type options="begin">title</Type>
-			</Measurement>
-		</Param>
-		<Param id="150" trending="false">
-			<Name>xupsBatCapacity</Name>
-			<Description>Battery Capacity</Description>
-			<Information>
-				<Subtext>
-					<![CDATA[Battery percent charge.]]>
-				</Subtext>
-			</Information>
-			<Type>read</Type>
+		<Param id="107">
+			<Name>interfaceCalculatedSpeed</Name>
+			<Description>Calculated Speed (Interface)</Description>
+			<Type>write</Type>
 			<Interprete>
 				<RawType>numeric text</RawType>
 				<Type>double</Type>
 				<LengthType>next param</LengthType>
 			</Interprete>
-			<SNMP>
-				<Enabled>true</Enabled>
-				<OID type="complete">1.3.6.1.4.1.534.1.2.4.0</OID>
-				<Type>integer32</Type>
-			</SNMP>
 			<Display>
 				<RTDisplay>true</RTDisplay>
-				<Units>percent</Units>
+				<Units>Mbps</Units>
 				<Range>
 					<Low>0</Low>
-					<High>100</High>
 				</Range>
-				<Positions>
-					<Position>
-						<Page>General</Page>
-						<Column>0</Column>
-						<Row>7</Row>
-					</Position>
-				</Positions>
-			</Display>
-			<Measurement>
-				<Type>number</Type>
-			</Measurement>
-		</Param>
-		<Param id="151" trending="false">
-			<Name>xupsInputFrequency</Name>
-			<Description>Input Frequency</Description>
-			<Information>
-				<Subtext>
-					<![CDATA[The utility line frequency in tenths of Hz.]]>
-				</Subtext>
-			</Information>
-			<Type>read</Type>
-			<Interprete>
-				<RawType>numeric text</RawType>
-				<Type>double</Type>
-				<LengthType>next param</LengthType>
-			</Interprete>
-			<SNMP>
-				<Enabled>true</Enabled>
-				<OID type="complete">1.3.6.1.4.1.534.1.3.1.0</OID>
-				<Type>integer32</Type>
-			</SNMP>
-			<Display>
-				<RTDisplay>true</RTDisplay>
-				<Units>0.1 Hertz</Units>
-				<Range>
-					<Low>0</Low>
-					<High>2147483647</High>
-				</Range>
-				<Positions>
-					<Position>
-						<Page>General</Page>
-						<Column>0</Column>
-						<Row>8</Row>
-					</Position>
-				</Positions>
-			</Display>
-			<Measurement>
-				<Type>number</Type>
-			</Measurement>
-		</Param>
-		<Param id="152" trending="false">
-			<Name>xupsInputNumPhases</Name>
-			<Description>Input Number of Phases</Description>
-			<Information>
-				<Subtext>
-					<![CDATA[The number of input phases (normally 1 to 3).]]>
-				</Subtext>
-			</Information>
-			<Type>read</Type>
-			<Interprete>
-				<RawType>numeric text</RawType>
-				<Type>double</Type>
-				<LengthType>next param</LengthType>
-			</Interprete>
-			<SNMP>
-				<Enabled>true</Enabled>
-				<OID type="complete">1.3.6.1.4.1.534.1.3.3.0</OID>
-				<Type>integer32</Type>
-			</SNMP>
-			<Display>
-				<RTDisplay>true</RTDisplay>
-				<Range>
-					<Low>0</Low>
-					<High>6</High>
-				</Range>
-				<Positions>
-					<Position>
-						<Page>General</Page>
-						<Column>0</Column>
-						<Row>9</Row>
-					</Position>
-				</Positions>
-			</Display>
-			<Measurement>
-				<Type>number</Type>
-			</Measurement>
-		</Param>
-		<Param id="153" trending="false">
-			<Name>xupsOutputLoad</Name>
-			<Description>Output Load</Description>
-			<Information>
-				<Subtext>
-					<![CDATA[The UPS output load in percent of rated capacity.]]>
-				</Subtext>
-			</Information>
-			<Type>read</Type>
-			<Interprete>
-				<RawType>numeric text</RawType>
-				<Type>double</Type>
-				<LengthType>next param</LengthType>
-			</Interprete>
-			<SNMP>
-				<Enabled>true</Enabled>
-				<OID type="complete">1.3.6.1.4.1.534.1.4.1.0</OID>
-				<Type>integer32</Type>
-			</SNMP>
-			<Display>
-				<RTDisplay>true</RTDisplay>
-				<Units>percent</Units>
-				<Range>
-					<Low>0</Low>
-					<High>200</High>
-				</Range>
-				<Positions>
-					<Position>
-						<Page>General</Page>
-						<Column>0</Column>
-						<Row>10</Row>
-					</Position>
-				</Positions>
-			</Display>
-			<Measurement>
-				<Type>number</Type>
-			</Measurement>
-		</Param>
-		<Param id="154" trending="false">
-			<Name>xupsOutputFrequency</Name>
-			<Description>Output Frequency</Description>
-			<Information>
-				<Subtext>
-					<![CDATA[The measured UPS output frequency in tenths of Hz.]]>
-				</Subtext>
-			</Information>
-			<Type>read</Type>
-			<Interprete>
-				<RawType>numeric text</RawType>
-				<Type>double</Type>
-				<LengthType>next param</LengthType>
-			</Interprete>
-			<SNMP>
-				<Enabled>true</Enabled>
-				<OID type="complete">1.3.6.1.4.1.534.1.4.2.0</OID>
-				<Type>integer32</Type>
-			</SNMP>
-			<Display>
-				<RTDisplay>true</RTDisplay>
-				<Units>0.1 Hertz</Units>
-				<Range>
-					<Low>0</Low>
-					<High>2147483647</High>
-				</Range>
-				<Positions>
-					<Position>
-						<Page>General</Page>
-						<Column>0</Column>
-						<Row>11</Row>
-					</Position>
-				</Positions>
 			</Display>
 			<Measurement>
 				<Type>number</Type>
@@ -1434,7 +1452,9 @@ no concept of bandwidth, this object should be zero.]]>
 
 	<QActions>
 		<QAction id="1" name="Precompiled Code" encoding="csharp" options="precompile" />
-		<QAction id="2" name="After Startup" encoding="csharp" triggers="2" />
+		<QAction id="2" name="After Startup" encoding="csharp" triggers="2"/>
+		<QAction id="3" name="Calculate Speed" encoding="csharp" triggers="50">
+		</QAction>
 	</QActions>
 
 	<Groups>
@@ -1452,8 +1472,8 @@ no concept of bandwidth, this object should be zero.]]>
 			<Type>poll</Type>
 			<Content multipleGet="true">
 				<Param>10</Param>
-				<Param>12</Param>
 				<Param>13</Param>
+				<Param>14</Param>
 			</Content>
 		</Group>
 		<Group id="11">
@@ -1465,8 +1485,8 @@ no concept of bandwidth, this object should be zero.]]>
 			</Content>
 		</Group>
 		<Group id="50">
-			<Name>IF Table</Name>
-			<Description>IF Table</Description>
+			<Name>Interface Table</Name>
+			<Description>Interface Table</Description>
 			<Type>poll</Type>
 			<Content multipleGet="true">
 				<Param>50</Param>
@@ -1477,11 +1497,11 @@ no concept of bandwidth, this object should be zero.]]>
 			<Description>UPS Parameters</Description>
 			<Type>poll</Type>
 			<Content multipleGet="true">
-				<Param>150</Param>
-				<Param>151</Param>
-				<Param>152</Param>
-				<Param>153</Param>
-				<Param>154</Param>
+				<Param>15</Param>
+				<Param>16</Param>
+				<Param>17</Param>
+				<Param>18</Param>
+				<Param>19</Param>
 			</Content>
 		</Group>
 	</Groups>
@@ -1539,7 +1559,7 @@ no concept of bandwidth, this object should be zero.]]>
 		</Timer>
 	</Timers>
 
-	<PortSettings>
+	<PortSettings name="SNMP Connection">
 	</PortSettings>
 
 	<VersionHistory>
