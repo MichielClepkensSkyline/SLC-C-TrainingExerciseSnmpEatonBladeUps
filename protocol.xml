@@ -1480,7 +1480,7 @@ no concept of bandwidth, this object should be zero.]]>
 			<Name>Interface Table</Name>
 			<Description>Interface Table</Description>
 			<Type>poll</Type>
-			<Content multipleGet="true">
+			<Content>
 				<Param>50</Param>
 			</Content>
 		</Group>
