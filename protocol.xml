@@ -66,7 +66,7 @@ Any inquiries can be addressed to:
 	</Compliancies>
 
 	<Params>
-		
+
 		<Param id="8">
 			<Name>Title_End_Generic</Name>
 			<Type>fixed</Type>
@@ -127,6 +127,12 @@ and networking software.]]>
 				<RawType>other</RawType>
 				<Type>string</Type>
 				<LengthType>next param</LengthType>
+				<Exceptions>
+					<Exception id="1" value="-1">
+						<Display state="disabled">Not Available</Display>
+						<Value>-1</Value>
+					</Exception>
+				</Exceptions>
 			</Interprete>
 			<SNMP>
 				<Enabled>true</Enabled>
@@ -219,6 +225,12 @@ re-initialized.]]>
 				<RawType>other</RawType>
 				<Type>string</Type>
 				<LengthType>next param</LengthType>
+				<Exceptions>
+					<Exception id="1" value="-1">
+						<Display state="disabled">Not Available</Display>
+						<Value>-1</Value>
+					</Exception>
+				</Exceptions>
 			</Interprete>
 			<SNMP>
 				<Enabled>true</Enabled>
@@ -256,6 +268,12 @@ re-initialized.]]>
 				<RawType>other</RawType>
 				<Type>string</Type>
 				<LengthType>next param</LengthType>
+				<Exceptions>
+					<Exception id="1" value="-1">
+						<Display state="disabled">Not Available</Display>
+						<Value>-1</Value>
+					</Exception>
+				</Exceptions>
 			</Interprete>
 			<SNMP>
 				<Enabled>true</Enabled>
@@ -552,6 +570,12 @@ interface hardware/software.]]>
 				<RawType>other</RawType>
 				<Type>string</Type>
 				<LengthType>next param</LengthType>
+				<Exceptions>
+					<Exception id="1" value="-1">
+						<Display state="disabled">Not Available</Display>
+						<Value>-1</Value>
+					</Exception>
+				</Exceptions>
 			</Interprete>
 			<SNMP>
 				<Enabled>true</Enabled>
@@ -1453,6 +1477,8 @@ no concept of bandwidth, this object should be zero.]]>
 
 	<QActions>
 		<QAction id="1" name="Precompiled Code" encoding="csharp" options="precompile" />
+		<QAction id="2" name="Check Retrieved Values" encoding="csharp" triggers="10;13;14">
+		</QAction>
 		<QAction id="3" name="Calculate Speed" encoding="csharp" triggers="50">
 		</QAction>
 	</QActions>

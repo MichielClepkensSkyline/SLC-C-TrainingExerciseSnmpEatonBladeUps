@@ -1,8 +1,4 @@
 using System;
-using System.Collections.Generic;
-using System.Globalization;
-using System.Text;
-
 using Skyline.DataMiner.Scripting;
 
 /// <summary>
@@ -10,15 +6,23 @@ using Skyline.DataMiner.Scripting;
 /// </summary>
 public static class QAction
 {
-    /// <summary>
-    /// The QAction entry point.
-    /// </summary>
-    /// <param name="protocol">Link with SLProtocol process.</param>
-    public static void Run(SLProtocol protocol)
+	private const string NotAvailableString = "-1";
+
+	/// <summary>
+	/// The QAction entry point.
+	/// </summary>
+	/// <param name="protocol">Link with SLProtocol process.</param>
+	public static void Run(SLProtocol protocol)
     {
         try
         {
+			int triggerPID = protocol.GetTriggerParameter();
+			var paramValue = Convert.ToString(protocol.GetParameter(triggerPID));
 
+			if (paramValue is null || String.IsNullOrWhiteSpace(paramValue))
+            {
+                protocol.SetParameter(triggerPID, NotAvailableString);
+            }
         }
         catch (Exception ex)
         {

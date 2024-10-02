@@ -352,6 +352,5 @@
     <Rule Id="SA1027" Action="None" />
     <Rule Id="SA1305" Action="Warning" />
     <Rule Id="SA1118" Action="None" />
-    <Rule Id="SA1512" Action="None" />
   </Rules>
 </RuleSet>
