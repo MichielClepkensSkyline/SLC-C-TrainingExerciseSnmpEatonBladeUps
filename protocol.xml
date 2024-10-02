@@ -141,10 +141,6 @@ and networking software.]]>
 			</SNMP>
 			<Display>
 				<RTDisplay>true</RTDisplay>
-				<Range>
-					<Low>0</Low>
-					<High>255</High>
-				</Range>
 				<Positions>
 					<Position>
 						<Page>General</Page>
@@ -239,10 +235,6 @@ re-initialized.]]>
 			</SNMP>
 			<Display>
 				<RTDisplay>true</RTDisplay>
-				<Range>
-					<Low>0</Low>
-					<High>31</High>
-				</Range>
 				<Positions>
 					<Position>
 						<Page>General</Page>
@@ -282,10 +274,6 @@ re-initialized.]]>
 			</SNMP>
 			<Display>
 				<RTDisplay>true</RTDisplay>
-				<Range>
-					<Low>0</Low>
-					<High>63</High>
-				</Range>
 				<Positions>
 					<Position>
 						<Page>General</Page>
@@ -1477,10 +1465,7 @@ no concept of bandwidth, this object should be zero.]]>
 
 	<QActions>
 		<QAction id="1" name="Precompiled Code" encoding="csharp" options="precompile" />
-		<QAction id="2" name="Check Polled Data" encoding="csharp" triggers="10;13;14;50">
-		</QAction>
-		<!--<QAction id="3" name="Calculate Speed" encoding="csharp" triggers="50">
-		</QAction>-->
+		<QAction id="2" name="Check Polled Data" encoding="csharp" triggers="10;13;14;50" />
 	</QActions>
 
 	<Groups>

@@ -1,6 +1,7 @@
 using System;
 
 using Skyline.DataMiner.Net.Messages;
+using Skyline.DataMiner.Net.SLDataGateway.Types;
 using Skyline.DataMiner.Scripting;
 
 using Parameter = Skyline.DataMiner.Scripting.Parameter;
@@ -50,53 +51,95 @@ public static class QAction
 
 	private static void HandleTableDataCalculations(SLProtocolExt protocol, int parameterId)
 	{
-		object[] columnsData = (object[])protocol.NotifyProtocol(
-				(int)NotifyType.NT_GET_TABLE_COLUMNS,
-				parameterId,
-				new uint[]
-				{
-					Parameter.Interfacetable.Idx.interfaceindex_51,
-					Parameter.Interfacetable.Idx.interfacedescription_52,
-					Parameter.Interfacetable.Idx.interfacespeed_54,
-					Parameter.Interfacetable.Idx.interfaceextendedspeed_56,
-				});
+		var tableData = FetchingTableColumnsData(protocol, parameterId);
 
-		if (columnsData.Length != 4)
+		if (!string.IsNullOrEmpty(tableData.ErrorLogMessage))
 		{
-			protocol.Log($"QA{protocol.QActionID}|Unexpected number of columns retrieved. Expected 4, got {columnsData.Length}.", LogType.Error, LogLevel.NoLogging);
+			protocol.Log($"QA{protocol.QActionID}|{protocol.GetTriggerParameter()}|HandleTableDataCalculations|{tableData.ErrorLogMessage}", LogType.Error, LogLevel.NoLogging);
 			return;
 		}
 
-		object[] primaryKeys = (object[])columnsData[0];
-		object[] description = (object[])columnsData[1];
-		object[] columnSpeed = (object[])columnsData[2];
-		object[] columnExtendedSpeed = (object[])columnsData[3];
+		CalculatingTableColumns(tableData, out string[] primaryKeysString, out object[] calculatedSpeed, out bool nullDescriptionExists);
 
-		var numofRows = primaryKeys.Length;
-		string[] primaryKeysString = new string[numofRows];
-		object[] calculatedSpeed = new object[numofRows];
-		object[] descriptionWithoutNulls = description;
-		var nullDescriptionExists = false;
+		SettingTableColumns(protocol, nullDescriptionExists, primaryKeysString, tableData.ColumnDescription, calculatedSpeed);
+	}
+
+	private static TableColumnsData FetchingTableColumnsData(SLProtocolExt protocol, int parameterId)
+	{
+		object[] columnsData = (object[])protocol.NotifyProtocol(
+		(int)NotifyType.NT_GET_TABLE_COLUMNS,
+		parameterId,
+		new uint[]
+		{
+			Parameter.Interfacetable.Idx.interfaceindex_51,
+			Parameter.Interfacetable.Idx.interfacedescription_52,
+			Parameter.Interfacetable.Idx.interfacespeed_54,
+			Parameter.Interfacetable.Idx.interfaceextendedspeed_56,
+		});
+
+		if (columnsData.Length != 4)
+		{
+			return new TableColumnsData
+			{
+				ErrorLogMessage = $"Unexpected number of columns retrieved. Expected 4, got {columnsData.Length}.",
+				PrimaryKeys = new object[0],
+				ColumnDescription = new object[0],
+				ColumnSpeed = new object[0],
+				ColumnExtendedSpeed = new object[0],
+			};
+		}
+
+		return new TableColumnsData
+		{
+			ErrorLogMessage = string.Empty,
+			PrimaryKeys = (object[])columnsData[0],
+			ColumnDescription = (object[])columnsData[1],
+			ColumnSpeed = (object[])columnsData[2],
+			ColumnExtendedSpeed = (object[])columnsData[3],
+		};
+	}
+
+	private static void CalculatingTableColumns(TableColumnsData tableColumnsData, out string[] primaryKeysString, out object[] calculatedSpeed, out bool nullDescriptionExists)
+	{
+		var numofRows = tableColumnsData.PrimaryKeys.Length;
+		primaryKeysString = new string[numofRows];
+		calculatedSpeed = new object[numofRows];
+		nullDescriptionExists = false;
 
 		for (int i = 0; i < numofRows; i++)
 		{
-			uint speedValue = Convert.ToUInt32(columnSpeed[i]);
-			calculatedSpeed[i] = speedValue < MaxIntegerValue ? Convert.ToDouble(columnSpeed[i]) / 1_000_000 : columnExtendedSpeed[i];
-			primaryKeysString[i] = Convert.ToString(primaryKeys[i]);
+			uint speedValue = Convert.ToUInt32(tableColumnsData.ColumnSpeed[i]);
+			calculatedSpeed[i] = speedValue < MaxIntegerValue ? Convert.ToDouble(tableColumnsData.ColumnSpeed[i]) / 1_000_000 : tableColumnsData.ColumnExtendedSpeed[i];
+			primaryKeysString[i] = Convert.ToString(tableColumnsData.PrimaryKeys[i]);
 
-			if (description[i] == null || string.IsNullOrEmpty(Convert.ToString(description[i])))
+			if (tableColumnsData.ColumnDescription[i] == null || string.IsNullOrEmpty(Convert.ToString(tableColumnsData.ColumnDescription[i])))
 			{
 				nullDescriptionExists = true;
-				descriptionWithoutNulls[i] = NotAvailableString;
+				tableColumnsData.ColumnDescription[i] = NotAvailableString;
 			}
 		}
+	}
 
+	private static void SettingTableColumns(SLProtocolExt protocol, bool nullDescriptionExists, string[] primaryKeysString, object[] columnDescription, object[] calculatedSpeed)
+	{
 		if (nullDescriptionExists)
 		{
-			protocol.interfacetable.SetColumn(Parameter.Interfacetable.Pid.interfacedescription_52, primaryKeysString, descriptionWithoutNulls);
+			protocol.interfacetable.SetColumn(Parameter.Interfacetable.Pid.interfacedescription_52, primaryKeysString, columnDescription);
 		}
 
 		protocol.interfacetable.SetColumn(Parameter.Interfacetable.Pid.interfacecalculatedspeed_57, primaryKeysString, calculatedSpeed);
 	}
 
+	public class TableColumnsData
+	{
+		public object[] PrimaryKeys { get; set; }
+
+		public object[] ColumnDescription { get; set; }
+
+		public object[] ColumnSpeed { get; set; }
+
+		public object[] ColumnExtendedSpeed { get; set; }
+
+		public string ErrorLogMessage { get; set; }
+	}
 }
