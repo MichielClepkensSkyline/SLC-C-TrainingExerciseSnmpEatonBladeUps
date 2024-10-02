@@ -1477,10 +1477,10 @@ no concept of bandwidth, this object should be zero.]]>
 
 	<QActions>
 		<QAction id="1" name="Precompiled Code" encoding="csharp" options="precompile" />
-		<QAction id="2" name="Check Retrieved Values" encoding="csharp" triggers="10;13;14">
+		<QAction id="2" name="Check Polled Data" encoding="csharp" triggers="10;13;14;50">
 		</QAction>
-		<QAction id="3" name="Calculate Speed" encoding="csharp" triggers="50">
-		</QAction>
+		<!--<QAction id="3" name="Calculate Speed" encoding="csharp" triggers="50">
+		</QAction>-->
 	</QActions>
 
 	<Groups>
