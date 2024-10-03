@@ -24,6 +24,8 @@ public static class QAction
         {
 			int triggerPID = protocol.GetTriggerParameter();
 
+			protocol.Log($"QA{protocol.QActionID}|¸TESTINGTESTING|{triggerPID}", LogType.Error, LogLevel.NoLogging);
+
 			if (triggerPID == Parameter.Interfacetable.tablePid)
 			{
 				HandleTableDataCalculations(protocol, triggerPID);
@@ -41,12 +43,26 @@ public static class QAction
 
 	private static void HandleParameterNullValues(SLProtocolExt protocol, int triggerPID)
 	{
-		var paramValue = Convert.ToString(protocol.GetParameter(triggerPID));
+		var paramIds = new UInt32[]
+			{
+				Parameter.systemdescription_10,
+				Parameter.upsdeviceidentmanufacturer_13,
+				Parameter.upsdeviceidentitymodel_14,
+			};
+		var paramIdsInt = new int[paramIds.Length];
+		var paramValues = (object[])protocol.GetParameters(paramIds);
 
-		if (string.IsNullOrWhiteSpace(paramValue))
+		for (int i = 0; i < paramValues.Length; i++)
 		{
-			protocol.SetParameter(triggerPID, NotAvailableString);
+			if (string.IsNullOrWhiteSpace(Convert.ToString(paramValues[i])))
+			{
+				paramValues[i] = NotAvailableString;
+			}
+
+			paramIdsInt[i] = (int)paramIds[i];
 		}
+
+		protocol.SetParameters(paramIdsInt, paramValues);
 	}
 
 	private static void HandleTableDataCalculations(SLProtocolExt protocol, int parameterId)

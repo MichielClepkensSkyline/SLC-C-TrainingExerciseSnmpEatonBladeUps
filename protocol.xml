@@ -66,6 +66,11 @@ Any inquiries can be addressed to:
 	</Compliancies>
 
 	<Params>
+		<Param id="1">
+			<Name>excecuteQActionOnPolledNullValues</Name>
+			<Description>Execute QAction On Polled Null Values</Description>
+			<Type>dummy</Type>
+		</Param>
 
 		<Param id="8">
 			<Name>Title_End_Generic</Name>
@@ -1465,7 +1470,7 @@ no concept of bandwidth, this object should be zero.]]>
 
 	<QActions>
 		<QAction id="1" name="Precompiled Code" encoding="csharp" options="precompile" />
-		<QAction id="2" name="Check Polled Data" encoding="csharp" triggers="10;13;14;50" />
+		<QAction id="2" name="Check Polled Data" encoding="csharp" triggers="1;50" />
 	</QActions>
 
 	<Groups>
@@ -1510,10 +1515,24 @@ no concept of bandwidth, this object should be zero.]]>
 	</Groups>
 
 	<Triggers>
+		<Trigger id="1">
+			<Name>After Executing System/Manufactrer Data Group</Name>
+			<Condition><![CDATA[(id:10 == "" OR id:13 == "" OR id:14 == "")]]></Condition>
+			<On id="10">group</On>
+			<Time>after</Time>
+			<Type>action</Type>
+			<Content>
+				<Id>1</Id>
+			</Content>
+		</Trigger>
 	</Triggers>
 
 	<Actions>
-
+		<Action id="1">
+			<Name>Excecute Handle Null Values QAction</Name>
+			<On id="1">parameter</On>
+			<Type>run actions</Type>
+		</Action>
 	</Actions>
 
 	<Timers>

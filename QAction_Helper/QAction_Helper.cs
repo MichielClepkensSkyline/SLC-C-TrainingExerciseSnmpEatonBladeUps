@@ -164,6 +164,7 @@ public interface SLProtocolExt : SLProtocol
 {
 	/// <summary>PID: 50</summary>
 	InterfacetableQActionTable interfacetable { get; set; }
+	object Excecuteqactiononpollednullvalues_dummy { get; set; }
 	object Title_end_generic__fixed { get; set; }
 	object Systemtitle__fixed { get; set; }
 	object Systemdescription_10 { get; set; }
@@ -206,6 +207,8 @@ public class ConcreteSLProtocolExt : ConcreteSLProtocol, SLProtocolExt
 {
 	/// <summary>PID: 50</summary>
 	public InterfacetableQActionTable interfacetable { get; set; }
+	/// <summary>PID: 1  | Type: dummy</summary>
+	public System.Object Excecuteqactiononpollednullvalues_dummy {get { return GetParameter(1); }set { SetParameter(1, value); }}
 	/// <summary>PID: 8  | Type: fixed</summary>
 	public System.Object Title_end_generic__fixed {get { return GetParameter(8); }set { SetParameter(8, value); }}
 	/// <summary>PID: 9  | Type: fixed</summary>
