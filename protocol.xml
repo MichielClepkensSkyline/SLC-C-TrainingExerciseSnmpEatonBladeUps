@@ -73,13 +73,10 @@ Any inquiries can be addressed to:
 		</Param>
 
 		<Param id="8">
-			<Name>Title_End_Generic</Name>
+			<Name>titleEndGeneric</Name>
 			<Type>fixed</Type>
 			<Display>
 				<RTDisplay>true</RTDisplay>
-				<!--Note that by adding multiple positions,
-					the same title end can be re-used for closing different group boxes.
-					Indeed, Cube only uses the positions in order to potentially group a title begin to a title end.-->
 				<Positions>
 					<Position>
 						<Page>General</Page>
@@ -97,7 +94,7 @@ Any inquiries can be addressed to:
 				<Type options="end">title</Type>
 			</Measurement>
 		</Param>
-		
+
 		<Param id="9">
 			<Name>systemTitle</Name>
 			<Description>System Information</Description>
@@ -121,10 +118,7 @@ Any inquiries can be addressed to:
 			<Description>System Description</Description>
 			<Information>
 				<Subtext>
-					<![CDATA[A textual description of the entity.  This value should
-include the full name and version identification of
-the system's hardware type, software operating-system,
-and networking software.]]>
+					<![CDATA[A textual description of the entity. This value should include the full name and version identification of the system's hardware type, software operating-system, and networking software.]]>
 				</Subtext>
 			</Information>
 			<Type>read</Type>
@@ -159,13 +153,11 @@ and networking software.]]>
 			</Measurement>
 		</Param>
 		<Param id="11" trending="false">
-			<Name>systemUpTime</Name>
-			<Description>System up Time</Description>
+			<Name>systemUptime</Name>
+			<Description>System Uptime</Description>
 			<Information>
 				<Subtext>
-					<![CDATA[The time (in hundredths of a second) since the
-network management portion of the system was last
-re-initialized.]]>
+					<![CDATA[The time (in hundredths of a second) since the network management portion of the system was last re-initialized.]]>
 				</Subtext>
 			</Information>
 			<Type>read</Type>
@@ -194,7 +186,7 @@ re-initialized.]]>
 				<Type options="time">number</Type>
 			</Measurement>
 		</Param>
-		
+
 		<Param id="12">
 			<Name>upsDeviceTitle</Name>
 			<Description>UPS Device Monitoring</Description>
@@ -214,7 +206,7 @@ re-initialized.]]>
 			</Measurement>
 		</Param>
 		<Param id="13" trending="false">
-			<Name>upsDeviceIdentManufacturer</Name>
+			<Name>upsDeviceManufacturer</Name>
 			<Description>Manufacturer</Description>
 			<Information>
 				<Subtext>
@@ -291,8 +283,8 @@ re-initialized.]]>
 				<Type>string</Type>
 			</Measurement>
 		</Param>
-		<Param id="15" trending="false">
-			<Name>upsDeviceBatCapacity</Name>
+		<Param id="15" trending="true">
+			<Name>upsDeviceBatteryCapacity</Name>
 			<Description>Battery Capacity</Description>
 			<Information>
 				<Subtext>
@@ -321,20 +313,24 @@ re-initialized.]]>
 					<Position>
 						<Page>General</Page>
 						<Column>0</Column>
-						<Row>9</Row>
+						<Row>10</Row>
 					</Position>
 				</Positions>
 			</Display>
 			<Measurement>
 				<Type>number</Type>
 			</Measurement>
+			<Alarm>
+				<Monitored>true</Monitored>
+				<CL>10</CL>
+			</Alarm>
 		</Param>
-		<Param id="16" trending="false">
+		<Param id="16" trending="true">
 			<Name>upsDeviceInputFrequency</Name>
 			<Description>Input Frequency</Description>
 			<Information>
 				<Subtext>
-					<![CDATA[The utility line frequency in tenths of Hz.]]>
+					<![CDATA[The utility line frequency in Hz.]]>
 				</Subtext>
 			</Information>
 			<Type>read</Type>
@@ -342,6 +338,7 @@ re-initialized.]]>
 				<RawType>numeric text</RawType>
 				<Type>double</Type>
 				<LengthType>next param</LengthType>
+				<Sequence noset="true">div:10</Sequence>
 			</Interprete>
 			<SNMP>
 				<Enabled>true</Enabled>
@@ -359,16 +356,21 @@ re-initialized.]]>
 					<Position>
 						<Page>General</Page>
 						<Column>0</Column>
-						<Row>10</Row>
+						<Row>12</Row>
 					</Position>
 				</Positions>
 			</Display>
 			<Measurement>
 				<Type>number</Type>
 			</Measurement>
+			<Alarm>
+				<Monitored>true</Monitored>
+				<CL>49</CL>
+				<CH>61</CH>
+			</Alarm>
 		</Param>
 		<Param id="17" trending="false">
-			<Name>upsDeviceInputNumPhases</Name>
+			<Name>upsDeviceInputNumberOfPhases</Name>
 			<Description>Input Number of Phases</Description>
 			<Information>
 				<Subtext>
@@ -377,8 +379,8 @@ re-initialized.]]>
 			</Information>
 			<Type>read</Type>
 			<Interprete>
-				<RawType>other</RawType>
-				<Type>string</Type>
+				<RawType>numeric text</RawType>
+				<Type>double</Type>
 				<LengthType>next param</LengthType>
 			</Interprete>
 			<SNMP>
@@ -396,20 +398,23 @@ re-initialized.]]>
 					<Position>
 						<Page>General</Page>
 						<Column>0</Column>
-						<Row>11</Row>
+						<Row>9</Row>
 					</Position>
 				</Positions>
+				<!-- SuppressValidator 2.9.4 'Phases' is not supported in the list, but it is logical. -->
+				<Units>Phases</Units>
+				<!-- /SuppressValidator 2.9.4 -->
 			</Display>
 			<Measurement>
-				<Type>string</Type>
+				<Type>number</Type>
 			</Measurement>
 		</Param>
-		<Param id="18" trending="false">
+		<Param id="18" trending="true">
 			<Name>upsDeviceOutputLoad</Name>
 			<Description>Output Load</Description>
 			<Information>
 				<Subtext>
-					<![CDATA[The UPS output load in percent of rated capacity.]]>
+					<![CDATA[The UPS output load as a percentage of rated capacity. Values above 100% indicate an overload, which may be allowed briefly, but can reduce the UPS's lifespan if prolonged.]]>
 				</Subtext>
 			</Information>
 			<Type>read</Type>
@@ -434,20 +439,24 @@ re-initialized.]]>
 					<Position>
 						<Page>General</Page>
 						<Column>0</Column>
-						<Row>12</Row>
+						<Row>11</Row>
 					</Position>
 				</Positions>
 			</Display>
 			<Measurement>
 				<Type>number</Type>
 			</Measurement>
+			<Alarm>
+				<Monitored>true</Monitored>
+				<CH>100</CH>
+			</Alarm>
 		</Param>
-		<Param id="19" trending="false">
+		<Param id="19" trending="true">
 			<Name>upsDeviceOutputFrequency</Name>
 			<Description>Output Frequency</Description>
 			<Information>
 				<Subtext>
-					<![CDATA[The measured UPS output frequency in tenths of Hz.]]>
+					<![CDATA[The measured UPS output frequency in Hz.]]>
 				</Subtext>
 			</Information>
 			<Type>read</Type>
@@ -455,6 +464,7 @@ re-initialized.]]>
 				<RawType>numeric text</RawType>
 				<Type>double</Type>
 				<LengthType>next param</LengthType>
+				<Sequence noset="true">div:10</Sequence>
 			</Interprete>
 			<SNMP>
 				<Enabled>true</Enabled>
@@ -479,25 +489,29 @@ re-initialized.]]>
 			<Measurement>
 				<Type>number</Type>
 			</Measurement>
+			<Alarm>
+				<Monitored>true</Monitored>
+				<CL>49</CL>
+				<CH>61</CH>
+			</Alarm>
 		</Param>
-		
+
 		<Param id="50" trending="false">
-			<Name>interfaceTable</Name>
-			<Description>Interface</Description>
+			<Name>interfacesTable</Name>
+			<Description>Interfaces</Description>
 			<Type>array</Type>
 			<ArrayOptions index="0" options=";naming=/52">
 				<ColumnOption idx="0" pid="51" type="snmp" options="" />
-				<ColumnOption idx="1" pid="52" type="snmp" options=";save" />
+				<ColumnOption idx="1" pid="52" type="snmp" options="" />
 				<ColumnOption idx="2" pid="53" type="snmp" options="" />
 				<ColumnOption idx="3" pid="54" type="snmp" options="" />
 				<ColumnOption idx="4" pid="55" type="snmp" options="" />
 				<ColumnOption idx="5" pid="56" type="snmp" options="" />
-				<ColumnOption idx="6" pid="57" type="retrieved" options="" />
+				<ColumnOption idx="6" pid="57" type="retrieved" options=";enableHeaderSum;enableHistogram;enableHeatmap" />
 			</ArrayOptions>
 			<Information>
 				<Subtext>
-					<![CDATA[A list of interface entries.  The number of entries is
-given by the value of ifNumber.]]>
+					<![CDATA[A list of interface entries.  The number of entries is given by the value of ifNumber.]]>
 				</Subtext>
 			</Information>
 			<SNMP>
@@ -515,23 +529,15 @@ given by the value of ifNumber.]]>
 				</Positions>
 			</Display>
 			<Measurement>
-				<Type options="tab=columns:51|0-52|1-53|2-55|4-54|3-56|5-57|6,width:100-116-144-100-120-109-239,sort:INT-STRING-INT-INT-INT-INT-INT,lines:5,filter:true">table</Type>
+				<Type options="tab=columns:51|0-52|1-53|2-55|4-54|3-56|5-57|6,width:100-116-144-120-120-109-239,sort:INT-STRING-INT-INT-INT-INT-INT,lines:5,filter:true">table</Type>
 			</Measurement>
 		</Param>
 		<Param id="51" trending="false">
-			<Name>interfaceIndex</Name>
-			<Description>Index (Interface)</Description>
+			<Name>interfacesIndex</Name>
+			<Description>Index (Interfaces)</Description>
 			<Information>
 				<Subtext>
-					<![CDATA[This is the SNMP instance of the table. Format: [ifIndex].
-
- - ifIndex: A unique value, greater than zero, for each interface.  It
-is recommended that values are assigned contiguously
-starting from 1.  The value for each interface sub-layer
-must remain constant at least from one re-initialization of
-the entity's network management system to the next re-
-initialization.
-]]>
+					<![CDATA[This is the SNMP instance of the table. Format: [ifIndex]. - ifIndex: A unique value, greater than zero, for each interface. It is recommended that values are assigned contiguously starting from 1. The value for each interface sub-layer must remain constant at least from one re-initialization of the entity's network management system to the next reinitialization.]]>
 				</Subtext>
 			</Information>
 			<Type>read</Type>
@@ -548,14 +554,11 @@ initialization.
 			</Measurement>
 		</Param>
 		<Param id="52" trending="false">
-			<Name>interfaceDescription</Name>
-			<Description>Description [IDX] (Interface)</Description>
+			<Name>interfacesDescription</Name>
+			<Description>Description [IDX] (Interfaces)</Description>
 			<Information>
 				<Subtext>
-					<![CDATA[A textual string containing information about the
-interface.  This string should include the name of the
-manufacturer, the product name and the version of the
-interface hardware/software.]]>
+					<![CDATA[A textual string containing information about the interface. This string should include the name of the manufacturer, the product name and the version of the interface hardware/software.]]>
 				</Subtext>
 			</Information>
 			<Type>read</Type>
@@ -577,24 +580,17 @@ interface hardware/software.]]>
 			</SNMP>
 			<Display>
 				<RTDisplay>true</RTDisplay>
-				<Range>
-					<Low>0</Low>
-					<High>255</High>
-				</Range>
 			</Display>
 			<Measurement>
 				<Type>string</Type>
 			</Measurement>
 		</Param>
 		<Param id="53" trending="false">
-			<Name>interfaceType</Name>
-			<Description>Type (Interface)</Description>
+			<Name>interfacesType</Name>
+			<Description>Type (Interfaces)</Description>
 			<Information>
 				<Subtext>
-					<![CDATA[The type of interface.  Additional values for ifType are
-assigned by the Internet Assigned Numbers Authority (IANA),
-through updating the syntax of the IANAifType textual
-convention.]]>
+					<![CDATA[The type of interface. Additional values for ifType are assigned by the Internet Assigned Numbers Authority (IANA), through updating the syntax of the IANAifType textual convention.]]>
 				</Subtext>
 			</Information>
 			<Type>read</Type>
@@ -1286,19 +1282,11 @@ convention.]]>
 			</Measurement>
 		</Param>
 		<Param id="54" trending="false">
-			<Name>interfaceSpeed</Name>
-			<Description>Speed (Interface)</Description>
+			<Name>interfacesSpeed</Name>
+			<Description>Speed (Interfaces)</Description>
 			<Information>
 				<Subtext>
-					<![CDATA[An estimate of the interface's current bandwidth in bits
-per second.  For interfaces which do not vary in bandwidth
-or for those where no accurate estimation can be made, this
-object should contain the nominal bandwidth.  If the
-bandwidth of the interface is greater than the maximum value
-reportable by this object then this object should report its
-maximum value (4,294,967,295) and ifHighSpeed must be used
-to report the interace's speed.  For a sub-layer which has
-no concept of bandwidth, this object should be zero.]]>
+					<![CDATA[An estimate of the interface's current bandwidth in bits per second. For interfaces which do not vary in bandwidth or for those where no accurate estimation can be made, this object should contain the nominal bandwidth.  If the bandwidth of the interface is greater than the maximum value reportable by this object then this object should report its maximum value (4,294,967,295) and ifHighSpeed must be used to report the interace's speed. For a sub-layer which has no concept of bandwidth, this object should be zero.]]>
 				</Subtext>
 			</Information>
 			<Type>read</Type>
@@ -1314,7 +1302,7 @@ no concept of bandwidth, this object should be zero.]]>
 			</SNMP>
 			<Display>
 				<RTDisplay>true</RTDisplay>
-				<Units>Bps</Units>
+				<Units>bps</Units>
 				<Range>
 					<Low>0</Low>
 				</Range>
@@ -1324,18 +1312,11 @@ no concept of bandwidth, this object should be zero.]]>
 			</Measurement>
 		</Param>
 		<Param id="55" trending="false">
-			<Name>interfaceAdminStatus</Name>
-			<Description>Admin Status (Interface)</Description>
+			<Name>interfacesAdministratorStatus</Name>
+			<Description>Administrator Status (Interfaces)</Description>
 			<Information>
 				<Subtext>
-					<![CDATA[The desired state of the interface.  The testing(3) state
-indicates that no operational packets can be passed.  When a
-managed system initializes, all interfaces start with
-ifAdminStatus in the down(2) state.  As a result of either
-explicit management action or per configuration information
-retained by the managed system, ifAdminStatus is then
-changed to either the up(1) or testing(3) states (or remains
-in the down(2) state).]]>
+					<![CDATA[The desired state of the interface. The testing(3) state indicates that no operational packets can be passed. When a managed system initializes, all interfaces start with ifAdminStatus in the down(2) state. As a result of either explicit management action or per configuration information retained by the managed system, ifAdminStatus is then changed to either the up(1) or testing(3) states (or remains in the down(2) state).]]>
 				</Subtext>
 			</Information>
 			<Type>read</Type>
@@ -1371,8 +1352,8 @@ in the down(2) state).]]>
 			</Measurement>
 		</Param>
 		<Param id="105" snmpSetAndGet="true">
-			<Name>interfaceAdminStatus</Name>
-			<Description>Admin Status (Interface)</Description>
+			<Name>interfacesAdministratorStatus</Name>
+			<Description>Administrator Status (Interfaces)</Description>
 			<Type>write</Type>
 			<Interprete>
 				<RawType>numeric text</RawType>
@@ -1406,19 +1387,11 @@ in the down(2) state).]]>
 			</Measurement>
 		</Param>
 		<Param id="56" trending="false">
-			<Name>interfaceExtendedSpeed</Name>
-			<Description>Extended Speed (Interface)</Description>
+			<Name>interfacesExtendedSpeed</Name>
+			<Description>Extended Speed (Interfaces)</Description>
 			<Information>
 				<Subtext>
-					<![CDATA[An estimate of the interface's current bandwidth in bits
-per second.  For interfaces which do not vary in bandwidth
-or for those where no accurate estimation can be made, this
-object should contain the nominal bandwidth.  If the
-bandwidth of the interface is greater than the maximum value
-reportable by this object then this object should report its
-maximum value (4,294,967,295) and ifHighSpeed must be used
-to report the interace's speed.  For a sub-layer which has
-no concept of bandwidth, this object should be zero.]]>
+					<![CDATA[An estimate of the interface's current bandwidth in units of 1,000,000 bits per second (Mbps).  If this object reports a value of `n' then the speed of the interface is somewhere in the range of `n-500,000' to `n+499,999'.  For interfaces which do not vary in bandwidth or for those where no accurate estimation can be made, this object should contain the nominal bandwidth.  For a sub-layer which has no concept of bandwidth, this object should be zero.]]>
 				</Subtext>
 			</Information>
 			<Type>read</Type>
@@ -1443,12 +1416,12 @@ no concept of bandwidth, this object should be zero.]]>
 				<Type>number</Type>
 			</Measurement>
 		</Param>
-		<Param id="57" trending="false">
-			<Name>interfaceCalculatedSpeed</Name>
-			<Description>Calculated Speed (Interface)</Description>
+		<Param id="57" trending="true">
+			<Name>interfacesCalculatedSpeed</Name>
+			<Description>Calculated Speed (Interfaces)</Description>
 			<Type>read</Type>
 			<Information>
-				<Subtext>Represents correct interface speed which is calculated based on interface and extended interface speed.</Subtext>
+				<Subtext>Represents correct interface speed which is calculated based on interface and extended interface speed (measured in Mbps).</Subtext>
 			</Information>
 			<Interprete>
 				<RawType>numeric text</RawType>
@@ -1465,6 +1438,10 @@ no concept of bandwidth, this object should be zero.]]>
 			<Measurement>
 				<Type>number</Type>
 			</Measurement>
+			<Alarm>
+				<Monitored>true</Monitored>
+				<CL>0</CL>
+			</Alarm>
 		</Param>
 	</Params>
 

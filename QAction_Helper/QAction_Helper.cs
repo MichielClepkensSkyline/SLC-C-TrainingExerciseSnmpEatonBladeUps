@@ -20,9 +20,9 @@ public static class Parameter
 	public const int systemuptime = 11;
 	/// <summary>PID: 13 | Type: read</summary>
 	[EditorBrowsable(EditorBrowsableState.Never)]
-	public const int upsdeviceidentmanufacturer_13 = 13;
+	public const int upsdevicemanufacturer_13 = 13;
 	/// <summary>PID: 13 | Type: read</summary>
-	public const int upsdeviceidentmanufacturer = 13;
+	public const int upsdevicemanufacturer = 13;
 	/// <summary>PID: 14 | Type: read</summary>
 	[EditorBrowsable(EditorBrowsableState.Never)]
 	public const int upsdeviceidentitymodel_14 = 14;
@@ -30,9 +30,9 @@ public static class Parameter
 	public const int upsdeviceidentitymodel = 14;
 	/// <summary>PID: 15 | Type: read</summary>
 	[EditorBrowsable(EditorBrowsableState.Never)]
-	public const int upsdevicebatcapacity_15 = 15;
+	public const int upsdevicebatterycapacity_15 = 15;
 	/// <summary>PID: 15 | Type: read</summary>
-	public const int upsdevicebatcapacity = 15;
+	public const int upsdevicebatterycapacity = 15;
 	/// <summary>PID: 16 | Type: read</summary>
 	[EditorBrowsable(EditorBrowsableState.Never)]
 	public const int upsdeviceinputfrequency_16 = 16;
@@ -40,9 +40,9 @@ public static class Parameter
 	public const int upsdeviceinputfrequency = 16;
 	/// <summary>PID: 17 | Type: read</summary>
 	[EditorBrowsable(EditorBrowsableState.Never)]
-	public const int upsdeviceinputnumphases_17 = 17;
+	public const int upsdeviceinputnumberofphases_17 = 17;
 	/// <summary>PID: 17 | Type: read</summary>
-	public const int upsdeviceinputnumphases = 17;
+	public const int upsdeviceinputnumberofphases = 17;
 	/// <summary>PID: 18 | Type: read</summary>
 	[EditorBrowsable(EditorBrowsableState.Never)]
 	public const int upsdeviceoutputload_18 = 18;
@@ -57,11 +57,11 @@ public static class Parameter
 	{
 		/// <summary>PID: 105 | Type: write</summary>
 		[EditorBrowsable(EditorBrowsableState.Never)]
-		public const int interfaceadminstatus_105 = 105;
+		public const int interfacesadministratorstatus_105 = 105;
 		/// <summary>PID: 105 | Type: write</summary>
-		public const int interfaceadminstatus = 105;
+		public const int interfacesadministratorstatus = 105;
 	}
-	public class Interfacetable
+	public class Interfacestable
 	{
 		/// <summary>PID: 50</summary>
 		public const int tablePid = 50;
@@ -73,39 +73,39 @@ public static class Parameter
 		{
 			/// <summary>PID: 51 | Type: read</summary>
 			[EditorBrowsable(EditorBrowsableState.Never)]
-			public const int interfaceindex_51 = 51;
+			public const int interfacesindex_51 = 51;
 			/// <summary>PID: 51 | Type: read</summary>
-			public const int interfaceindex = 51;
+			public const int interfacesindex = 51;
 			/// <summary>PID: 52 | Type: read</summary>
 			[EditorBrowsable(EditorBrowsableState.Never)]
-			public const int interfacedescription_52 = 52;
+			public const int interfacesdescription_52 = 52;
 			/// <summary>PID: 52 | Type: read</summary>
-			public const int interfacedescription = 52;
+			public const int interfacesdescription = 52;
 			/// <summary>PID: 53 | Type: read</summary>
 			[EditorBrowsable(EditorBrowsableState.Never)]
-			public const int interfacetype_53 = 53;
+			public const int interfacestype_53 = 53;
 			/// <summary>PID: 53 | Type: read</summary>
-			public const int interfacetype = 53;
+			public const int interfacestype = 53;
 			/// <summary>PID: 54 | Type: read</summary>
 			[EditorBrowsable(EditorBrowsableState.Never)]
-			public const int interfacespeed_54 = 54;
+			public const int interfacesspeed_54 = 54;
 			/// <summary>PID: 54 | Type: read</summary>
-			public const int interfacespeed = 54;
+			public const int interfacesspeed = 54;
 			/// <summary>PID: 55 | Type: read</summary>
 			[EditorBrowsable(EditorBrowsableState.Never)]
-			public const int interfaceadminstatus_55 = 55;
+			public const int interfacesadministratorstatus_55 = 55;
 			/// <summary>PID: 55 | Type: read</summary>
-			public const int interfaceadminstatus = 55;
+			public const int interfacesadministratorstatus = 55;
 			/// <summary>PID: 56 | Type: read</summary>
 			[EditorBrowsable(EditorBrowsableState.Never)]
-			public const int interfaceextendedspeed_56 = 56;
+			public const int interfacesextendedspeed_56 = 56;
 			/// <summary>PID: 56 | Type: read</summary>
-			public const int interfaceextendedspeed = 56;
+			public const int interfacesextendedspeed = 56;
 			/// <summary>PID: 57 | Type: read</summary>
 			[EditorBrowsable(EditorBrowsableState.Never)]
-			public const int interfacecalculatedspeed_57 = 57;
+			public const int interfacescalculatedspeed_57 = 57;
 			/// <summary>PID: 57 | Type: read</summary>
-			public const int interfacecalculatedspeed = 57;
+			public const int interfacescalculatedspeed = 57;
 			public class Write
 			{
 			}
@@ -114,46 +114,46 @@ public static class Parameter
 		{
 			/// <summary>IDX: 0 | Type: read</summary>
 			[EditorBrowsable(EditorBrowsableState.Never)]
-			public const int interfaceindex_51 = 0;
+			public const int interfacesindex_51 = 0;
 			/// <summary>IDX: 0 | Type: read</summary>
-			public const int interfaceindex = 0;
+			public const int interfacesindex = 0;
 			/// <summary>IDX: 1 | Type: read</summary>
 			[EditorBrowsable(EditorBrowsableState.Never)]
-			public const int interfacedescription_52 = 1;
+			public const int interfacesdescription_52 = 1;
 			/// <summary>IDX: 1 | Type: read</summary>
-			public const int interfacedescription = 1;
+			public const int interfacesdescription = 1;
 			/// <summary>IDX: 2 | Type: read</summary>
 			[EditorBrowsable(EditorBrowsableState.Never)]
-			public const int interfacetype_53 = 2;
+			public const int interfacestype_53 = 2;
 			/// <summary>IDX: 2 | Type: read</summary>
-			public const int interfacetype = 2;
+			public const int interfacestype = 2;
 			/// <summary>IDX: 3 | Type: read</summary>
 			[EditorBrowsable(EditorBrowsableState.Never)]
-			public const int interfacespeed_54 = 3;
+			public const int interfacesspeed_54 = 3;
 			/// <summary>IDX: 3 | Type: read</summary>
-			public const int interfacespeed = 3;
+			public const int interfacesspeed = 3;
 			/// <summary>IDX: 4 | Type: read</summary>
 			[EditorBrowsable(EditorBrowsableState.Never)]
-			public const int interfaceadminstatus_55 = 4;
+			public const int interfacesadministratorstatus_55 = 4;
 			/// <summary>IDX: 4 | Type: read</summary>
-			public const int interfaceadminstatus = 4;
+			public const int interfacesadministratorstatus = 4;
 			/// <summary>IDX: 5 | Type: read</summary>
 			[EditorBrowsable(EditorBrowsableState.Never)]
-			public const int interfaceextendedspeed_56 = 5;
+			public const int interfacesextendedspeed_56 = 5;
 			/// <summary>IDX: 5 | Type: read</summary>
-			public const int interfaceextendedspeed = 5;
+			public const int interfacesextendedspeed = 5;
 			/// <summary>IDX: 6 | Type: read</summary>
 			[EditorBrowsable(EditorBrowsableState.Never)]
-			public const int interfacecalculatedspeed_57 = 6;
+			public const int interfacescalculatedspeed_57 = 6;
 			/// <summary>IDX: 6 | Type: read</summary>
-			public const int interfacecalculatedspeed = 6;
+			public const int interfacescalculatedspeed = 6;
 		}
 	}
 }
 public class WriteParameters
 {
 	/// <summary>PID: 105  | Type: write | DISCREETS: Up = 1, Down = 2, Testing = 3</summary>
-	public System.Object Interfaceadminstatus {get { return Protocol.GetParameter(105); }set { Protocol.SetParameter(105, value); }}
+	public System.Object Interfacesadministratorstatus {get { return Protocol.GetParameter(105); }set { Protocol.SetParameter(105, value); }}
 	public SLProtocolExt Protocol;
 	public WriteParameters(SLProtocolExt protocol)
 	{
@@ -163,54 +163,54 @@ public class WriteParameters
 public interface SLProtocolExt : SLProtocol
 {
 	/// <summary>PID: 50</summary>
-	InterfacetableQActionTable interfacetable { get; set; }
+	InterfacestableQActionTable interfacestable { get; set; }
 	object Excecuteqactiononpollednullvalues_dummy { get; set; }
-	object Title_end_generic__fixed { get; set; }
+	object Titleendgeneric__fixed { get; set; }
 	object Systemtitle__fixed { get; set; }
 	object Systemdescription_10 { get; set; }
 	object Systemdescription { get; set; }
 	object Systemuptime_11 { get; set; }
 	object Systemuptime { get; set; }
 	object Upsdevicetitle__fixed { get; set; }
-	object Upsdeviceidentmanufacturer_13 { get; set; }
-	object Upsdeviceidentmanufacturer { get; set; }
+	object Upsdevicemanufacturer_13 { get; set; }
+	object Upsdevicemanufacturer { get; set; }
 	object Upsdeviceidentitymodel_14 { get; set; }
 	object Upsdeviceidentitymodel { get; set; }
-	object Upsdevicebatcapacity_15 { get; set; }
-	object Upsdevicebatcapacity { get; set; }
+	object Upsdevicebatterycapacity_15 { get; set; }
+	object Upsdevicebatterycapacity { get; set; }
 	object Upsdeviceinputfrequency_16 { get; set; }
 	object Upsdeviceinputfrequency { get; set; }
-	object Upsdeviceinputnumphases_17 { get; set; }
-	object Upsdeviceinputnumphases { get; set; }
+	object Upsdeviceinputnumberofphases_17 { get; set; }
+	object Upsdeviceinputnumberofphases { get; set; }
 	object Upsdeviceoutputload_18 { get; set; }
 	object Upsdeviceoutputload { get; set; }
 	object Upsdeviceoutputfrequency_19 { get; set; }
 	object Upsdeviceoutputfrequency { get; set; }
-	object Interfaceindex_51 { get; set; }
-	object Interfaceindex { get; set; }
-	object Interfacedescription_52 { get; set; }
-	object Interfacedescription { get; set; }
-	object Interfacetype_53 { get; set; }
-	object Interfacetype { get; set; }
-	object Interfacespeed_54 { get; set; }
-	object Interfacespeed { get; set; }
-	object Interfaceadminstatus_55 { get; set; }
-	object Interfaceadminstatus { get; set; }
-	object Interfaceextendedspeed_56 { get; set; }
-	object Interfaceextendedspeed { get; set; }
-	object Interfacecalculatedspeed_57 { get; set; }
-	object Interfacecalculatedspeed { get; set; }
-	object Interfaceadminstatus_105 { get; set; }
+	object Interfacesindex_51 { get; set; }
+	object Interfacesindex { get; set; }
+	object Interfacesdescription_52 { get; set; }
+	object Interfacesdescription { get; set; }
+	object Interfacestype_53 { get; set; }
+	object Interfacestype { get; set; }
+	object Interfacesspeed_54 { get; set; }
+	object Interfacesspeed { get; set; }
+	object Interfacesadministratorstatus_55 { get; set; }
+	object Interfacesadministratorstatus { get; set; }
+	object Interfacesextendedspeed_56 { get; set; }
+	object Interfacesextendedspeed { get; set; }
+	object Interfacescalculatedspeed_57 { get; set; }
+	object Interfacescalculatedspeed { get; set; }
+	object Interfacesadministratorstatus_105 { get; set; }
 	WriteParameters Write { get; set; }
 }
 public class ConcreteSLProtocolExt : ConcreteSLProtocol, SLProtocolExt
 {
 	/// <summary>PID: 50</summary>
-	public InterfacetableQActionTable interfacetable { get; set; }
+	public InterfacestableQActionTable interfacestable { get; set; }
 	/// <summary>PID: 1  | Type: dummy</summary>
 	public System.Object Excecuteqactiononpollednullvalues_dummy {get { return GetParameter(1); }set { SetParameter(1, value); }}
 	/// <summary>PID: 8  | Type: fixed</summary>
-	public System.Object Title_end_generic__fixed {get { return GetParameter(8); }set { SetParameter(8, value); }}
+	public System.Object Titleendgeneric__fixed {get { return GetParameter(8); }set { SetParameter(8, value); }}
 	/// <summary>PID: 9  | Type: fixed</summary>
 	public System.Object Systemtitle__fixed {get { return GetParameter(9); }set { SetParameter(9, value); }}
 	/// <summary>PID: 10  | Type: read | EXCEPTIONS: Not Available = -1</summary>
@@ -227,9 +227,9 @@ public class ConcreteSLProtocolExt : ConcreteSLProtocol, SLProtocolExt
 	public System.Object Upsdevicetitle__fixed {get { return GetParameter(12); }set { SetParameter(12, value); }}
 	/// <summary>PID: 13  | Type: read | EXCEPTIONS: Not Available = -1</summary>
 	[EditorBrowsable(EditorBrowsableState.Never)]
-	public System.Object Upsdeviceidentmanufacturer_13 {get { return GetParameter(13); }set { SetParameter(13, value); }}
+	public System.Object Upsdevicemanufacturer_13 {get { return GetParameter(13); }set { SetParameter(13, value); }}
 	/// <summary>PID: 13  | Type: read | EXCEPTIONS: Not Available = -1</summary>
-	public System.Object Upsdeviceidentmanufacturer {get { return GetParameter(13); }set { SetParameter(13, value); }}
+	public System.Object Upsdevicemanufacturer {get { return GetParameter(13); }set { SetParameter(13, value); }}
 	/// <summary>PID: 14  | Type: read | EXCEPTIONS: Not Available = -1</summary>
 	[EditorBrowsable(EditorBrowsableState.Never)]
 	public System.Object Upsdeviceidentitymodel_14 {get { return GetParameter(14); }set { SetParameter(14, value); }}
@@ -237,9 +237,9 @@ public class ConcreteSLProtocolExt : ConcreteSLProtocol, SLProtocolExt
 	public System.Object Upsdeviceidentitymodel {get { return GetParameter(14); }set { SetParameter(14, value); }}
 	/// <summary>PID: 15  | Type: read</summary>
 	[EditorBrowsable(EditorBrowsableState.Never)]
-	public System.Object Upsdevicebatcapacity_15 {get { return GetParameter(15); }set { SetParameter(15, value); }}
+	public System.Object Upsdevicebatterycapacity_15 {get { return GetParameter(15); }set { SetParameter(15, value); }}
 	/// <summary>PID: 15  | Type: read</summary>
-	public System.Object Upsdevicebatcapacity {get { return GetParameter(15); }set { SetParameter(15, value); }}
+	public System.Object Upsdevicebatterycapacity {get { return GetParameter(15); }set { SetParameter(15, value); }}
 	/// <summary>PID: 16  | Type: read</summary>
 	[EditorBrowsable(EditorBrowsableState.Never)]
 	public System.Object Upsdeviceinputfrequency_16 {get { return GetParameter(16); }set { SetParameter(16, value); }}
@@ -247,9 +247,9 @@ public class ConcreteSLProtocolExt : ConcreteSLProtocol, SLProtocolExt
 	public System.Object Upsdeviceinputfrequency {get { return GetParameter(16); }set { SetParameter(16, value); }}
 	/// <summary>PID: 17  | Type: read</summary>
 	[EditorBrowsable(EditorBrowsableState.Never)]
-	public System.Object Upsdeviceinputnumphases_17 {get { return GetParameter(17); }set { SetParameter(17, value); }}
+	public System.Object Upsdeviceinputnumberofphases_17 {get { return GetParameter(17); }set { SetParameter(17, value); }}
 	/// <summary>PID: 17  | Type: read</summary>
-	public System.Object Upsdeviceinputnumphases {get { return GetParameter(17); }set { SetParameter(17, value); }}
+	public System.Object Upsdeviceinputnumberofphases {get { return GetParameter(17); }set { SetParameter(17, value); }}
 	/// <summary>PID: 18  | Type: read</summary>
 	[EditorBrowsable(EditorBrowsableState.Never)]
 	public System.Object Upsdeviceoutputload_18 {get { return GetParameter(18); }set { SetParameter(18, value); }}
@@ -262,97 +262,97 @@ public class ConcreteSLProtocolExt : ConcreteSLProtocol, SLProtocolExt
 	public System.Object Upsdeviceoutputfrequency {get { return GetParameter(19); }set { SetParameter(19, value); }}
 	/// <summary>PID: 51  | Type: read</summary>
 	[EditorBrowsable(EditorBrowsableState.Never)]
-	public System.Object Interfaceindex_51 {get { return GetParameter(51); }set { SetParameter(51, value); }}
+	public System.Object Interfacesindex_51 {get { return GetParameter(51); }set { SetParameter(51, value); }}
 	/// <summary>PID: 51  | Type: read</summary>
-	public System.Object Interfaceindex {get { return GetParameter(51); }set { SetParameter(51, value); }}
+	public System.Object Interfacesindex {get { return GetParameter(51); }set { SetParameter(51, value); }}
 	/// <summary>PID: 52  | Type: read | EXCEPTIONS: Not Available = -1</summary>
 	[EditorBrowsable(EditorBrowsableState.Never)]
-	public System.Object Interfacedescription_52 {get { return GetParameter(52); }set { SetParameter(52, value); }}
+	public System.Object Interfacesdescription_52 {get { return GetParameter(52); }set { SetParameter(52, value); }}
 	/// <summary>PID: 52  | Type: read | EXCEPTIONS: Not Available = -1</summary>
-	public System.Object Interfacedescription {get { return GetParameter(52); }set { SetParameter(52, value); }}
+	public System.Object Interfacesdescription {get { return GetParameter(52); }set { SetParameter(52, value); }}
 	/// <summary>PID: 53  | Type: read | DISCREETS: Other = 1, Regular 1822 = 2, Hdh 1822 = 3, Ddn X 25 = 4, RFC 877 X 25 = 5, Ethernet Csmacd = 6, Iso 88023 Csmacd = 7, Iso 88024 Token Bus = 8, Iso 88025 Token Ring = 9, Iso 88026 Man = 10, Star LAN = 11, Proteon 10 Mbit = 12, Proteon 80 Mbit = 13, Hyperchannel = 14, FDDI = 15, LAPB = 16, SDLC = 17, Ds 1 = 18, E 1 = 19, Basic ISDN = 20, Primary ISDN = 21, Prop Point to Point Serial = 22, PPP = 23, Software Loopback = 24, Eon = 25, Ethernet 3 Mbit = 26, Nsip = 27, Slip = 28, Ultra = 29, Ds 3 = 30, Sip = 31, Frame Relay = 32, Rs 232 = 33, Para = 34, Arcnet = 35, Arcnet Plus = 36, ATM = 37, Miox 25 = 38, Sonet = 39, X 25 Ple = 40, Iso 88022 LLC = 41, Local Talk = 42, Smds Dxi = 43, Frame Relay Service = 44, V 35 = 45, Hssi = 46, Hippi = 47, Modem = 48, Aal 5 = 49, Sonet Path = 50, Sonet VT = 51, Smds Icip = 52, Prop Virtual = 53, Prop Multiplexor = 54, IEEE 80212 = 55, Fibre Channel = 56, Hippi Interface = 57, Frame Relay Interconnect = 58, Aflane 8023 = 59, Aflane 8025 = 60, Cct Emul = 61, Fast Ether = 62, ISDN = 63, V 11 = 64, V 36 = 65, G 703 at 64 K = 66, G 703 at 2 Mb = 67, Qllc = 68, Fast Ether FX = 69, Channel = 70, IEEE 80211 = 71, Ibm 370 Par Chan = 72, Escon = 73, Dlsw = 74, Isdns = 75, Isdnu = 76, Lapd = 77, IP Switch = 78, Rsrb = 79, ATM Logical = 80, Ds 0 = 81, Ds 0 Bundle = 82, Bsc = 83, Async = 84, Cnr = 85, Iso 88025 Dtr = 86, Eplrs = 87, Arap = 88, Prop Cnls = 89, Host Pad = 90, Term Pad = 91, Frame Relay MPI = 92, X 213 = 93, ADSL = 94, Radsl = 95, Sdsl = 96, Vdsl = 97, Iso 88025 CRFP Int = 98, Myrinet = 99, Voice EM = 100, Voice FXO = 101, Voice FXS = 102, Voice Encap = 103, Voice Over IP = 104, ATM Dxi = 105, ATM Funi = 106, ATM Ima = 107, PPP Multilink Bundle = 108, IP Over Cdlc = 109, IP Over Claw = 110, Stack to Stack = 111, Virtual IP Address = 112, Mpc = 113, IP Over ATM = 114, Iso 88025 Fiber = 115, Tdlc = 116, Gigabit Ethernet = 117, HDLC = 118, LAPF = 119, V 37 = 120, X 25 Mlp = 121, X 25 Hunt Group = 122, Trasnp HDLC = 123, Interleave = 124, Fast = 125, IP = 126, Docs Cable Maclayer = 127, Docs Cable Downstream = 128, Docs Cable Upstream = 129, A 12 Mpp Switch = 130, Tunnel = 131, Coffee = 132, Ces = 133, ATM Sub Interface = 134, L 2 VLAN = 135, L 3 Ipvlan = 136, L 3 Ipxvlan = 137, Digital Powerline = 138, Media Mail Over IP = 139, Dtm = 140, Dcn = 141, IP Forward = 142, Msdsl = 143, IEEE 1394 = 144, If Gsn = 145, Dvb Rcc MAC Layer = 146, Dvb Rcc Downstream = 147, Dvb Rcc Upstream = 148, ATM Virtual = 149, MPLS Tunnel = 150, Srp = 151, Voice Over ATM = 152, Voice Over Frame Relay = 153, Idsl = 154, Composite Link = 155, Ss 7 Sig Link = 156, Prop Wireless P 2 P = 157, Fr Forward = 158, RFC 1483 = 159, USB = 160, IEEE 8023 Ad Lag = 161, Bgppolicyaccounting = 162, Frf 16 Mfr Bundle = 163, H 323 Gatekeeper = 164, H 323 Proxy = 165, MPLS = 166, MF Sig Link = 167</summary>
 	[EditorBrowsable(EditorBrowsableState.Never)]
-	public System.Object Interfacetype_53 {get { return GetParameter(53); }set { SetParameter(53, value); }}
+	public System.Object Interfacestype_53 {get { return GetParameter(53); }set { SetParameter(53, value); }}
 	/// <summary>PID: 53  | Type: read | DISCREETS: Other = 1, Regular 1822 = 2, Hdh 1822 = 3, Ddn X 25 = 4, RFC 877 X 25 = 5, Ethernet Csmacd = 6, Iso 88023 Csmacd = 7, Iso 88024 Token Bus = 8, Iso 88025 Token Ring = 9, Iso 88026 Man = 10, Star LAN = 11, Proteon 10 Mbit = 12, Proteon 80 Mbit = 13, Hyperchannel = 14, FDDI = 15, LAPB = 16, SDLC = 17, Ds 1 = 18, E 1 = 19, Basic ISDN = 20, Primary ISDN = 21, Prop Point to Point Serial = 22, PPP = 23, Software Loopback = 24, Eon = 25, Ethernet 3 Mbit = 26, Nsip = 27, Slip = 28, Ultra = 29, Ds 3 = 30, Sip = 31, Frame Relay = 32, Rs 232 = 33, Para = 34, Arcnet = 35, Arcnet Plus = 36, ATM = 37, Miox 25 = 38, Sonet = 39, X 25 Ple = 40, Iso 88022 LLC = 41, Local Talk = 42, Smds Dxi = 43, Frame Relay Service = 44, V 35 = 45, Hssi = 46, Hippi = 47, Modem = 48, Aal 5 = 49, Sonet Path = 50, Sonet VT = 51, Smds Icip = 52, Prop Virtual = 53, Prop Multiplexor = 54, IEEE 80212 = 55, Fibre Channel = 56, Hippi Interface = 57, Frame Relay Interconnect = 58, Aflane 8023 = 59, Aflane 8025 = 60, Cct Emul = 61, Fast Ether = 62, ISDN = 63, V 11 = 64, V 36 = 65, G 703 at 64 K = 66, G 703 at 2 Mb = 67, Qllc = 68, Fast Ether FX = 69, Channel = 70, IEEE 80211 = 71, Ibm 370 Par Chan = 72, Escon = 73, Dlsw = 74, Isdns = 75, Isdnu = 76, Lapd = 77, IP Switch = 78, Rsrb = 79, ATM Logical = 80, Ds 0 = 81, Ds 0 Bundle = 82, Bsc = 83, Async = 84, Cnr = 85, Iso 88025 Dtr = 86, Eplrs = 87, Arap = 88, Prop Cnls = 89, Host Pad = 90, Term Pad = 91, Frame Relay MPI = 92, X 213 = 93, ADSL = 94, Radsl = 95, Sdsl = 96, Vdsl = 97, Iso 88025 CRFP Int = 98, Myrinet = 99, Voice EM = 100, Voice FXO = 101, Voice FXS = 102, Voice Encap = 103, Voice Over IP = 104, ATM Dxi = 105, ATM Funi = 106, ATM Ima = 107, PPP Multilink Bundle = 108, IP Over Cdlc = 109, IP Over Claw = 110, Stack to Stack = 111, Virtual IP Address = 112, Mpc = 113, IP Over ATM = 114, Iso 88025 Fiber = 115, Tdlc = 116, Gigabit Ethernet = 117, HDLC = 118, LAPF = 119, V 37 = 120, X 25 Mlp = 121, X 25 Hunt Group = 122, Trasnp HDLC = 123, Interleave = 124, Fast = 125, IP = 126, Docs Cable Maclayer = 127, Docs Cable Downstream = 128, Docs Cable Upstream = 129, A 12 Mpp Switch = 130, Tunnel = 131, Coffee = 132, Ces = 133, ATM Sub Interface = 134, L 2 VLAN = 135, L 3 Ipvlan = 136, L 3 Ipxvlan = 137, Digital Powerline = 138, Media Mail Over IP = 139, Dtm = 140, Dcn = 141, IP Forward = 142, Msdsl = 143, IEEE 1394 = 144, If Gsn = 145, Dvb Rcc MAC Layer = 146, Dvb Rcc Downstream = 147, Dvb Rcc Upstream = 148, ATM Virtual = 149, MPLS Tunnel = 150, Srp = 151, Voice Over ATM = 152, Voice Over Frame Relay = 153, Idsl = 154, Composite Link = 155, Ss 7 Sig Link = 156, Prop Wireless P 2 P = 157, Fr Forward = 158, RFC 1483 = 159, USB = 160, IEEE 8023 Ad Lag = 161, Bgppolicyaccounting = 162, Frf 16 Mfr Bundle = 163, H 323 Gatekeeper = 164, H 323 Proxy = 165, MPLS = 166, MF Sig Link = 167</summary>
-	public System.Object Interfacetype {get { return GetParameter(53); }set { SetParameter(53, value); }}
+	public System.Object Interfacestype {get { return GetParameter(53); }set { SetParameter(53, value); }}
 	/// <summary>PID: 54  | Type: read</summary>
 	[EditorBrowsable(EditorBrowsableState.Never)]
-	public System.Object Interfacespeed_54 {get { return GetParameter(54); }set { SetParameter(54, value); }}
+	public System.Object Interfacesspeed_54 {get { return GetParameter(54); }set { SetParameter(54, value); }}
 	/// <summary>PID: 54  | Type: read</summary>
-	public System.Object Interfacespeed {get { return GetParameter(54); }set { SetParameter(54, value); }}
+	public System.Object Interfacesspeed {get { return GetParameter(54); }set { SetParameter(54, value); }}
 	/// <summary>PID: 55  | Type: read | DISCREETS: Up = 1, Down = 2, Testing = 3</summary>
 	[EditorBrowsable(EditorBrowsableState.Never)]
-	public System.Object Interfaceadminstatus_55 {get { return GetParameter(55); }set { SetParameter(55, value); }}
+	public System.Object Interfacesadministratorstatus_55 {get { return GetParameter(55); }set { SetParameter(55, value); }}
 	/// <summary>PID: 55  | Type: read | DISCREETS: Up = 1, Down = 2, Testing = 3</summary>
-	public System.Object Interfaceadminstatus {get { return GetParameter(55); }set { SetParameter(55, value); }}
+	public System.Object Interfacesadministratorstatus {get { return GetParameter(55); }set { SetParameter(55, value); }}
 	/// <summary>PID: 56  | Type: read</summary>
 	[EditorBrowsable(EditorBrowsableState.Never)]
-	public System.Object Interfaceextendedspeed_56 {get { return GetParameter(56); }set { SetParameter(56, value); }}
+	public System.Object Interfacesextendedspeed_56 {get { return GetParameter(56); }set { SetParameter(56, value); }}
 	/// <summary>PID: 56  | Type: read</summary>
-	public System.Object Interfaceextendedspeed {get { return GetParameter(56); }set { SetParameter(56, value); }}
+	public System.Object Interfacesextendedspeed {get { return GetParameter(56); }set { SetParameter(56, value); }}
 	/// <summary>PID: 57  | Type: read</summary>
 	[EditorBrowsable(EditorBrowsableState.Never)]
-	public System.Object Interfacecalculatedspeed_57 {get { return GetParameter(57); }set { SetParameter(57, value); }}
+	public System.Object Interfacescalculatedspeed_57 {get { return GetParameter(57); }set { SetParameter(57, value); }}
 	/// <summary>PID: 57  | Type: read</summary>
-	public System.Object Interfacecalculatedspeed {get { return GetParameter(57); }set { SetParameter(57, value); }}
+	public System.Object Interfacescalculatedspeed {get { return GetParameter(57); }set { SetParameter(57, value); }}
 	/// <summary>PID: 105  | Type: write | DISCREETS: Up = 1, Down = 2, Testing = 3</summary>
 	[EditorBrowsable(EditorBrowsableState.Never)]
-	public System.Object Interfaceadminstatus_105 {get { return GetParameter(105); }set { SetParameter(105, value); }}
+	public System.Object Interfacesadministratorstatus_105 {get { return GetParameter(105); }set { SetParameter(105, value); }}
 	public WriteParameters Write { get; set; }
 	public ConcreteSLProtocolExt()
 	{
-		interfacetable = new InterfacetableQActionTable(this, 50, "interfacetable");
+		interfacestable = new InterfacestableQActionTable(this, 50, "interfacestable");
 		Write = new WriteParameters(this);
 	}
 }
 /// <summary>IDX: 0</summary>
-public class InterfacetableQActionTable : QActionTable, IEnumerable<InterfacetableQActionRow>
+public class InterfacestableQActionTable : QActionTable, IEnumerable<InterfacestableQActionRow>
 {
-	public InterfacetableQActionTable(SLProtocol protocol, int tableId, string tableName) : base(protocol, tableId, tableName) { }
+	public InterfacestableQActionTable(SLProtocol protocol, int tableId, string tableName) : base(protocol, tableId, tableName) { }
 	IEnumerator IEnumerable.GetEnumerator() { return (IEnumerator) GetEnumerator(); }
-	public IEnumerator<InterfacetableQActionRow> GetEnumerator() { return new QActionTableEnumerator<InterfacetableQActionRow>(this); }
+	public IEnumerator<InterfacestableQActionRow> GetEnumerator() { return new QActionTableEnumerator<InterfacestableQActionRow>(this); }
 }
 /// <summary>IDX: 0</summary>
-public class InterfacetableQActionRow : QActionTableRow
+public class InterfacestableQActionRow : QActionTableRow
 {
 	/// <summary>PID: 51 | Type: read</summary>
 	[EditorBrowsable(EditorBrowsableState.Never)]
-	public System.Object Interfaceindex_51 { get { if (base.Columns.ContainsKey(0)) { return base.Columns[0]; } else { return null; } } set { if (base.Columns.ContainsKey(0)) { base.Columns[0] = value; } else { base.Columns.Add(0, value); } } }
+	public System.Object Interfacesindex_51 { get { if (base.Columns.ContainsKey(0)) { return base.Columns[0]; } else { return null; } } set { if (base.Columns.ContainsKey(0)) { base.Columns[0] = value; } else { base.Columns.Add(0, value); } } }
 	/// <summary>PID: 51 | Type: read</summary>
-	public System.Object Interfaceindex { get { if (base.Columns.ContainsKey(0)) { return base.Columns[0]; } else { return null; } } set { if (base.Columns.ContainsKey(0)) { base.Columns[0] = value; } else { base.Columns.Add(0, value); } } }
+	public System.Object Interfacesindex { get { if (base.Columns.ContainsKey(0)) { return base.Columns[0]; } else { return null; } } set { if (base.Columns.ContainsKey(0)) { base.Columns[0] = value; } else { base.Columns.Add(0, value); } } }
 	/// <summary>PID: 52 | Type: read</summary>
 	[EditorBrowsable(EditorBrowsableState.Never)]
-	public System.Object Interfacedescription_52 { get { if (base.Columns.ContainsKey(1)) { return base.Columns[1]; } else { return null; } } set { if (base.Columns.ContainsKey(1)) { base.Columns[1] = value; } else { base.Columns.Add(1, value); } } }
+	public System.Object Interfacesdescription_52 { get { if (base.Columns.ContainsKey(1)) { return base.Columns[1]; } else { return null; } } set { if (base.Columns.ContainsKey(1)) { base.Columns[1] = value; } else { base.Columns.Add(1, value); } } }
 	/// <summary>PID: 52 | Type: read</summary>
-	public System.Object Interfacedescription { get { if (base.Columns.ContainsKey(1)) { return base.Columns[1]; } else { return null; } } set { if (base.Columns.ContainsKey(1)) { base.Columns[1] = value; } else { base.Columns.Add(1, value); } } }
+	public System.Object Interfacesdescription { get { if (base.Columns.ContainsKey(1)) { return base.Columns[1]; } else { return null; } } set { if (base.Columns.ContainsKey(1)) { base.Columns[1] = value; } else { base.Columns.Add(1, value); } } }
 	/// <summary>PID: 53 | Type: read</summary>
 	[EditorBrowsable(EditorBrowsableState.Never)]
-	public System.Object Interfacetype_53 { get { if (base.Columns.ContainsKey(2)) { return base.Columns[2]; } else { return null; } } set { if (base.Columns.ContainsKey(2)) { base.Columns[2] = value; } else { base.Columns.Add(2, value); } } }
+	public System.Object Interfacestype_53 { get { if (base.Columns.ContainsKey(2)) { return base.Columns[2]; } else { return null; } } set { if (base.Columns.ContainsKey(2)) { base.Columns[2] = value; } else { base.Columns.Add(2, value); } } }
 	/// <summary>PID: 53 | Type: read</summary>
-	public System.Object Interfacetype { get { if (base.Columns.ContainsKey(2)) { return base.Columns[2]; } else { return null; } } set { if (base.Columns.ContainsKey(2)) { base.Columns[2] = value; } else { base.Columns.Add(2, value); } } }
+	public System.Object Interfacestype { get { if (base.Columns.ContainsKey(2)) { return base.Columns[2]; } else { return null; } } set { if (base.Columns.ContainsKey(2)) { base.Columns[2] = value; } else { base.Columns.Add(2, value); } } }
 	/// <summary>PID: 54 | Type: read</summary>
 	[EditorBrowsable(EditorBrowsableState.Never)]
-	public System.Object Interfacespeed_54 { get { if (base.Columns.ContainsKey(3)) { return base.Columns[3]; } else { return null; } } set { if (base.Columns.ContainsKey(3)) { base.Columns[3] = value; } else { base.Columns.Add(3, value); } } }
+	public System.Object Interfacesspeed_54 { get { if (base.Columns.ContainsKey(3)) { return base.Columns[3]; } else { return null; } } set { if (base.Columns.ContainsKey(3)) { base.Columns[3] = value; } else { base.Columns.Add(3, value); } } }
 	/// <summary>PID: 54 | Type: read</summary>
-	public System.Object Interfacespeed { get { if (base.Columns.ContainsKey(3)) { return base.Columns[3]; } else { return null; } } set { if (base.Columns.ContainsKey(3)) { base.Columns[3] = value; } else { base.Columns.Add(3, value); } } }
+	public System.Object Interfacesspeed { get { if (base.Columns.ContainsKey(3)) { return base.Columns[3]; } else { return null; } } set { if (base.Columns.ContainsKey(3)) { base.Columns[3] = value; } else { base.Columns.Add(3, value); } } }
 	/// <summary>PID: 55 | Type: read</summary>
 	[EditorBrowsable(EditorBrowsableState.Never)]
-	public System.Object Interfaceadminstatus_55 { get { if (base.Columns.ContainsKey(4)) { return base.Columns[4]; } else { return null; } } set { if (base.Columns.ContainsKey(4)) { base.Columns[4] = value; } else { base.Columns.Add(4, value); } } }
+	public System.Object Interfacesadministratorstatus_55 { get { if (base.Columns.ContainsKey(4)) { return base.Columns[4]; } else { return null; } } set { if (base.Columns.ContainsKey(4)) { base.Columns[4] = value; } else { base.Columns.Add(4, value); } } }
 	/// <summary>PID: 55 | Type: read</summary>
-	public System.Object Interfaceadminstatus { get { if (base.Columns.ContainsKey(4)) { return base.Columns[4]; } else { return null; } } set { if (base.Columns.ContainsKey(4)) { base.Columns[4] = value; } else { base.Columns.Add(4, value); } } }
+	public System.Object Interfacesadministratorstatus { get { if (base.Columns.ContainsKey(4)) { return base.Columns[4]; } else { return null; } } set { if (base.Columns.ContainsKey(4)) { base.Columns[4] = value; } else { base.Columns.Add(4, value); } } }
 	/// <summary>PID: 56 | Type: read</summary>
 	[EditorBrowsable(EditorBrowsableState.Never)]
-	public System.Object Interfaceextendedspeed_56 { get { if (base.Columns.ContainsKey(5)) { return base.Columns[5]; } else { return null; } } set { if (base.Columns.ContainsKey(5)) { base.Columns[5] = value; } else { base.Columns.Add(5, value); } } }
+	public System.Object Interfacesextendedspeed_56 { get { if (base.Columns.ContainsKey(5)) { return base.Columns[5]; } else { return null; } } set { if (base.Columns.ContainsKey(5)) { base.Columns[5] = value; } else { base.Columns.Add(5, value); } } }
 	/// <summary>PID: 56 | Type: read</summary>
-	public System.Object Interfaceextendedspeed { get { if (base.Columns.ContainsKey(5)) { return base.Columns[5]; } else { return null; } } set { if (base.Columns.ContainsKey(5)) { base.Columns[5] = value; } else { base.Columns.Add(5, value); } } }
+	public System.Object Interfacesextendedspeed { get { if (base.Columns.ContainsKey(5)) { return base.Columns[5]; } else { return null; } } set { if (base.Columns.ContainsKey(5)) { base.Columns[5] = value; } else { base.Columns.Add(5, value); } } }
 	/// <summary>PID: 57 | Type: read</summary>
 	[EditorBrowsable(EditorBrowsableState.Never)]
-	public System.Object Interfacecalculatedspeed_57 { get { if (base.Columns.ContainsKey(6)) { return base.Columns[6]; } else { return null; } } set { if (base.Columns.ContainsKey(6)) { base.Columns[6] = value; } else { base.Columns.Add(6, value); } } }
+	public System.Object Interfacescalculatedspeed_57 { get { if (base.Columns.ContainsKey(6)) { return base.Columns[6]; } else { return null; } } set { if (base.Columns.ContainsKey(6)) { base.Columns[6] = value; } else { base.Columns.Add(6, value); } } }
 	/// <summary>PID: 57 | Type: read</summary>
-	public System.Object Interfacecalculatedspeed { get { if (base.Columns.ContainsKey(6)) { return base.Columns[6]; } else { return null; } } set { if (base.Columns.ContainsKey(6)) { base.Columns[6] = value; } else { base.Columns.Add(6, value); } } }
-	public InterfacetableQActionRow() : base(0, 7) { }
-	public InterfacetableQActionRow(System.Object[] oRow) : base(0, 7, oRow) { }
-	public static implicit operator InterfacetableQActionRow(System.Object[] source) { return new InterfacetableQActionRow(source); }
-	public static implicit operator System.Object[](InterfacetableQActionRow source) { return source.ToObjectArray(); }
+	public System.Object Interfacescalculatedspeed { get { if (base.Columns.ContainsKey(6)) { return base.Columns[6]; } else { return null; } } set { if (base.Columns.ContainsKey(6)) { base.Columns[6] = value; } else { base.Columns.Add(6, value); } } }
+	public InterfacestableQActionRow() : base(0, 7) { }
+	public InterfacestableQActionRow(System.Object[] oRow) : base(0, 7, oRow) { }
+	public static implicit operator InterfacestableQActionRow(System.Object[] source) { return new InterfacestableQActionRow(source); }
+	public static implicit operator System.Object[](InterfacestableQActionRow source) { return source.ToObjectArray(); }
 }
 }
