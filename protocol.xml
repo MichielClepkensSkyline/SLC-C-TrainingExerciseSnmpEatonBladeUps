@@ -511,7 +511,7 @@ Any inquiries can be addressed to:
 			</ArrayOptions>
 			<Information>
 				<Subtext>
-					<![CDATA[A list of interface entries.  The number of entries is given by the value of ifNumber.]]>
+					<![CDATA[A list of interface entries. The number of entries is given by the value of ifNumber.]]>
 				</Subtext>
 			</Information>
 			<SNMP>
@@ -1421,7 +1421,9 @@ Any inquiries can be addressed to:
 			<Description>Calculated Speed (Interfaces)</Description>
 			<Type>read</Type>
 			<Information>
-				<Subtext>Represents correct interface speed which is calculated based on interface and extended interface speed (measured in Mbps).</Subtext>
+				<Subtext>
+					<![CDATA[Represents correct interface speed which is calculated based on interface and extended interface speed (measured in Mbps).]]>
+				</Subtext>
 			</Information>
 			<Interprete>
 				<RawType>numeric text</RawType>
@@ -1470,8 +1472,8 @@ Any inquiries can be addressed to:
 			</Content>
 		</Group>
 		<Group id="50">
-			<Name>Interface Table</Name>
-			<Description>Interface Table</Description>
+			<Name>Interfaces Table</Name>
+			<Description>Interfaces Table</Description>
 			<Type>poll</Type>
 			<Content>
 				<Param>50</Param>
