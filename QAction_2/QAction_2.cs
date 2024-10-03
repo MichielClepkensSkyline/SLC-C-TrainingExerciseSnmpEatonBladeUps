@@ -24,8 +24,6 @@ public static class QAction
         {
 			int triggerPID = protocol.GetTriggerParameter();
 
-			protocol.Log($"QA{protocol.QActionID}|¸TESTINGTESTING|{triggerPID}", LogType.Error, LogLevel.NoLogging);
-
 			if (triggerPID == Parameter.Interfacetable.tablePid)
 			{
 				HandleTableDataCalculations(protocol, triggerPID);
