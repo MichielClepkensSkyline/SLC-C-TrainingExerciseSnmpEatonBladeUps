@@ -71,7 +71,7 @@ Any inquiries can be addressed to:
 			<Description>Execute QAction On Polled Null Values</Description>
 			<Type>dummy</Type>
 		</Param>
-
+		
 		<Param id="8">
 			<Name>titleEndGeneric</Name>
 			<Type>fixed</Type>
@@ -94,7 +94,7 @@ Any inquiries can be addressed to:
 				<Type options="end">title</Type>
 			</Measurement>
 		</Param>
-
+		
 		<Param id="9">
 			<Name>systemTitle</Name>
 			<Description>System Information</Description>
@@ -186,7 +186,7 @@ Any inquiries can be addressed to:
 				<Type options="time">number</Type>
 			</Measurement>
 		</Param>
-
+		
 		<Param id="12">
 			<Name>upsDeviceTitle</Name>
 			<Description>UPS Device Monitoring</Description>
@@ -495,7 +495,7 @@ Any inquiries can be addressed to:
 				<CH>61</CH>
 			</Alarm>
 		</Param>
-
+		
 		<Param id="50" trending="false">
 			<Name>interfacesTable</Name>
 			<Description>Interfaces</Description>
@@ -529,7 +529,7 @@ Any inquiries can be addressed to:
 				</Positions>
 			</Display>
 			<Measurement>
-				<Type options="tab=columns:51|0-52|1-53|2-55|4-54|3-56|5-57|6,width:100-116-144-120-120-109-239,sort:INT-STRING-INT-INT-INT-INT-INT,lines:5,filter:true">table</Type>
+				<Type options="tab=columns:51|0-52|1-53|2-55|4-54|3-56|5-57|6,width:100-116-144-120-0-0-239,sort:INT-STRING-INT-INT-INT-INT-INT,lines:5,filter:true">table</Type>
 			</Measurement>
 		</Param>
 		<Param id="51" trending="false">
