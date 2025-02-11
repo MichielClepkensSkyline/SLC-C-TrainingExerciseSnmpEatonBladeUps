@@ -1970,9 +1970,9 @@ interface hardware/software.]]>
 							<MajorVersion id="0">
 								<MinorVersions>
 									<MinorVersion id="1">
-										<Date>2025-01-09</Date>
+										<Date>2025-11-02</Date>
 										<Provider>
-											<Author>XXX</Author>
+											<Author>TSE</Author>
 											<Company>Skyline Communications</Company>
 										</Provider>
 										<Changes>
