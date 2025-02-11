@@ -1635,6 +1635,18 @@ zero.]]>
 				<Type>double</Type>
 				<LengthType>next param</LengthType>
 			</Interprete>
+			<Alarm>
+				<Monitored>true</Monitored>
+				<CL></CL>
+				<MaL></MaL>
+				<MiL></MiL>
+				<WaL></WaL>
+				<Normal>1000</Normal>
+				<WaH></WaH>
+				<MiH></MiH>
+				<MaH></MaH>
+				<CH></CH>
+			</Alarm>
 			<Display>
 				<Units>Mbps</Units>
 				<RTDisplay>true</RTDisplay>
