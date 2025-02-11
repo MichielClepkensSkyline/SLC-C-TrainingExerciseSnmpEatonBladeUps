@@ -28,11 +28,13 @@ public static class QAction
 			{
 				if (Convert.ToInt64(speed[i])>=Int32.MaxValue)
 					speed[i] = calcSpeed[i];
+                else
+					speed[i] = Convert.ToInt32(speed[i]) / 1000;
 			}
 
-			protocol.iftable.SetColumn(Parameter.Iftable.Pid.iftablespeed_204, protocol.iftable.Keys, speed);
+			protocol.iftable.SetColumn(Parameter.Iftable.Pid.ifrealspeed_208, protocol.iftable.Keys, speed);
 
-         }
+        }
         catch (Exception ex)
 		{
 			protocol.Log($"QA{protocol.QActionID}|{protocol.GetTriggerParameter()}|Run|Exception thrown:{Environment.NewLine}{ex}", LogType.Error, LogLevel.NoLogging);
