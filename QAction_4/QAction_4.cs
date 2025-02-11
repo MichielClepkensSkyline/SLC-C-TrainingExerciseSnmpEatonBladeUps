@@ -30,7 +30,7 @@ public static class QAction
 					speed[i] = calcSpeed[i];
 			}
 
-            protocol.iftable.SetColumn(Parameter.Iftable.Pid.iftablespeed_204, protocol.iftable.Keys, speed);
+			protocol.iftable.SetColumn(Parameter.Iftable.Pid.iftablespeed_204, protocol.iftable.Keys, speed);
 
          }
         catch (Exception ex)

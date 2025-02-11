@@ -227,13 +227,14 @@ re-initialized.]]>
 			<Name>ifTable</Name>
 			<Description>Iftable</Description>
 			<Type>array</Type>
-			<ArrayOptions index="0">
+			<ArrayOptions index="0" options=";naming=/202">
 				<ColumnOption idx="0" pid="201" type="snmp" options="" />
 				<ColumnOption idx="1" pid="202" type="snmp" options="" />
 				<ColumnOption idx="2" pid="203" type="snmp" options="" />
 				<ColumnOption idx="3" pid="204" type="snmp" options="" />
 				<ColumnOption idx="4" pid="205" type="snmp" options="" />
 				<ColumnOption idx="5" pid="206" type="snmp" options="" />
+				<ColumnOption idx="6" pid="207" type="displaykey" options="" />
 				
 			</ArrayOptions>
 			<Information>
@@ -257,12 +258,12 @@ is given by the value of ifNumber.]]>
 				</Positions>
 			</Display>
 			<Measurement>
-				<Type options="tab=columns:201|0-202|1-203|2-204|3-205|4,width:118-100-195-100-115,sort:INT-STRING-INT-INT-INT,lines:20,filter:true">table</Type>
+				<Type options="tab=columns:201|0-203|2-204|3-205|4-207|6,width:118-195-100-115-100,sort:INT-INT-INT-INT-STRING,lines:20,filter:true">table</Type>
 			</Measurement>
 		</Param>
 		<Param id="201" trending="false">
 			<Name>ifTableIndex</Name>
-			<Description>Index [IDX] (If)</Description>
+			<Description>Index</Description>
 			<Information>
 				<Subtext>
 					<![CDATA[This is the SNMP instance of the table. Format: [ifIndex].
@@ -312,7 +313,7 @@ interface hardware/software.]]>
 				<Type>octetstring</Type>
 			</SNMP>
 			<Display>
-				<RTDisplay>true</RTDisplay>
+				<RTDisplay>false</RTDisplay>
 				<Range>
 					<Low>0</Low>
 					<High>255</High>
@@ -1481,6 +1482,10 @@ zero.]]>
 			<Display>
 				<Units>Mbps</Units>
 				<RTDisplay>true</RTDisplay>
+				<Range>
+					<Low>0</Low>
+					<High>50000000</High>
+				</Range>
 			</Display>
 			<Measurement>
 				<Type>number</Type>
@@ -1567,9 +1572,44 @@ zero.]]>
 			<Display>
 				<Units>Mbps</Units>
 				<RTDisplay>false</RTDisplay>
+				<Range>
+					<Low>0</Low>
+					<High>80000</High>
+				</Range>
 			</Display>
 			<Measurement>
 				<Type>number</Type>
+			</Measurement>
+		</Param>
+		
+		
+		
+		<Param id="207" trending="false">
+			<Name>ifDisplaykey</Name>
+			<Description>Displaykey</Description>
+			<Information>
+				<Subtext>
+					<![CDATA[A textual string containing information about the
+interface.  This string should include the name of the
+manufacturer, the product name and the version of the
+interface hardware/software.]]>
+				</Subtext>
+			</Information>
+			<Type>read</Type>
+			<Interprete>
+				<RawType>other</RawType>
+				<Type>string</Type>
+				<LengthType>next param</LengthType>
+			</Interprete>
+			<Display>
+				<RTDisplay>true</RTDisplay>
+				<Range>
+					<Low>0</Low>
+					<High>255</High>
+				</Range>
+			</Display>
+			<Measurement>
+				<Type>string</Type>
 			</Measurement>
 		</Param>
 		
@@ -1593,7 +1633,7 @@ zero.]]>
 				<MaL></MaL>
 				<MiL></MiL>
 				<WaL></WaL>
-				<Normal></Normal>
+				<Normal>50</Normal>
 				<WaH></WaH>
 				<MiH></MiH>
 				<MaH></MaH>
@@ -1606,7 +1646,7 @@ zero.]]>
 			</SNMP>
 			<Display>
 				<RTDisplay>true</RTDisplay>
-				<Units>percent</Units>
+				<Units>%</Units>
 				<Range>
 					<Low>0</Low>
 					<High>100</High>
@@ -1643,7 +1683,7 @@ zero.]]>
 				<MaL></MaL>
 				<MiL></MiL>
 				<WaL></WaL>
-				<Normal></Normal>
+				<Normal>500</Normal>
 				<WaH></WaH>
 				<MiH></MiH>
 				<MaH></MaH>
@@ -1656,7 +1696,7 @@ zero.]]>
 			</SNMP>
 			<Display>
 				<RTDisplay>true</RTDisplay>
-				<Units>0.1 Hertz</Units>
+				<Units>Hz</Units>
 				<Range>
 					<Low>0</Low>
 					<High>2147483647</High>
@@ -1693,7 +1733,7 @@ zero.]]>
 				<MaL></MaL>
 				<MiL></MiL>
 				<WaL></WaL>
-				<Normal></Normal>
+				<Normal>3</Normal>
 				<WaH></WaH>
 				<MiH></MiH>
 				<MaH></MaH>
@@ -1742,7 +1782,7 @@ zero.]]>
 				<MaL></MaL>
 				<MiL></MiL>
 				<WaL></WaL>
-				<Normal></Normal>
+				<Normal>10</Normal>
 				<WaH></WaH>
 				<MiH></MiH>
 				<MaH></MaH>
@@ -1755,7 +1795,7 @@ zero.]]>
 			</SNMP>
 			<Display>
 				<RTDisplay>true</RTDisplay>
-				<Units>percent</Units>
+				<Units>%</Units>
 				<Range>
 					<Low>0</Low>
 					<High>200</High>
@@ -1792,7 +1832,7 @@ zero.]]>
 				<MaL></MaL>
 				<MiL></MiL>
 				<WaL></WaL>
-				<Normal></Normal>
+				<Normal>500</Normal>
 				<WaH></WaH>
 				<MiH></MiH>
 				<MaH></MaH>
@@ -1805,7 +1845,7 @@ zero.]]>
 			</SNMP>
 			<Display>
 				<RTDisplay>true</RTDisplay>
-				<Units>0.1 Hertz</Units>
+				<Units>Hz</Units>
 				<Range>
 					<Low>0</Low>
 					<High>2147483647</High>
