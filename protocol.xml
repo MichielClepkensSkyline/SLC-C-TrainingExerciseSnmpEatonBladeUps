@@ -55,7 +55,7 @@ Any inquiries can be addressed to:
 	<DeviceOID>00</DeviceOID>
 	<ElementType>Example</ElementType>
 	<Type relativeTimers="true">snmpv2</Type>
-	<!-- SuppressValidator 1.22.6 irelevent
+	<!-- SuppressValidator 1.22.6 irrelevant
  -->
 	<Display defaultPage="General" pageOrder="General" wideColumnPages=""/>
 	<!-- /SuppressValidator 1.22.6 -->
@@ -96,10 +96,6 @@ and networking software.]]>
 			</SNMP>
 			<Display>
 				<RTDisplay>true</RTDisplay>
-				<Range>
-					<Low>0</Low>
-					<High>255</High>
-				</Range>
 				<Positions>
 					<Position>
 						<Page>General</Page>
@@ -169,10 +165,7 @@ re-initialized.]]>
 			</SNMP>
 			<Display>
 				<RTDisplay>true</RTDisplay>
-				<Range>
-					<Low>0</Low>
-					<High>31</High>
-				</Range>
+			
 				<Positions>
 					<Position>
 						<Page>General</Page>
@@ -206,10 +199,6 @@ re-initialized.]]>
 			</SNMP>
 			<Display>
 				<RTDisplay>true</RTDisplay>
-				<Range>
-					<Low>0</Low>
-					<High>63</High>
-				</Range>
 				<Positions>
 					<Position>
 						<Page>General</Page>
@@ -314,10 +303,6 @@ interface hardware/software.]]>
 			</SNMP>
 			<Display>
 				<RTDisplay>true</RTDisplay>
-				<Range>
-					<Low>0</Low>
-					<High>255</High>
-				</Range>
 			</Display>
 			<Measurement>
 				<Type>string</Type>
@@ -1601,17 +1586,14 @@ interface hardware/software.]]>
 			</Interprete>
 			<Display>
 				<RTDisplay>true</RTDisplay>
-				<Range>
-					<Low>0</Low>
-					<High>255</High>
-				</Range>
+			
 			</Display>
 			<Measurement>
 				<Type>string</Type>
 			</Measurement>
 		</Param>
 		
-		<Param id="208" trending="false">
+		<Param id="208" trending="true">
 			<Name>ifRealSpeed</Name>
 			<Description>Interface Speed</Description>
 			<Information>
@@ -1660,7 +1642,7 @@ zero.]]>
 			</Measurement>
 		</Param>
 		
-		<Param id="300" trending="false">
+		<Param id="300" trending="true">
 			<Name>xupsBatCapacity</Name>
 			<Description>Xups Bat Capacity</Description>
 			<Information>
@@ -1710,7 +1692,7 @@ zero.]]>
 				<Type>number</Type>
 			</Measurement>
 		</Param>
-		<Param id="301" trending="false">
+		<Param id="301" trending="true">
 			<Name>xupsInputFrequency</Name>
 			<Description>Input Frequency</Description>
 			<Information>
@@ -1762,7 +1744,7 @@ zero.]]>
 				<Type>number</Type>
 			</Measurement>
 		</Param>
-		<Param id="302" trending="false">
+		<Param id="302" trending="true">
 			<Name>xupsInputNumPhases</Name>
 			<Description>Number of Input Phases</Description>
 			<Information>
@@ -1815,7 +1797,7 @@ zero.]]>
 				<Type>number</Type>
 			</Measurement>
 		</Param>
-		<Param id="303" trending="false">
+		<Param id="303" trending="true">
 			<Name>xupsOutputLoad</Name>
 			<Description>Output Load</Description>
 			<Information>
@@ -1865,7 +1847,7 @@ zero.]]>
 				<Type>number</Type>
 			</Measurement>
 		</Param>
-		<Param id="304" trending="false">
+		<Param id="304" trending="true">
 			<Name>xupsOutputFrequency</Name>
 			<Description>Output Frequency</Description>
 			<Information>
