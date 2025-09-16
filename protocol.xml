@@ -246,7 +246,7 @@ is given by the value of ifNumber.]]>
 				</Positions>
 			</Display>
 			<Measurement>
-				<Type options="tab=columns:2001|0-2002|1-2004|3-2005|4,width:100-195-126-107,sort:INT-INT-INT-INT,lines:20,filter:true">table</Type>
+				<Type options="tab=columns:2001|0-2002|1-2004|3-2005|4-2003|2,width:100-195-126-107-105,sort:INT-INT-INT-INT-INT,lines:20,filter:true">table</Type>
 			</Measurement>
 		</Param>
 		<Param id="2001" trending="false">
@@ -1435,7 +1435,7 @@ zero.]]>
 				<Type>gauge32</Type>
 			</SNMP>
 			<Display>
-				<RTDisplay>false</RTDisplay>
+				<RTDisplay>true</RTDisplay>
 				<Range>
 					<Low>0</Low>
 					<High>4294967295</High>
@@ -1751,7 +1751,7 @@ zero.]]>
 				</Positions>
 			</Display>
 			<Measurement>
-				<Type>number</Type>
+				<Type>analog</Type>
 			</Measurement>
 		</Param>
 		
@@ -1850,7 +1850,7 @@ bandwidth, this object should be zero.]]>
 
 	<QActions>
 		<QAction id="1" name="Precompiled Code" encoding="csharp" options="precompile" />
-		<QAction id="2" name="Calculate Interface Speed" encoding="csharp" triggers="">
+		<QAction id="2" name="Calculate Interface Speed" encoding="csharp" triggers="2003" row="true">
 		</QAction>
 	</QActions>
 
