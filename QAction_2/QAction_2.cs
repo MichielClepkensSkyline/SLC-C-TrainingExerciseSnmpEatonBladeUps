@@ -21,7 +21,7 @@ public static class QAction
 		{
 			string rowPK = protocol.RowKey();
 			var interfaceSpeed = protocol.GetCell(Parameter.Interfacetable.tablePid, rowPK, Parameter.Interfacetable.Idx.interfacetablespeed_2003);
-			protocol.Log($"QA{protocol.QActionID}|{protocol.GetTriggerParameter()}| this is the interface row key: {rowPK} and speed: {Convert.ToDouble(interfaceSpeed)}", LogType.Error, LogLevel.NoLogging);
+			protocol.Log($"QA{protocol.QActionID}|{protocol.GetTriggerParameter()}| this is the interface row key: {rowPK} and speed: {Convert.ToUInt32(interfaceSpeed)}", LogType.Error, LogLevel.NoLogging);
 		}
 		catch (Exception ex)
 		{
