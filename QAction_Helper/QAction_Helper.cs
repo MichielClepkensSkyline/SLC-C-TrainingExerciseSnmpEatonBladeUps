@@ -119,6 +119,44 @@ public static class Parameter
 			public const int iftableadminstatus = 3;
 		}
 	}
+	public class Extendedinterfacetable
+	{
+		/// <summary>PID: 4000</summary>
+		public const int tablePid = 4000;
+		/// <summary>IDX: 0</summary>
+		public const int indexColumn = 0;
+		/// <summary>PID: 4001</summary>
+		public const int indexColumnPid = 4001;
+		public class Pid
+		{
+			/// <summary>PID: 4001 | Type: read</summary>
+			[EditorBrowsable(EditorBrowsableState.Never)]
+			public const int extendedinterfaceinstance_4001 = 4001;
+			/// <summary>PID: 4001 | Type: read</summary>
+			public const int extendedinterfaceinstance = 4001;
+			/// <summary>PID: 4002 | Type: read</summary>
+			[EditorBrowsable(EditorBrowsableState.Never)]
+			public const int extendedinterfacehighspeed_4002 = 4002;
+			/// <summary>PID: 4002 | Type: read</summary>
+			public const int extendedinterfacehighspeed = 4002;
+			public class Write
+			{
+			}
+		}
+		public class Idx
+		{
+			/// <summary>IDX: 0 | Type: read</summary>
+			[EditorBrowsable(EditorBrowsableState.Never)]
+			public const int extendedinterfaceinstance_4001 = 0;
+			/// <summary>IDX: 0 | Type: read</summary>
+			public const int extendedinterfaceinstance = 0;
+			/// <summary>IDX: 1 | Type: read</summary>
+			[EditorBrowsable(EditorBrowsableState.Never)]
+			public const int extendedinterfacehighspeed_4002 = 1;
+			/// <summary>IDX: 1 | Type: read</summary>
+			public const int extendedinterfacehighspeed = 1;
+		}
+	}
 }
 public class WriteParameters
 {
@@ -134,6 +172,8 @@ public interface SLProtocolExt : SLProtocol
 {
 	/// <summary>PID: 2000</summary>
 	IftableQActionTable iftable { get; set; }
+	/// <summary>PID: 4000</summary>
+	ExtendedinterfacetableQActionTable extendedinterfacetable { get; set; }
 	object Systemdescription_1000 { get; set; }
 	object Systemdescription { get; set; }
 	object Systemuptime_1001 { get; set; }
@@ -161,12 +201,18 @@ public interface SLProtocolExt : SLProtocol
 	object Xupsoutputload { get; set; }
 	object Xupsoutputfrequency_3004 { get; set; }
 	object Xupsoutputfrequency { get; set; }
+	object Extendedinterfaceinstance_4001 { get; set; }
+	object Extendedinterfaceinstance { get; set; }
+	object Extendedinterfacehighspeed_4002 { get; set; }
+	object Extendedinterfacehighspeed { get; set; }
 	WriteParameters Write { get; set; }
 }
 public class ConcreteSLProtocolExt : ConcreteSLProtocol, SLProtocolExt
 {
 	/// <summary>PID: 2000</summary>
 	public IftableQActionTable iftable { get; set; }
+	/// <summary>PID: 4000</summary>
+	public ExtendedinterfacetableQActionTable extendedinterfacetable { get; set; }
 	/// <summary>PID: 1000  | Type: read</summary>
 	[EditorBrowsable(EditorBrowsableState.Never)]
 	public System.Object Systemdescription_1000 {get { return GetParameter(1000); }set { SetParameter(1000, value); }}
@@ -235,10 +281,21 @@ public class ConcreteSLProtocolExt : ConcreteSLProtocol, SLProtocolExt
 	public System.Object Xupsoutputfrequency_3004 {get { return GetParameter(3004); }set { SetParameter(3004, value); }}
 	/// <summary>PID: 3004  | Type: read</summary>
 	public System.Object Xupsoutputfrequency {get { return GetParameter(3004); }set { SetParameter(3004, value); }}
+	/// <summary>PID: 4001  | Type: read</summary>
+	[EditorBrowsable(EditorBrowsableState.Never)]
+	public System.Object Extendedinterfaceinstance_4001 {get { return GetParameter(4001); }set { SetParameter(4001, value); }}
+	/// <summary>PID: 4001  | Type: read</summary>
+	public System.Object Extendedinterfaceinstance {get { return GetParameter(4001); }set { SetParameter(4001, value); }}
+	/// <summary>PID: 4002  | Type: read</summary>
+	[EditorBrowsable(EditorBrowsableState.Never)]
+	public System.Object Extendedinterfacehighspeed_4002 {get { return GetParameter(4002); }set { SetParameter(4002, value); }}
+	/// <summary>PID: 4002  | Type: read</summary>
+	public System.Object Extendedinterfacehighspeed {get { return GetParameter(4002); }set { SetParameter(4002, value); }}
 	public WriteParameters Write { get; set; }
 	public ConcreteSLProtocolExt()
 	{
 		iftable = new IftableQActionTable(this, 2000, "iftable");
+		extendedinterfacetable = new ExtendedinterfacetableQActionTable(this, 4000, "extendedinterfacetable");
 		Write = new WriteParameters(this);
 	}
 }
@@ -248,6 +305,13 @@ public class IftableQActionTable : QActionTable, IEnumerable<IftableQActionRow>
 	public IftableQActionTable(SLProtocol protocol, int tableId, string tableName) : base(protocol, tableId, tableName) { }
 	IEnumerator IEnumerable.GetEnumerator() { return (IEnumerator) GetEnumerator(); }
 	public IEnumerator<IftableQActionRow> GetEnumerator() { return new QActionTableEnumerator<IftableQActionRow>(this); }
+}
+/// <summary>IDX: 0</summary>
+public class ExtendedinterfacetableQActionTable : QActionTable, IEnumerable<ExtendedinterfacetableQActionRow>
+{
+	public ExtendedinterfacetableQActionTable(SLProtocol protocol, int tableId, string tableName) : base(protocol, tableId, tableName) { }
+	IEnumerator IEnumerable.GetEnumerator() { return (IEnumerator) GetEnumerator(); }
+	public IEnumerator<ExtendedinterfacetableQActionRow> GetEnumerator() { return new QActionTableEnumerator<ExtendedinterfacetableQActionRow>(this); }
 }
 /// <summary>IDX: 0</summary>
 public class IftableQActionRow : QActionTableRow
@@ -276,5 +340,23 @@ public class IftableQActionRow : QActionTableRow
 	public IftableQActionRow(System.Object[] oRow) : base(0, 4, oRow) { }
 	public static implicit operator IftableQActionRow(System.Object[] source) { return new IftableQActionRow(source); }
 	public static implicit operator System.Object[](IftableQActionRow source) { return source.ToObjectArray(); }
+}
+/// <summary>IDX: 0</summary>
+public class ExtendedinterfacetableQActionRow : QActionTableRow
+{
+	/// <summary>PID: 4001 | Type: read</summary>
+	[EditorBrowsable(EditorBrowsableState.Never)]
+	public System.Object Extendedinterfaceinstance_4001 { get { if (base.Columns.ContainsKey(0)) { return base.Columns[0]; } else { return null; } } set { if (base.Columns.ContainsKey(0)) { base.Columns[0] = value; } else { base.Columns.Add(0, value); } } }
+	/// <summary>PID: 4001 | Type: read</summary>
+	public System.Object Extendedinterfaceinstance { get { if (base.Columns.ContainsKey(0)) { return base.Columns[0]; } else { return null; } } set { if (base.Columns.ContainsKey(0)) { base.Columns[0] = value; } else { base.Columns.Add(0, value); } } }
+	/// <summary>PID: 4002 | Type: read</summary>
+	[EditorBrowsable(EditorBrowsableState.Never)]
+	public System.Object Extendedinterfacehighspeed_4002 { get { if (base.Columns.ContainsKey(1)) { return base.Columns[1]; } else { return null; } } set { if (base.Columns.ContainsKey(1)) { base.Columns[1] = value; } else { base.Columns.Add(1, value); } } }
+	/// <summary>PID: 4002 | Type: read</summary>
+	public System.Object Extendedinterfacehighspeed { get { if (base.Columns.ContainsKey(1)) { return base.Columns[1]; } else { return null; } } set { if (base.Columns.ContainsKey(1)) { base.Columns[1] = value; } else { base.Columns.Add(1, value); } } }
+	public ExtendedinterfacetableQActionRow() : base(0, 2) { }
+	public ExtendedinterfacetableQActionRow(System.Object[] oRow) : base(0, 2, oRow) { }
+	public static implicit operator ExtendedinterfacetableQActionRow(System.Object[] source) { return new ExtendedinterfacetableQActionRow(source); }
+	public static implicit operator System.Object[](ExtendedinterfacetableQActionRow source) { return source.ToObjectArray(); }
 }
 }
