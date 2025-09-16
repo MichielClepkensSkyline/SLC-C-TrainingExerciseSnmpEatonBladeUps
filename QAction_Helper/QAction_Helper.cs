@@ -8,6 +8,51 @@ namespace Skyline.DataMiner.Scripting
 {
 public static class Parameter
 {
+	/// <summary>PID: 1000 | Type: read</summary>
+	[EditorBrowsable(EditorBrowsableState.Never)]
+	public const int systemdescription_1000 = 1000;
+	/// <summary>PID: 1000 | Type: read</summary>
+	public const int systemdescription = 1000;
+	/// <summary>PID: 1001 | Type: read</summary>
+	[EditorBrowsable(EditorBrowsableState.Never)]
+	public const int systemuptime_1001 = 1001;
+	/// <summary>PID: 1001 | Type: read</summary>
+	public const int systemuptime = 1001;
+	/// <summary>PID: 1002 | Type: read</summary>
+	[EditorBrowsable(EditorBrowsableState.Never)]
+	public const int manufacturer_1002 = 1002;
+	/// <summary>PID: 1002 | Type: read</summary>
+	public const int manufacturer = 1002;
+	/// <summary>PID: 1003 | Type: read</summary>
+	[EditorBrowsable(EditorBrowsableState.Never)]
+	public const int model_1003 = 1003;
+	/// <summary>PID: 1003 | Type: read</summary>
+	public const int model = 1003;
+	/// <summary>PID: 1004 | Type: read</summary>
+	[EditorBrowsable(EditorBrowsableState.Never)]
+	public const int inputfrequency_1004 = 1004;
+	/// <summary>PID: 1004 | Type: read</summary>
+	public const int inputfrequency = 1004;
+	/// <summary>PID: 1005 | Type: read</summary>
+	[EditorBrowsable(EditorBrowsableState.Never)]
+	public const int numberofinputphases_1005 = 1005;
+	/// <summary>PID: 1005 | Type: read</summary>
+	public const int numberofinputphases = 1005;
+	/// <summary>PID: 1006 | Type: read</summary>
+	[EditorBrowsable(EditorBrowsableState.Never)]
+	public const int outputload_1006 = 1006;
+	/// <summary>PID: 1006 | Type: read</summary>
+	public const int outputload = 1006;
+	/// <summary>PID: 1007 | Type: read</summary>
+	[EditorBrowsable(EditorBrowsableState.Never)]
+	public const int outputfrequency_1007 = 1007;
+	/// <summary>PID: 1007 | Type: read</summary>
+	public const int outputfrequency = 1007;
+	/// <summary>PID: 1008 | Type: read</summary>
+	[EditorBrowsable(EditorBrowsableState.Never)]
+	public const int batterycapacity_1008 = 1008;
+	/// <summary>PID: 1008 | Type: read</summary>
+	public const int batterycapacity = 1008;
 	public class Write
 	{
 	}
@@ -23,12 +68,75 @@ public class WriteParameters
 public interface SLProtocolExt : SLProtocol
 {
 	object Afterstartup_dummy { get; set; }
+	object Systemdescription_1000 { get; set; }
+	object Systemdescription { get; set; }
+	object Systemuptime_1001 { get; set; }
+	object Systemuptime { get; set; }
+	object Manufacturer_1002 { get; set; }
+	object Manufacturer { get; set; }
+	object Model_1003 { get; set; }
+	object Model { get; set; }
+	object Inputfrequency_1004 { get; set; }
+	object Inputfrequency { get; set; }
+	object Numberofinputphases_1005 { get; set; }
+	object Numberofinputphases { get; set; }
+	object Outputload_1006 { get; set; }
+	object Outputload { get; set; }
+	object Outputfrequency_1007 { get; set; }
+	object Outputfrequency { get; set; }
+	object Batterycapacity_1008 { get; set; }
+	object Batterycapacity { get; set; }
 	WriteParameters Write { get; set; }
 }
 public class ConcreteSLProtocolExt : ConcreteSLProtocol, SLProtocolExt
 {
 	/// <summary>PID: 2  | Type: dummy</summary>
 	public System.Object Afterstartup_dummy {get { return GetParameter(2); }set { SetParameter(2, value); }}
+	/// <summary>PID: 1000  | Type: read</summary>
+	[EditorBrowsable(EditorBrowsableState.Never)]
+	public System.Object Systemdescription_1000 {get { return GetParameter(1000); }set { SetParameter(1000, value); }}
+	/// <summary>PID: 1000  | Type: read</summary>
+	public System.Object Systemdescription {get { return GetParameter(1000); }set { SetParameter(1000, value); }}
+	/// <summary>PID: 1001  | Type: read</summary>
+	[EditorBrowsable(EditorBrowsableState.Never)]
+	public System.Object Systemuptime_1001 {get { return GetParameter(1001); }set { SetParameter(1001, value); }}
+	/// <summary>PID: 1001  | Type: read</summary>
+	public System.Object Systemuptime {get { return GetParameter(1001); }set { SetParameter(1001, value); }}
+	/// <summary>PID: 1002  | Type: read</summary>
+	[EditorBrowsable(EditorBrowsableState.Never)]
+	public System.Object Manufacturer_1002 {get { return GetParameter(1002); }set { SetParameter(1002, value); }}
+	/// <summary>PID: 1002  | Type: read</summary>
+	public System.Object Manufacturer {get { return GetParameter(1002); }set { SetParameter(1002, value); }}
+	/// <summary>PID: 1003  | Type: read</summary>
+	[EditorBrowsable(EditorBrowsableState.Never)]
+	public System.Object Model_1003 {get { return GetParameter(1003); }set { SetParameter(1003, value); }}
+	/// <summary>PID: 1003  | Type: read</summary>
+	public System.Object Model {get { return GetParameter(1003); }set { SetParameter(1003, value); }}
+	/// <summary>PID: 1004  | Type: read</summary>
+	[EditorBrowsable(EditorBrowsableState.Never)]
+	public System.Object Inputfrequency_1004 {get { return GetParameter(1004); }set { SetParameter(1004, value); }}
+	/// <summary>PID: 1004  | Type: read</summary>
+	public System.Object Inputfrequency {get { return GetParameter(1004); }set { SetParameter(1004, value); }}
+	/// <summary>PID: 1005  | Type: read</summary>
+	[EditorBrowsable(EditorBrowsableState.Never)]
+	public System.Object Numberofinputphases_1005 {get { return GetParameter(1005); }set { SetParameter(1005, value); }}
+	/// <summary>PID: 1005  | Type: read</summary>
+	public System.Object Numberofinputphases {get { return GetParameter(1005); }set { SetParameter(1005, value); }}
+	/// <summary>PID: 1006  | Type: read</summary>
+	[EditorBrowsable(EditorBrowsableState.Never)]
+	public System.Object Outputload_1006 {get { return GetParameter(1006); }set { SetParameter(1006, value); }}
+	/// <summary>PID: 1006  | Type: read</summary>
+	public System.Object Outputload {get { return GetParameter(1006); }set { SetParameter(1006, value); }}
+	/// <summary>PID: 1007  | Type: read</summary>
+	[EditorBrowsable(EditorBrowsableState.Never)]
+	public System.Object Outputfrequency_1007 {get { return GetParameter(1007); }set { SetParameter(1007, value); }}
+	/// <summary>PID: 1007  | Type: read</summary>
+	public System.Object Outputfrequency {get { return GetParameter(1007); }set { SetParameter(1007, value); }}
+	/// <summary>PID: 1008  | Type: read</summary>
+	[EditorBrowsable(EditorBrowsableState.Never)]
+	public System.Object Batterycapacity_1008 {get { return GetParameter(1008); }set { SetParameter(1008, value); }}
+	/// <summary>PID: 1008  | Type: read</summary>
+	public System.Object Batterycapacity {get { return GetParameter(1008); }set { SetParameter(1008, value); }}
 	public WriteParameters Write { get; set; }
 	public ConcreteSLProtocolExt()
 	{
