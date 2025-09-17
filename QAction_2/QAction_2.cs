@@ -18,7 +18,7 @@ public static class QAction
     {
         try
         {
-
+            protocol.Log($"QA{protocol.QActionID}|Run|Started QAction 2", LogType.Error, LogLevel.NoLogging);
         }
         catch (Exception ex)
         {

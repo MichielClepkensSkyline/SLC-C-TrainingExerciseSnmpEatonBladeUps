@@ -14,45 +14,41 @@ public static class QAction
 {
 	/// <summary>
 	/// The QAction entry point.
+	/// This method only updates one row at a time.
+	/// Performance wise this is best in case many rows get updated not to often.
 	/// </summary>
 	/// <param name="protocol">Link with SLProtocol process.</param>
 	public static void Run(SLProtocolExt protocol)
 	{
 		try
 		{
-			// Enkel updaten van rij die QA heeft doen triggeren (op deze manier is de methode efficienter)
-			string rowKey = protocol.RowKey();
-			object speedObject = protocol.GetCell(protocol.interfacetable.TableId, rowKey, 2);
-			uint speed = Convert.ToUInt32(speedObject);
-			protocol.Log($"QA{protocol.QActionID}|RUN|{speed}", LogType.Error, LogLevel.NoLogging);
-			if (speed == 4294967295)
-			{
-				speedObject = protocol.GetCell(protocol.interfacetable.TableId, rowKey, 5);
-				speed = Convert.ToUInt32(speedObject);
-				protocol.SetCell(protocol.interfacetable.TableId, rowKey, 4, speed);
-				//protocol.Log($"QA{protocol.QActionID}|Run|ExtendedTable needed", LogType.Error, LogLevel.NoLogging);
-			}
-			else
-			{
-				protocol.SetCell(protocol.interfacetable.TableId, rowKey, 4, speed/1000000);
-			}
+			// Get the changed column and calculate the speed
+            string rowKey = protocol.RowKey();
+            uint speed = CalculateSpeed(protocol, rowKey);
 
-			/*
-			List<uint> interfaceSpeeds = new List<uint>();
-            object[] speeds = protocol.GetColumn(protocol.interfacetable.TableId, 2);
-            foreach (object sp in speeds)
-			{
-				uint speed = Convert.ToUInt32(sp);
-				
-			}
-
-            protocol.Log($"QA{protocol.QActionID}|Run|{protocol.RowKey()}", LogType.Error, LogLevel.NoLogging);
-            protocol.RowKey();
-			//protocol.Log($"QA{protocol.QActionID}|Run|{interfaceSpeeds[0]}", LogType.Error, LogLevel.NoLogging);*/
+            protocol.SetCell(protocol.interfacetable.TableId, rowKey, Parameter.Interfacetable.Idx.interfacetableinterfacespeed, speed);
 		}
 		catch (Exception ex)
 		{
 			protocol.Log($"QA{protocol.QActionID}|{protocol.GetTriggerParameter()}|Run|Exception thrown:{Environment.NewLine}{ex}", LogType.Error, LogLevel.NoLogging);
 		}
 	}
+
+	private static UInt32 CalculateSpeed(SLProtocolExt protocol, string rowKey)
+	{
+        object speedObject = protocol.GetCell(protocol.interfacetable.TableId, rowKey, Parameter.Interfacetable.Idx.interfacetablespeed);
+        uint speed = Convert.ToUInt32(speedObject);
+
+        if (speed == UInt32.MaxValue)
+        {
+            speedObject = protocol.GetCell(protocol.interfacetable.TableId, rowKey, Parameter.Interfacetable.Idx.interfacetableifhighspeed);
+            speed = Convert.ToUInt32(speedObject);
+        }
+		else
+		{
+			speed = speed / 1000000; // Convert from bps to Mbps
+		}
+
+        return speed;
+    }
 }
