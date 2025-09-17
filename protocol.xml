@@ -55,7 +55,7 @@ Any inquiries can be addressed to:
 	<DeviceOID>000</DeviceOID>
 	<ElementType>UPS</ElementType>
 	<Type relativeTimers="true">snmpv2</Type>
-	<Display defaultPage="General" pageOrder="General;Interfaces" wideColumnPages="General;Interfaces"/>
+	<Display defaultPage="General" pageOrder="General;Interfaces;UPS parameters" wideColumnPages=""/>
 	<SNMP includepages="true">auto</SNMP>
 
 	<Compliancies>
@@ -251,11 +251,11 @@ is given by the value of ifNumber.]]>
 				</Positions>
 			</Display>
 			<Measurement>
-				<Type options="tab=columns:101|0-102|1-103|2-104|3,width:100-195-100-100,sort:INT-STRING-INT-STRING,lines:20,filter:true">table</Type>
+				<Type options="tab=columns:101|0-102|1-103|2-104|3,width:100-195-100-115,sort:INT-STRING-INT-STRING,lines:20,filter:true">table</Type>
 			</Measurement>
 		</Param>
 		<Param id="101" trending="false">
-			<Name>ifTableIndex</Name>
+			<Name>InterfacesifTableIndex</Name>
 			<Description>Index [IDX] (Interfaces)</Description>
 			<Information>
 				<Subtext>
@@ -281,7 +281,7 @@ management system to the next re-initialization.]]>
 			</Measurement>
 		</Param>
 		<Param id="102" trending="false">
-			<Name>ifTableType</Name>
+			<Name>InterfacesifTableType</Name>
 			<Description>Type (Interfaces)</Description>
 			<Information>
 				<Subtext>
@@ -1408,7 +1408,7 @@ IANAifType textual convention.]]>
 			</Measurement>
 		</Param>
 		<Param id="103" trending="false">
-			<Name>ifTableSpeed</Name>
+			<Name>InterfacesifTableSpeed</Name>
 			<Description>Speed (Interfaces)</Description>
 			<Information>
 				<Subtext>
@@ -1444,7 +1444,7 @@ zero.]]>
 			</Measurement>
 		</Param>
 		<Param id="104" trending="false">
-			<Name>ifTableAdminStatus</Name>
+			<Name>InterfacesifTableAdminStatus</Name>
 			<Description>Admin Status (If)</Description>
 			<Information>
 				<Subtext>
@@ -1492,6 +1492,301 @@ the down(2) state).]]>
 			</Measurement>
 		</Param>
 		
+		<Param id="200" trending="false">
+			<Name>ExtendedInterfaceTable</Name>
+			<Description>Extended Interface</Description>
+			<Type>array</Type>
+			<ArrayOptions index="0">
+				<ColumnOption idx="0" pid="201" type="snmp" options="" />
+				<ColumnOption idx="1" pid="202" type="snmp" options="" />
+			</ArrayOptions>
+			<Information>
+				<Subtext>
+					<![CDATA[A list of interface entries.  The number of entries
+is given by the value of ifNumber.  This table
+contains additional objects for the interface table.]]>
+				</Subtext>
+			</Information>
+			<SNMP>
+				<Enabled>true</Enabled>
+				<OID type="complete" options="instance;multipleGetNext">1.3.6.1.2.1.31.1.1</OID>
+			</SNMP>
+			<Display>
+				<RTDisplay>true</RTDisplay>
+				<Positions>
+					<Position>
+						<Page>Interfaces</Page>
+						<Column>1</Column>
+						<Row>0</Row>
+					</Position>
+				</Positions>
+			</Display>
+			<Measurement>
+				<Type options="tab=columns:201|0-202|1,width:153-138,sort:INT-INT,lines:20,filter:true">table</Type>
+			</Measurement>
+		</Param>
+		<Param id="201" trending="false">
+			<Name>ExtendedInterfaceifXIfName</Name>
+			<Description>If Name (If X)</Description>
+			<Information>
+				<Subtext>
+					<![CDATA[The textual name of the interface.  The value of this
+object should be the name of the interface as assigned
+by the local device and should be suitable for use in
+commands entered at the device's `console'.  This
+might be a text name, such as `le0' or a simple port
+number, such as `1', depending on the interface naming
+syntax of the device.  If several entries in the
+ifTable together represent a single interface as named
+by the device, then each will have the same value of
+ifName.  Note that for an agent which responds to SNMP
+queries concerning an interface on some other
+(proxied) device, then the value of ifName for such an
+interface is the proxied device's local name for it.
+
+If there is no local name, or this object is otherwise
+not applicable, then this object contains a zero-
+length string.]]>
+				</Subtext>
+			</Information>
+			<Type>read</Type>
+			<Interprete>
+				<RawType>other</RawType>
+				<Type>string</Type>
+				<LengthType>next param</LengthType>
+			</Interprete>
+			<Display>
+				<RTDisplay>true</RTDisplay>
+			</Display>
+			<Measurement>
+				<Type>string</Type>
+			</Measurement>
+		</Param>
+		
+		<Param id="202" trending="false">
+			<Name>ExtendedInterfaceifXIfHighSpeed</Name>
+			<Description>Interface High Speed (Extended Interface)</Description>
+			<Information>
+				<Subtext>
+					<![CDATA[An estimate of the interface's current bandwidth in
+units of 1,000,000 bits per second.  If this object
+reports a value of `n' then the speed of the interface
+is somewhere in the range of `n-500,000' to
+`n+499,999'.  For interfaces which do not vary in
+bandwidth or for those where no accurate estimation
+can be made, this object should contain the nominal
+bandwidth.  For a sub-layer which has no concept of
+bandwidth, this object should be zero.]]>
+				</Subtext>
+			</Information>
+			<Type>read</Type>
+			<Interprete>
+				<RawType>numeric text</RawType>
+				<Type>double</Type>
+				<LengthType>next param</LengthType>
+			</Interprete>
+			<SNMP>
+				<Enabled>true</Enabled>
+				<OID type="complete">1.3.6.1.2.1.31.1.1.1.15</OID>
+				<Type>gauge32</Type>
+			</SNMP>
+			<Display>
+				<RTDisplay>true</RTDisplay>
+			</Display>
+			<Measurement>
+				<Type>number</Type>
+			</Measurement>
+		</Param>
+		<Param id="300" trending="false">
+			<Name>xupsInputFrequency</Name>
+			<Description>Input Frequency</Description>
+			<Information>
+				<Subtext>
+					<![CDATA[The utility line frequency in tenths of Hz.]]>
+				</Subtext>
+			</Information>
+			<Type>read</Type>
+			<Interprete>
+				<RawType>numeric text</RawType>
+				<Type>double</Type>
+				<LengthType>next param</LengthType>
+			</Interprete>
+			<SNMP>
+				<Enabled>true</Enabled>
+				<OID type="complete">1.3.6.1.4.1.534.1.3.1.0</OID>
+				<Type>integer32</Type>
+			</SNMP>
+			<Display>
+				<RTDisplay>true</RTDisplay>
+				<Units>Hz</Units>
+				<Range>
+					<Low>0</Low>
+					<High>2147483647</High>
+				</Range>
+				<Positions>
+					<Position>
+						<Page>UPS Parameters</Page>
+						<Column>0</Column>
+						<Row>0</Row>
+					</Position>
+				</Positions>
+			</Display>
+			<Measurement>
+				<Type>number</Type>
+			</Measurement>
+		</Param>
+		<Param id="301" trending="false">
+			<Name>xupsInputNumPhases</Name>
+			<Description>Xups Input Number Phases</Description>
+			<Information>
+				<Subtext>
+					<![CDATA[The number of input phases (normally 1 to 3).]]>
+				</Subtext>
+			</Information>
+			<Type>read</Type>
+			<Interprete>
+				<RawType>numeric text</RawType>
+				<Type>double</Type>
+				<LengthType>next param</LengthType>
+			</Interprete>
+			<SNMP>
+				<Enabled>true</Enabled>
+				<OID type="complete">1.3.6.1.4.1.534.1.3.3.0</OID>
+				<Type>integer32</Type>
+			</SNMP>
+			<Display>
+				<RTDisplay>true</RTDisplay>
+				<Range>
+					<Low>0</Low>
+					<High>6</High>
+				</Range>
+				<Positions>
+					<Position>
+						<Page>UPS Parameters</Page>
+						<Column>0</Column>
+						<Row>1</Row>
+					</Position>
+				</Positions>
+			</Display>
+			<Measurement>
+				<Type>number</Type>
+			</Measurement>
+		</Param>
+		<Param id="302" trending="false">
+			<Name>xupsOutputLoad</Name>
+			<Description>Xups Output Load</Description>
+			<Information>
+				<Subtext>
+					<![CDATA[The UPS output load in percent of rated capacity.]]>
+				</Subtext>
+			</Information>
+			<Type>read</Type>
+			<Interprete>
+				<RawType>numeric text</RawType>
+				<Type>double</Type>
+				<LengthType>next param</LengthType>
+			</Interprete>
+			<SNMP>
+				<Enabled>true</Enabled>
+				<OID type="complete">1.3.6.1.4.1.534.1.4.1.0</OID>
+				<Type>integer32</Type>
+			</SNMP>
+			<Display>
+				<RTDisplay>true</RTDisplay>
+				<Units>percent</Units>
+				<Range>
+					<Low>0</Low>
+					<High>200</High>
+				</Range>
+				<Positions>
+					<Position>
+						<Page>UPS Parameters</Page>
+						<Column>0</Column>
+						<Row>2</Row>
+					</Position>
+				</Positions>
+			</Display>
+			<Measurement>
+				<Type>number</Type>
+			</Measurement>
+		</Param>
+		<Param id="303" trending="false">
+			<Name>xupsOutputFrequency</Name>
+			<Description>Xups Output Frequency</Description>
+			<Information>
+				<Subtext>
+					<![CDATA[The measured UPS output frequency in tenths of Hz.]]>
+				</Subtext>
+			</Information>
+			<Type>read</Type>
+			<Interprete>
+				<RawType>numeric text</RawType>
+				<Type>double</Type>
+				<LengthType>next param</LengthType>
+			</Interprete>
+			<SNMP>
+				<Enabled>true</Enabled>
+				<OID type="complete">1.3.6.1.4.1.534.1.4.2.0</OID>
+				<Type>integer32</Type>
+			</SNMP>
+			<Display>
+				<RTDisplay>true</RTDisplay>
+				<Units>Hz</Units>
+				<Range>
+					<Low>0</Low>
+					<High>2147483647</High>
+				</Range>
+				<Positions>
+					<Position>
+						<Page>UPS Parameters</Page>
+						<Column>0</Column>
+						<Row>3</Row>
+					</Position>
+				</Positions>
+			</Display>
+			<Measurement>
+				<Type>number</Type>
+			</Measurement>
+		</Param>
+		<Param id="304" trending="false">
+			<Name>xupsBatCapacity</Name>
+			<Description>Xups Bat Capacity</Description>
+			<Information>
+				<Subtext>
+					<![CDATA[Battery percent charge.]]>
+				</Subtext>
+			</Information>
+			<Type>read</Type>
+			<Interprete>
+				<RawType>numeric text</RawType>
+				<Type>double</Type>
+				<LengthType>next param</LengthType>
+			</Interprete>
+			<SNMP>
+				<Enabled>true</Enabled>
+				<OID type="complete">1.3.6.1.4.1.534.1.2.4.0</OID>
+				<Type>integer32</Type>
+			</SNMP>
+			<Display>
+				<RTDisplay>true</RTDisplay>
+				<Units>percent</Units>
+				<Range>
+					<Low>0</Low>
+					<High>100</High>
+				</Range>
+				<Positions>
+					<Position>
+						<Page>UPS Parameters</Page>
+						<Column>0</Column>
+						<Row>4</Row>
+					</Position>
+				</Positions>
+			</Display>
+			<Measurement>
+				<Type>number</Type>
+			</Measurement>
+		</Param>
+		
 	</Params>
 
 	<QActions>
@@ -1523,6 +1818,24 @@ the down(2) state).]]>
 			<Description>Get Interface Data</Description>
 			<Content multipleGet="true">
 				<Param>100</Param>
+			</Content>
+		</Group>
+		<Group id="300">
+			<Name>GetIfXData</Name>
+			<Description>Get Extended Interface Data</Description>
+			<Content multipleGet="true">
+				<Param>200</Param>
+			</Content>
+		</Group>
+		<Group id="400">
+			<Name>GetUpsData</Name>
+			<Description>Get UPS Data</Description>
+			<Content multipleGet="true">
+				<Param>300</Param>
+				<Param>301</Param>
+				<Param>302</Param>
+				<Param>303</Param>
+				<Param>304</Param>
 			</Content>
 		</Group>
 	</Groups>
@@ -1560,6 +1873,8 @@ the down(2) state).]]>
 			<Content>
 				<Group>100</Group>
 				<Group>200</Group>
+				<Group>300</Group>
+				<Group>400</Group>
 			</Content>
 		</Timer>
 		<Timer id="2">
