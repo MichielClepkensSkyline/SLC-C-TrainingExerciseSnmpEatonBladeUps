@@ -8,6 +8,26 @@ namespace Skyline.DataMiner.Scripting
 {
 public static class Parameter
 {
+	/// <summary>PID: 3 | Type: read</summary>
+	[EditorBrowsable(EditorBrowsableState.Never)]
+	public const int sysdescr_3 = 3;
+	/// <summary>PID: 3 | Type: read</summary>
+	public const int sysdescr = 3;
+	/// <summary>PID: 4 | Type: read</summary>
+	[EditorBrowsable(EditorBrowsableState.Never)]
+	public const int sysuptime_4 = 4;
+	/// <summary>PID: 4 | Type: read</summary>
+	public const int sysuptime = 4;
+	/// <summary>PID: 5 | Type: read</summary>
+	[EditorBrowsable(EditorBrowsableState.Never)]
+	public const int xupsidentmanufacturer_5 = 5;
+	/// <summary>PID: 5 | Type: read</summary>
+	public const int xupsidentmanufacturer = 5;
+	/// <summary>PID: 6 | Type: read</summary>
+	[EditorBrowsable(EditorBrowsableState.Never)]
+	public const int xupsidentmodel_6 = 6;
+	/// <summary>PID: 6 | Type: read</summary>
+	public const int xupsidentmodel = 6;
 	public class Write
 	{
 	}
@@ -23,12 +43,40 @@ public class WriteParameters
 public interface SLProtocolExt : SLProtocol
 {
 	object Afterstartup_dummy { get; set; }
+	object Sysdescr_3 { get; set; }
+	object Sysdescr { get; set; }
+	object Sysuptime_4 { get; set; }
+	object Sysuptime { get; set; }
+	object Xupsidentmanufacturer_5 { get; set; }
+	object Xupsidentmanufacturer { get; set; }
+	object Xupsidentmodel_6 { get; set; }
+	object Xupsidentmodel { get; set; }
 	WriteParameters Write { get; set; }
 }
 public class ConcreteSLProtocolExt : ConcreteSLProtocol, SLProtocolExt
 {
 	/// <summary>PID: 2  | Type: dummy</summary>
 	public System.Object Afterstartup_dummy {get { return GetParameter(2); }set { SetParameter(2, value); }}
+	/// <summary>PID: 3  | Type: read</summary>
+	[EditorBrowsable(EditorBrowsableState.Never)]
+	public System.Object Sysdescr_3 {get { return GetParameter(3); }set { SetParameter(3, value); }}
+	/// <summary>PID: 3  | Type: read</summary>
+	public System.Object Sysdescr {get { return GetParameter(3); }set { SetParameter(3, value); }}
+	/// <summary>PID: 4  | Type: read</summary>
+	[EditorBrowsable(EditorBrowsableState.Never)]
+	public System.Object Sysuptime_4 {get { return GetParameter(4); }set { SetParameter(4, value); }}
+	/// <summary>PID: 4  | Type: read</summary>
+	public System.Object Sysuptime {get { return GetParameter(4); }set { SetParameter(4, value); }}
+	/// <summary>PID: 5  | Type: read</summary>
+	[EditorBrowsable(EditorBrowsableState.Never)]
+	public System.Object Xupsidentmanufacturer_5 {get { return GetParameter(5); }set { SetParameter(5, value); }}
+	/// <summary>PID: 5  | Type: read</summary>
+	public System.Object Xupsidentmanufacturer {get { return GetParameter(5); }set { SetParameter(5, value); }}
+	/// <summary>PID: 6  | Type: read</summary>
+	[EditorBrowsable(EditorBrowsableState.Never)]
+	public System.Object Xupsidentmodel_6 {get { return GetParameter(6); }set { SetParameter(6, value); }}
+	/// <summary>PID: 6  | Type: read</summary>
+	public System.Object Xupsidentmodel {get { return GetParameter(6); }set { SetParameter(6, value); }}
 	public WriteParameters Write { get; set; }
 	public ConcreteSLProtocolExt()
 	{
