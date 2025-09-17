@@ -60,7 +60,7 @@ Any inquiries can be addressed to:
 
 	<Compliancies>
 		<CassandraReady>true</CassandraReady>
-		<MinimumRequiredVersion>10.1.0.0 - 9966</MinimumRequiredVersion>
+		<MinimumRequiredVersion>10.3.0.0 - 12752</MinimumRequiredVersion>
 	</Compliancies>
 
 	<Params>
@@ -285,6 +285,9 @@ re-initialized.]]>
 			</SNMP>
 			<Display>
 				<RTDisplay>true</RTDisplay>
+				<!-- SuppressValidator 2.9.4 Phase unit is not available. -->
+				<Units>phase</Units>
+				<!-- /SuppressValidator 2.9.4 -->
 				<Range>
 					<Low>0</Low>
 					<High>6</High>
@@ -415,17 +418,18 @@ re-initialized.]]>
 			<Measurement>
 				<Type>number</Type>
 			</Measurement>
-		</Param>		
+		</Param>
 		<Param id="1200" trending="false">
 			<Name>interfaceTable</Name>
 			<Description>Interface Table</Description>
 			<Type>array</Type>
 			<ArrayOptions index="0">
-				<ColumnOption idx="0" pid="1201" type="snmp" options="" />
-				<ColumnOption idx="1" pid="1202" type="snmp" options="" />
-				<ColumnOption idx="2" pid="1203" type="snmp" options="" />
-				<ColumnOption idx="3" pid="1204" type="snmp" options="" />
-				<ColumnOption idx="4" pid="1205" type="retrieved" options="" />
+				<ColumnOption idx="0" pid="1201" type="snmp" options=""/>
+				<ColumnOption idx="1" pid="1202" type="snmp" options=""/>
+				<ColumnOption idx="2" pid="1203" type="snmp" options=""/>
+				<ColumnOption idx="3" pid="1204" type="snmp" options=""/>
+				<ColumnOption idx="4" pid="1205" type="retrieved" options=""/>
+				<ColumnOption idx="5" pid="1206" type="snmp" options=""/>
 			</ArrayOptions>
 			<Information>
 				<Subtext>
@@ -447,7 +451,7 @@ re-initialized.]]>
 				</Positions>
 			</Display>
 			<Measurement>
-				<Type options="tab=columns:1201|0-1202|1-1203|2-1204|3-1205|4,width:100-195-100-100-107,sort:INT-INT-INT-INT-INT,lines:20,filter:true">table</Type>
+				<Type options="tab=columns:1201|0-1202|1-1203|2-1204|3-1205|4-1206|5,width:100-195-105-100-116-116,sort:INT-INT-INT-INT-INT-INT,lines:20,filter:true">table</Type>
 			</Measurement>
 		</Param>
 		<Param id="1201" trending="false">
@@ -529,7 +533,7 @@ IANAifType textual convention.]]>
 						<Value>4</Value>
 					</Discreet>
 					<Discreet>
-						<Display>Rfc 877 X 25</Display>
+						<Display>RFC 877 X 25</Display>
 						<Value>5</Value>
 					</Discreet>
 					<Discreet>
@@ -553,7 +557,7 @@ IANAifType textual convention.]]>
 						<Value>10</Value>
 					</Discreet>
 					<Discreet>
-						<Display>Star Lan</Display>
+						<Display>Star LAN</Display>
 						<Value>11</Value>
 					</Discreet>
 					<Discreet>
@@ -569,15 +573,15 @@ IANAifType textual convention.]]>
 						<Value>14</Value>
 					</Discreet>
 					<Discreet>
-						<Display>Fddi</Display>
+						<Display>FDDI</Display>
 						<Value>15</Value>
 					</Discreet>
 					<Discreet>
-						<Display>Lapb</Display>
+						<Display>LAPB</Display>
 						<Value>16</Value>
 					</Discreet>
 					<Discreet>
-						<Display>Sdlc</Display>
+						<Display>SDLC</Display>
 						<Value>17</Value>
 					</Discreet>
 					<Discreet>
@@ -597,11 +601,11 @@ IANAifType textual convention.]]>
 						<Value>21</Value>
 					</Discreet>
 					<Discreet>
-						<Display>Prop Point To Point Serial</Display>
+						<Display>Prop Point to Point Serial</Display>
 						<Value>22</Value>
 					</Discreet>
 					<Discreet>
-						<Display>Ppp</Display>
+						<Display>PPP</Display>
 						<Value>23</Value>
 					</Discreet>
 					<Discreet>
@@ -657,7 +661,7 @@ IANAifType textual convention.]]>
 						<Value>36</Value>
 					</Discreet>
 					<Discreet>
-						<Display>Atm</Display>
+						<Display>ATM</Display>
 						<Value>37</Value>
 					</Discreet>
 					<Discreet>
@@ -673,7 +677,7 @@ IANAifType textual convention.]]>
 						<Value>40</Value>
 					</Discreet>
 					<Discreet>
-						<Display>Iso 88022 Llc</Display>
+						<Display>Iso 88022 LLC</Display>
 						<Value>41</Value>
 					</Discreet>
 					<Discreet>
@@ -729,7 +733,7 @@ IANAifType textual convention.]]>
 						<Value>54</Value>
 					</Discreet>
 					<Discreet>
-						<Display>Ieee 80212</Display>
+						<Display>IEEE 80212</Display>
 						<Value>55</Value>
 					</Discreet>
 					<Discreet>
@@ -761,7 +765,7 @@ IANAifType textual convention.]]>
 						<Value>62</Value>
 					</Discreet>
 					<Discreet>
-						<Display>Isdn</Display>
+						<Display>ISDN</Display>
 						<Value>63</Value>
 					</Discreet>
 					<Discreet>
@@ -773,11 +777,11 @@ IANAifType textual convention.]]>
 						<Value>65</Value>
 					</Discreet>
 					<Discreet>
-						<Display>G 703 At 64 K</Display>
+						<Display>G 703 at 64 K</Display>
 						<Value>66</Value>
 					</Discreet>
 					<Discreet>
-						<Display>G 703 At 2 Mb</Display>
+						<Display>G 703 at 2 Mb</Display>
 						<Value>67</Value>
 					</Discreet>
 					<Discreet>
@@ -793,7 +797,7 @@ IANAifType textual convention.]]>
 						<Value>70</Value>
 					</Discreet>
 					<Discreet>
-						<Display>Ieee 80211</Display>
+						<Display>IEEE 80211</Display>
 						<Value>71</Value>
 					</Discreet>
 					<Discreet>
@@ -821,7 +825,7 @@ IANAifType textual convention.]]>
 						<Value>77</Value>
 					</Discreet>
 					<Discreet>
-						<Display>Ip Switch</Display>
+						<Display>IP Switch</Display>
 						<Value>78</Value>
 					</Discreet>
 					<Discreet>
@@ -829,7 +833,7 @@ IANAifType textual convention.]]>
 						<Value>79</Value>
 					</Discreet>
 					<Discreet>
-						<Display>Atm Logical</Display>
+						<Display>ATM Logical</Display>
 						<Value>80</Value>
 					</Discreet>
 					<Discreet>
@@ -885,7 +889,7 @@ IANAifType textual convention.]]>
 						<Value>93</Value>
 					</Discreet>
 					<Discreet>
-						<Display>Adsl</Display>
+						<Display>ADSL</Display>
 						<Value>94</Value>
 					</Discreet>
 					<Discreet>
@@ -925,39 +929,39 @@ IANAifType textual convention.]]>
 						<Value>103</Value>
 					</Discreet>
 					<Discreet>
-						<Display>Voice Over Ip</Display>
+						<Display>Voice Over IP</Display>
 						<Value>104</Value>
 					</Discreet>
 					<Discreet>
-						<Display>Atm Dxi</Display>
+						<Display>ATM Dxi</Display>
 						<Value>105</Value>
 					</Discreet>
 					<Discreet>
-						<Display>Atm Funi</Display>
+						<Display>ATM Funi</Display>
 						<Value>106</Value>
 					</Discreet>
 					<Discreet>
-						<Display>Atm Ima</Display>
+						<Display>ATM Ima</Display>
 						<Value>107</Value>
 					</Discreet>
 					<Discreet>
-						<Display>Ppp Multilink Bundle</Display>
+						<Display>PPP Multilink Bundle</Display>
 						<Value>108</Value>
 					</Discreet>
 					<Discreet>
-						<Display>Ip Over Cdlc</Display>
+						<Display>IP Over Cdlc</Display>
 						<Value>109</Value>
 					</Discreet>
 					<Discreet>
-						<Display>Ip Over Claw</Display>
+						<Display>IP Over Claw</Display>
 						<Value>110</Value>
 					</Discreet>
 					<Discreet>
-						<Display>Stack To Stack</Display>
+						<Display>Stack to Stack</Display>
 						<Value>111</Value>
 					</Discreet>
 					<Discreet>
-						<Display>Virtual Ip Address</Display>
+						<Display>Virtual IP Address</Display>
 						<Value>112</Value>
 					</Discreet>
 					<Discreet>
@@ -965,7 +969,7 @@ IANAifType textual convention.]]>
 						<Value>113</Value>
 					</Discreet>
 					<Discreet>
-						<Display>Ip Over Atm</Display>
+						<Display>IP Over ATM</Display>
 						<Value>114</Value>
 					</Discreet>
 					<Discreet>
@@ -981,11 +985,11 @@ IANAifType textual convention.]]>
 						<Value>117</Value>
 					</Discreet>
 					<Discreet>
-						<Display>Hdlc</Display>
+						<Display>HDLC</Display>
 						<Value>118</Value>
 					</Discreet>
 					<Discreet>
-						<Display>Lapf</Display>
+						<Display>LAPF</Display>
 						<Value>119</Value>
 					</Discreet>
 					<Discreet>
@@ -1001,7 +1005,7 @@ IANAifType textual convention.]]>
 						<Value>122</Value>
 					</Discreet>
 					<Discreet>
-						<Display>Transp Hdlc</Display>
+						<Display>Transp HDLC</Display>
 						<Value>123</Value>
 					</Discreet>
 					<Discreet>
@@ -1013,7 +1017,7 @@ IANAifType textual convention.]]>
 						<Value>125</Value>
 					</Discreet>
 					<Discreet>
-						<Display>Ip</Display>
+						<Display>IP</Display>
 						<Value>126</Value>
 					</Discreet>
 					<Discreet>
@@ -1045,11 +1049,11 @@ IANAifType textual convention.]]>
 						<Value>133</Value>
 					</Discreet>
 					<Discreet>
-						<Display>Atm Sub Interface</Display>
+						<Display>ATM Sub Interface</Display>
 						<Value>134</Value>
 					</Discreet>
 					<Discreet>
-						<Display>L 2 Vlan</Display>
+						<Display>L 2 VLAN</Display>
 						<Value>135</Value>
 					</Discreet>
 					<Discreet>
@@ -1065,7 +1069,7 @@ IANAifType textual convention.]]>
 						<Value>138</Value>
 					</Discreet>
 					<Discreet>
-						<Display>Media Mail Over Ip</Display>
+						<Display>Media Mail Over IP</Display>
 						<Value>139</Value>
 					</Discreet>
 					<Discreet>
@@ -1077,7 +1081,7 @@ IANAifType textual convention.]]>
 						<Value>141</Value>
 					</Discreet>
 					<Discreet>
-						<Display>Ip Forward</Display>
+						<Display>IP Forward</Display>
 						<Value>142</Value>
 					</Discreet>
 					<Discreet>
@@ -1085,7 +1089,7 @@ IANAifType textual convention.]]>
 						<Value>143</Value>
 					</Discreet>
 					<Discreet>
-						<Display>Ieee 1394</Display>
+						<Display>IEEE 1394</Display>
 						<Value>144</Value>
 					</Discreet>
 					<Discreet>
@@ -1093,7 +1097,7 @@ IANAifType textual convention.]]>
 						<Value>145</Value>
 					</Discreet>
 					<Discreet>
-						<Display>Dvb Rcc Mac Layer</Display>
+						<Display>Dvb Rcc MAC Layer</Display>
 						<Value>146</Value>
 					</Discreet>
 					<Discreet>
@@ -1105,11 +1109,11 @@ IANAifType textual convention.]]>
 						<Value>148</Value>
 					</Discreet>
 					<Discreet>
-						<Display>Atm Virtual</Display>
+						<Display>ATM Virtual</Display>
 						<Value>149</Value>
 					</Discreet>
 					<Discreet>
-						<Display>Mpls Tunnel</Display>
+						<Display>MPLS Tunnel</Display>
 						<Value>150</Value>
 					</Discreet>
 					<Discreet>
@@ -1117,7 +1121,7 @@ IANAifType textual convention.]]>
 						<Value>151</Value>
 					</Discreet>
 					<Discreet>
-						<Display>Voice Over Atm</Display>
+						<Display>Voice Over ATM</Display>
 						<Value>152</Value>
 					</Discreet>
 					<Discreet>
@@ -1145,15 +1149,15 @@ IANAifType textual convention.]]>
 						<Value>158</Value>
 					</Discreet>
 					<Discreet>
-						<Display>Rfc 1483</Display>
+						<Display>RFC 1483</Display>
 						<Value>159</Value>
 					</Discreet>
 					<Discreet>
-						<Display>Usb</Display>
+						<Display>USB</Display>
 						<Value>160</Value>
 					</Discreet>
 					<Discreet>
-						<Display>Ieee 8023 Ad Lag</Display>
+						<Display>IEEE 8023 Ad Lag</Display>
 						<Value>161</Value>
 					</Discreet>
 					<Discreet>
@@ -1173,11 +1177,11 @@ IANAifType textual convention.]]>
 						<Value>165</Value>
 					</Discreet>
 					<Discreet>
-						<Display>Mpls</Display>
+						<Display>MPLS</Display>
 						<Value>166</Value>
 					</Discreet>
 					<Discreet>
-						<Display>Mf Sig Link</Display>
+						<Display>MF Sig Link</Display>
 						<Value>167</Value>
 					</Discreet>
 					<Discreet>
@@ -1265,7 +1269,7 @@ IANAifType textual convention.]]>
 						<Value>188</Value>
 					</Discreet>
 					<Discreet>
-						<Display>Atm Radio</Display>
+						<Display>ATM Radio</Display>
 						<Value>189</Value>
 					</Discreet>
 					<Discreet>
@@ -1285,7 +1289,7 @@ IANAifType textual convention.]]>
 						<Value>193</Value>
 					</Discreet>
 					<Discreet>
-						<Display>Atm Vci End Pt</Display>
+						<Display>ATM Vci End Pt</Display>
 						<Value>194</Value>
 					</Discreet>
 					<Discreet>
@@ -1297,7 +1301,7 @@ IANAifType textual convention.]]>
 						<Value>196</Value>
 					</Discreet>
 					<Discreet>
-						<Display>Prop Atm</Display>
+						<Display>Prop ATM</Display>
 						<Value>197</Value>
 					</Discreet>
 					<Discreet>
@@ -1369,7 +1373,7 @@ IANAifType textual convention.]]>
 						<Value>214</Value>
 					</Discreet>
 					<Discreet>
-						<Display>Six To Four</Display>
+						<Display>Six to Four</Display>
 						<Value>215</Value>
 					</Discreet>
 					<Discreet>
@@ -1429,15 +1433,15 @@ IANAifType textual convention.]]>
 						<Value>229</Value>
 					</Discreet>
 					<Discreet>
-						<Display>Adsl 2</Display>
+						<Display>ADSL 2</Display>
 						<Value>230</Value>
 					</Discreet>
 					<Discreet>
-						<Display>Mac Sec Controlled IF</Display>
+						<Display>MAC Sec Controlled IF</Display>
 						<Value>231</Value>
 					</Discreet>
 					<Discreet>
-						<Display>Mac Sec Uncontrolled IF</Display>
+						<Display>MAC Sec Uncontrolled IF</Display>
 						<Value>232</Value>
 					</Discreet>
 					<Discreet>
@@ -1453,23 +1457,23 @@ IANAifType textual convention.]]>
 						<Value>235</Value>
 					</Discreet>
 					<Discreet>
-						<Display>Moca Version 1</Display>
+						<Display>MoCA Version 1</Display>
 						<Value>236</Value>
 					</Discreet>
 					<Discreet>
-						<Display>Ieee 80216 WMAN</Display>
+						<Display>IEEE 80216 WMAN</Display>
 						<Value>237</Value>
 					</Discreet>
 					<Discreet>
-						<Display>Adsl 2 Plus</Display>
+						<Display>ADSL 2 Plus</Display>
 						<Value>238</Value>
 					</Discreet>
 					<Discreet>
-						<Display>Dvb Rcs Mac Layer</Display>
+						<Display>Dvb Rcs MAC Layer</Display>
 						<Value>239</Value>
 					</Discreet>
 					<Discreet>
-						<Display>Dvb Tdm</Display>
+						<Display>Dvb TDM</Display>
 						<Value>240</Value>
 					</Discreet>
 					<Discreet>
@@ -1493,7 +1497,7 @@ IANAifType textual convention.]]>
 						<Value>245</Value>
 					</Discreet>
 					<Discreet>
-						<Display>If Pw Type</Display>
+						<Display>If PW Type</Display>
 						<Value>246</Value>
 					</Discreet>
 					<Discreet>
@@ -1521,7 +1525,7 @@ IANAifType textual convention.]]>
 						<Value>252</Value>
 					</Discreet>
 					<Discreet>
-						<Display>Capwap Dot 11 Bss</Display>
+						<Display>Capwap Dot 11 BSS</Display>
 						<Value>253</Value>
 					</Discreet>
 					<Discreet>
@@ -1541,11 +1545,11 @@ IANAifType textual convention.]]>
 						<Value>257</Value>
 					</Discreet>
 					<Discreet>
-						<Display>Vmware Virtual Nic</Display>
+						<Display>VMware Virtual NIC</Display>
 						<Value>258</Value>
 					</Discreet>
 					<Discreet>
-						<Display>Ieee 802154</Display>
+						<Display>IEEE 802154</Display>
 						<Value>259</Value>
 					</Discreet>
 					<Discreet>
@@ -1597,7 +1601,7 @@ IANAifType textual convention.]]>
 						<Value>271</Value>
 					</Discreet>
 					<Discreet>
-						<Display>Vmware Nic Team</Display>
+						<Display>VMware NIC Team</Display>
 						<Value>272</Value>
 					</Discreet>
 					<Discreet>
@@ -1642,6 +1646,7 @@ zero.]]>
 			</SNMP>
 			<Display>
 				<RTDisplay>true</RTDisplay>
+				<Units>bps</Units>
 				<Range>
 					<Low>0</Low>
 					<High>4294967295</High>
@@ -1713,6 +1718,9 @@ the down(2) state).]]>
 				<OID type="complete">1.3.6.1.2.1.2.2.1.7</OID>
 				<Type>integer</Type>
 			</SNMP>
+			<Display>
+				<RTDisplay>true</RTDisplay>
+			</Display>
 			<Measurement>
 				<Type>discreet</Type>
 				<Discreets>
@@ -1746,77 +1754,18 @@ the down(2) state).]]>
 			<Display>
 				<RTDisplay>true</RTDisplay>
 				<Units>Mbps</Units>
+				<Range>
+					<Low>0</Low>
+					<High>4294967295</High>
+				</Range>
 			</Display>
 			<Measurement>
 				<Type>number</Type>
 			</Measurement>
 		</Param>
-		
-		<Param id="1400" trending="false">
-			<Name>extendedInterfaceTable</Name>
-			<Description>Extended Interface Table</Description>
-			<Type>array</Type>
-			<ArrayOptions index="0">
-				<ColumnOption idx="0" pid="1401" type="snmp" options=";foreignKey=1200" />
-				<ColumnOption idx="1" pid="1402" type="snmp" options="" />
-			</ArrayOptions>
-			<Information>
-				<Subtext>
-					<![CDATA[A list of interface entries.  The number of entries
-is given by the value of ifNumber.  This table
-contains additional objects for the interface table.]]>
-				</Subtext>
-			</Information>
-			<SNMP>
-				<Enabled>true</Enabled>
-				<OID type="complete" options="instance;multipleGetNext">1.3.6.1.2.1.31.1.1</OID>
-			</SNMP>
-			<Display>
-				<RTDisplay>true</RTDisplay>
-				<Positions>
-					<Position>
-						<Page>Extended Interface Table</Page>
-						<Column>0</Column>
-						<Row>0</Row>
-					</Position>
-				</Positions>
-			</Display>
-			<Measurement>
-				<Type options="tab=columns:1401|0-1402|1,width:100-100,sort:INT-INT,lines:20,filter:true">table</Type>
-			</Measurement>
-		</Param>
-		<Param id="1401" trending="false">
-			<Name>extendedInterfaceTableInstance</Name>
-			<Description>Instance [IDX] (Extended Interface Table)</Description>
-			<Information>
-				<Subtext>
-					<![CDATA[This is the SNMP instance of the table. Format: [ifIndex].
-
- - ifIndex: A unique value, greater than zero, for each
-interface.  It is recommended that values are assigned
-contiguously starting from 1.  The value for each
-interface sub-layer must remain constant at least from
-one re-initialization of the entity's network
-management system to the next re-initialization.
-]]>
-				</Subtext>
-			</Information>
-			<Type>read</Type>
-			<Interprete>
-				<RawType>other</RawType>
-				<Type>string</Type>
-				<LengthType>next param</LengthType>
-			</Interprete>
-			<Display>
-				<RTDisplay>true</RTDisplay>
-			</Display>
-			<Measurement>
-				<Type>string</Type>
-			</Measurement>
-		</Param>
-		<Param id="1402" trending="false">
-			<Name>extendedInterfaceTableIfHighSpeed</Name>
-			<Description>If High Speed (Extended Interface Table)</Description>
+		<Param id="1206" trending="false">
+			<Name>interfaceTableIfHighSpeed</Name>
+			<Description>If High: Speed (Interface Table)</Description>
 			<Information>
 				<Subtext>
 					<![CDATA[An estimate of the interface's current bandwidth in
@@ -1843,6 +1792,11 @@ bandwidth, this object should be zero.]]>
 			</SNMP>
 			<Display>
 				<RTDisplay>true</RTDisplay>
+				<Units>Mbps</Units>
+				<Range>
+					<Low>0</Low>
+					<High>4294967295</High>
+				</Range>
 			</Display>
 			<Measurement>
 				<Type>number</Type>
@@ -1860,7 +1814,6 @@ bandwidth, this object should be zero.]]>
 		<QAction id="1" name="Precompiled Code" encoding="csharp" options="precompile" />
 		<QAction id="2" name="After Startup" encoding="csharp" triggers="2" />
 		<QAction id="3" name="Calculate Interface Speed" encoding="csharp" triggers="1203" row="true"/>
-		<QAction id="4" name="Test" encoding="csharp" triggers="1000" />
 	</QActions>
 
 	<Groups>
@@ -1904,11 +1857,11 @@ bandwidth, this object should be zero.]]>
 			</Content>
 		</Group>
 		<Group id="1400">
-			<Name>getExtendedInterfaceTable</Name>
-			<Description>Get Extended Interface Table</Description>
+			<Name>getHighSpeed</Name>
+			<Description>Get High Speed</Description>
 			<Type>poll</Type>
 			<Content multipleGet="true">
-				<Param>1400</Param>
+				<Param>1206</Param>
 			</Content>
 		</Group>
 	</Groups>

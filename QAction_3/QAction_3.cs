@@ -27,7 +27,7 @@ public static class QAction
 			protocol.Log($"QA{protocol.QActionID}|RUN|{speed}", LogType.Error, LogLevel.NoLogging);
 			if (speed == 4294967295)
 			{
-				speedObject = protocol.GetCell(protocol.extendedinterfacetable.TableId, rowKey, 1);
+				speedObject = protocol.GetCell(protocol.interfacetable.TableId, rowKey, 5);
 				speed = Convert.ToUInt32(speedObject);
 				protocol.SetCell(protocol.interfacetable.TableId, rowKey, 4, speed);
 				//protocol.Log($"QA{protocol.QActionID}|Run|ExtendedTable needed", LogType.Error, LogLevel.NoLogging);
