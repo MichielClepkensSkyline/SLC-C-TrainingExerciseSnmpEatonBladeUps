@@ -15,13 +15,24 @@ public static class QAction
 	/// The QAction entry point.
 	/// </summary>
 	/// <param name="protocol">Link with SLProtocol process.</param>
-	public static void Run(SLProtocolExt protocol)
+	public static void Run(SLProtocol protocol)
 	{
 		try
 		{
-			string rowPK = protocol.RowKey();
-			var interfaceSpeed = protocol.GetCell(Parameter.Interfacetable.tablePid, rowPK, Parameter.Interfacetable.Idx.interfacetablespeed_2003);
-			protocol.Log($"QA{protocol.QActionID}|{protocol.GetTriggerParameter()}| this is the interface row key: {rowPK} and speed: {Convert.ToUInt32(interfaceSpeed)}", LogType.Error, LogLevel.NoLogging);
+			//string rowPK = protocol.RowKey();
+			//var interfaceSpeed = protocol.GetCell(Parameter.Interfacetable.tablePid, rowPK, Parameter.Interfacetable.Idx.interfacetablespeed_2003);
+			protocol.Log($"QA{protocol.QActionID}|{protocol.GetTriggerParameter()}| this is the interface row key: and speed:", LogType.Error, LogLevel.NoLogging);
+
+			var unsignedIntegerMaxValue = UInt32.MaxValue;
+
+			/*if (Convert.ToUInt32(interfaceSpeed) < unsignedIntegerMaxValue)
+			{
+
+			}
+			else
+			{
+
+			}*/
 		}
 		catch (Exception ex)
 		{
