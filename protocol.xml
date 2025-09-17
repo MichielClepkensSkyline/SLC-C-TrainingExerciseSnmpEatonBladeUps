@@ -55,7 +55,7 @@ Any inquiries can be addressed to:
 	<DeviceOID>99</DeviceOID>
 	<ElementType>UPS</ElementType>
 	<Type relativeTimers="true">snmpv2</Type>
-	<Display defaultPage="General" pageOrder="General;Interface Table;Extended Interface Table;UPS Parameters" wideColumnPages=""/>
+	<Display defaultPage="General" pageOrder="General;Interface Table;UPS Parameters" wideColumnPages=""/>
 	<SNMP includepages="true">auto</SNMP>
 
 	<Compliancies>
@@ -451,7 +451,7 @@ re-initialized.]]>
 				</Positions>
 			</Display>
 			<Measurement>
-				<Type options="tab=columns:1201|0-1202|1-1203|2-1204|3-1205|4-1206|5,width:100-195-105-100-116-116,sort:INT-INT-INT-INT-INT-INT,lines:20,filter:true">table</Type>
+				<Type options="tab=columns:1201|0-1202|1-1203|2-1204|3-1205|4-1206|5,width:0-195-0-100-116-0,sort:INT-INT-INT-INT-INT-INT,lines:20,filter:true">table</Type>
 			</Measurement>
 		</Param>
 		<Param id="1201" trending="false">
@@ -1856,14 +1856,6 @@ bandwidth, this object should be zero.]]>
 				<Param>1200</Param>
 			</Content>
 		</Group>
-		<Group id="1400">
-			<Name>getHighSpeed</Name>
-			<Description>Get High Speed</Description>
-			<Type>poll</Type>
-			<Content multipleGet="true">
-				<Param>1206</Param>
-			</Content>
-		</Group>
 	</Groups>
 
 	<Triggers>
@@ -1899,7 +1891,6 @@ bandwidth, this object should be zero.]]>
 			<Content>
 				<Group>1000</Group>
 				<Group>1001</Group>
-				<Group>1400</Group>
 				<Group>1200</Group>
 			</Content>
 		</Timer>
