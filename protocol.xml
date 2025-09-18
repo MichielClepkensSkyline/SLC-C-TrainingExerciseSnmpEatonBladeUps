@@ -229,6 +229,7 @@ re-initialized.]]>
 				<ColumnOption idx="1" pid="102" type="snmp" options="" />
 				<ColumnOption idx="2" pid="103" type="snmp" options="" />
 				<ColumnOption idx="3" pid="104" type="snmp" options="" />
+				<ColumnOption idx="4" pid="105" type="retrieved" options="" />
 			</ArrayOptions>
 			<Information>
 				<Subtext>
@@ -251,7 +252,7 @@ is given by the value of ifNumber.]]>
 				</Positions>
 			</Display>
 			<Measurement>
-				<Type options="tab=columns:101|0-102|1-103|2-104|3,width:100-195-100-115,sort:INT-STRING-INT-STRING,lines:20,filter:true">table</Type>
+				<Type options="tab=columns:101|0-102|1-103|2-104|3-105|4,width:100-195-105-115-115,sort:INT-STRING-INT-STRING-INT,lines:20,filter:true">table</Type>
 			</Measurement>
 		</Param>
 		<Param id="101" trending="false">
@@ -1450,7 +1451,7 @@ zero.]]>
 		</Param>
 		<Param id="104" trending="false">
 			<Name>InterfacesifTableAdminStatus</Name>
-			<Description>Admin Status (If)</Description>
+			<Description>Admin Status (Interfaces)</Description>
 			<Information>
 				<Subtext>
 					<![CDATA[The desired state of the interface.  The testing(3)
@@ -1494,6 +1495,30 @@ the down(2) state).]]>
 						<Value>3</Value>
 					</Discreet>
 				</Discreets>
+			</Measurement>
+		</Param>
+		<Param id="105" trending="false">
+			<Name>InterfacesCalculatedSpeed</Name>
+			<Description>Calculated Speed (Interfaces)</Description>
+			<Type>read</Type>
+			<Information>
+				<Subtext>This is the calculated speed we get as a rsult from the QAction</Subtext>
+			</Information>
+			<Interprete>
+				<RawType>numeric text</RawType>
+				<Type>double</Type>
+				<LengthType>next param</LengthType>
+			</Interprete>
+			<Display>
+				<RTDisplay>true</RTDisplay>
+				<Units>Mbps</Units>
+				<Range>
+					<Low>0</Low>
+					<High>4294967295</High>
+				</Range>
+			</Display>
+			<Measurement>
+				<Type>number</Type>
 			</Measurement>
 		</Param>
 		
@@ -1803,6 +1828,9 @@ bandwidth, this object should be zero.]]>
 			<Name>CalculateSpeed</Name>
 			<Description>Calculate Speed</Description>
 			<Type>dummy</Type>
+			<Measurement>
+				<Type>number</Type>
+			</Measurement>
 		</Param>
 	</Params>
 

@@ -86,6 +86,11 @@ public static class Parameter
 			public const int interfacesiftableadminstatus_104 = 104;
 			/// <summary>PID: 104 | Type: read</summary>
 			public const int interfacesiftableadminstatus = 104;
+			/// <summary>PID: 105 | Type: read</summary>
+			[EditorBrowsable(EditorBrowsableState.Never)]
+			public const int interfacescalculatedspeed_105 = 105;
+			/// <summary>PID: 105 | Type: read</summary>
+			public const int interfacescalculatedspeed = 105;
 			public class Write
 			{
 			}
@@ -112,6 +117,11 @@ public static class Parameter
 			public const int interfacesiftableadminstatus_104 = 3;
 			/// <summary>IDX: 3 | Type: read</summary>
 			public const int interfacesiftableadminstatus = 3;
+			/// <summary>IDX: 4 | Type: read</summary>
+			[EditorBrowsable(EditorBrowsableState.Never)]
+			public const int interfacescalculatedspeed_105 = 4;
+			/// <summary>IDX: 4 | Type: read</summary>
+			public const int interfacescalculatedspeed = 4;
 		}
 	}
 	public class Extendedinterfacetable
@@ -184,6 +194,8 @@ public interface SLProtocolExt : SLProtocol
 	object Interfacesiftablespeed { get; set; }
 	object Interfacesiftableadminstatus_104 { get; set; }
 	object Interfacesiftableadminstatus { get; set; }
+	object Interfacescalculatedspeed_105 { get; set; }
+	object Interfacescalculatedspeed { get; set; }
 	object Extendedinterfaceifxifname_201 { get; set; }
 	object Extendedinterfaceifxifname { get; set; }
 	object Extendedinterfaceifxifhighspeed_202 { get; set; }
@@ -249,6 +261,11 @@ public class ConcreteSLProtocolExt : ConcreteSLProtocol, SLProtocolExt
 	public System.Object Interfacesiftableadminstatus_104 {get { return GetParameter(104); }set { SetParameter(104, value); }}
 	/// <summary>PID: 104  | Type: read | DISCREETS: Up = 1, Down = 2, Testing = 3</summary>
 	public System.Object Interfacesiftableadminstatus {get { return GetParameter(104); }set { SetParameter(104, value); }}
+	/// <summary>PID: 105  | Type: read</summary>
+	[EditorBrowsable(EditorBrowsableState.Never)]
+	public System.Object Interfacescalculatedspeed_105 {get { return GetParameter(105); }set { SetParameter(105, value); }}
+	/// <summary>PID: 105  | Type: read</summary>
+	public System.Object Interfacescalculatedspeed {get { return GetParameter(105); }set { SetParameter(105, value); }}
 	/// <summary>PID: 201  | Type: read</summary>
 	[EditorBrowsable(EditorBrowsableState.Never)]
 	public System.Object Extendedinterfaceifxifname_201 {get { return GetParameter(201); }set { SetParameter(201, value); }}
@@ -331,8 +348,13 @@ public class InterfacestableQActionRow : QActionTableRow
 	public System.Object Interfacesiftableadminstatus_104 { get { if (base.Columns.ContainsKey(3)) { return base.Columns[3]; } else { return null; } } set { if (base.Columns.ContainsKey(3)) { base.Columns[3] = value; } else { base.Columns.Add(3, value); } } }
 	/// <summary>PID: 104 | Type: read</summary>
 	public System.Object Interfacesiftableadminstatus { get { if (base.Columns.ContainsKey(3)) { return base.Columns[3]; } else { return null; } } set { if (base.Columns.ContainsKey(3)) { base.Columns[3] = value; } else { base.Columns.Add(3, value); } } }
-	public InterfacestableQActionRow() : base(0, 4) { }
-	public InterfacestableQActionRow(System.Object[] oRow) : base(0, 4, oRow) { }
+	/// <summary>PID: 105 | Type: read</summary>
+	[EditorBrowsable(EditorBrowsableState.Never)]
+	public System.Object Interfacescalculatedspeed_105 { get { if (base.Columns.ContainsKey(4)) { return base.Columns[4]; } else { return null; } } set { if (base.Columns.ContainsKey(4)) { base.Columns[4] = value; } else { base.Columns.Add(4, value); } } }
+	/// <summary>PID: 105 | Type: read</summary>
+	public System.Object Interfacescalculatedspeed { get { if (base.Columns.ContainsKey(4)) { return base.Columns[4]; } else { return null; } } set { if (base.Columns.ContainsKey(4)) { base.Columns[4] = value; } else { base.Columns.Add(4, value); } } }
+	public InterfacestableQActionRow() : base(0, 5) { }
+	public InterfacestableQActionRow(System.Object[] oRow) : base(0, 5, oRow) { }
 	public static implicit operator InterfacestableQActionRow(System.Object[] source) { return new InterfacestableQActionRow(source); }
 	public static implicit operator System.Object[](InterfacestableQActionRow source) { return source.ToObjectArray(); }
 }
