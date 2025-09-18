@@ -44,10 +44,11 @@ public static class QAction
 	private static uint GetCalculatedInterfaceSpeed(SLProtocol protocol, string rowPK, uint interfaceSpeed, int offset)
 	{
 		uint unsignedIntegerMaxValue = UInt32.MaxValue;
+		uint dividerValueFrombpsToMbps = 1000000;
 
 		if (interfaceSpeed < unsignedIntegerMaxValue)
 		{
-			interfaceSpeed = interfaceSpeed / 1000000;
+			interfaceSpeed = interfaceSpeed / dividerValueFrombpsToMbps;
 		}
 		else if(interfaceSpeed == unsignedIntegerMaxValue)
 		{
