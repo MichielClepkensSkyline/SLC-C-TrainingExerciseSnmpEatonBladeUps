@@ -55,7 +55,7 @@ Any inquiries can be addressed to:
 	<DeviceOID>0</DeviceOID>
 	<ElementType>Unknown</ElementType>
 	<Type relativeTimers="true">snmpv2</Type>
-	<Display defaultPage="General" pageOrder="General;----------;WebInterface#" wideColumnPages=""/>
+	<Display defaultPage="General" pageOrder="General;Interface table;UPS Parameters;----------;WebInterface#" wideColumnPages="UPS Parameters"/>
 	<SNMP includepages="true">auto</SNMP>
 
 	<Compliancies>
@@ -64,7 +64,74 @@ Any inquiries can be addressed to:
 	</Compliancies>
 
 	<Params>
-		
+		<Param id="1">
+			<Name>Title_Begin_General_Parameters</Name>
+			<Description>General Parameters</Description>
+			<Type>fixed</Type>
+			<Display>
+				<RTDisplay>true</RTDisplay>
+				<Positions>
+					<Position>
+						<Page>General</Page>
+						<Column>0</Column>
+						<Row>0</Row>
+					</Position>
+				</Positions>
+			</Display>
+			<Measurement>
+				<Type options="begin">title</Type>
+			</Measurement>
+		</Param>
+		<Param id="2">
+			<Name>Title_End_Generic</Name>
+			<Type>fixed</Type>
+			<Display>
+				<RTDisplay>true</RTDisplay>
+				<Positions>
+					<Position>
+						<Page>General</Page>
+						<Column>0</Column>
+						<Row>5</Row>
+					</Position>
+					<Position>
+						<Page>General</Page>
+						<Column>0</Column>
+						<Row>12</Row>
+					</Position>
+					<Position>
+						<Page>UPS Parameters</Page>
+						<Column>0</Column>
+						<Row>6</Row>
+					</Position>
+				</Positions>
+			</Display>
+			<Measurement>
+				<Type options="end">title</Type>
+			</Measurement>
+		</Param>
+		<Param id="3">
+			<Name>Title_Begin_UPS_Parameters</Name>
+			<Description>UPS Parameters</Description>
+			<Type>fixed</Type>
+			<Display>
+				<RTDisplay>true</RTDisplay>
+				<Positions>
+					<Position>
+						<Page>General</Page>
+						<Column>0</Column>
+						<Row>6</Row>
+					</Position>
+					<Position>
+						<Page>UPS Parameters</Page>
+						<Column>0</Column>
+						<Row>0</Row>
+					</Position>
+				</Positions>
+			</Display>
+			<Measurement>
+				<Type options="begin">title</Type>
+			</Measurement>
+		</Param>
 		<Param id="1000" trending="false">
 			<Name>systemDescription</Name>
 			<Description>System Description</Description>
@@ -215,16 +282,16 @@ re-initialized.]]>
 			</Measurement>
 		</Param>
 		
-		<Param id="2000" trending="false">
+		<Param id="1200" trending="false">
 			<Name>interfaceTable</Name>
 			<Description>Interface Table</Description>
 			<Type>array</Type>
 			<ArrayOptions index="0">
-				<ColumnOption idx="0" pid="2001" type="snmp" options="" />
-				<ColumnOption idx="1" pid="2002" type="snmp" options="" />
-				<ColumnOption idx="2" pid="2003" type="snmp" options="" />
-				<ColumnOption idx="3" pid="2004" type="snmp" options="" />
-				<ColumnOption idx="4" pid="2005" type="retrieved" options=";enableHeaderSum;enableHistogram;enableHeatmap" />
+				<ColumnOption idx="0" pid="1201" type="snmp" options="" />
+				<ColumnOption idx="1" pid="1202" type="snmp" options="" />
+				<ColumnOption idx="2" pid="1203" type="snmp" options="" />
+				<ColumnOption idx="3" pid="1204" type="snmp" options="" />
+				<ColumnOption idx="4" pid="1205" type="retrieved" options=";enableHeaderSum;enableHistogram;enableHeatmap" />
 			</ArrayOptions>
 			<Information>
 				<Subtext>
@@ -240,6 +307,11 @@ is given by the value of ifNumber.]]>
 				<RTDisplay>true</RTDisplay>
 				<Positions>
 					<Position>
+						<Page>Interface table</Page>
+						<Column>0</Column>
+						<Row>0</Row>
+					</Position>
+					<Position>
 						<Page>General</Page>
 						<Column>1</Column>
 						<Row>0</Row>
@@ -247,10 +319,10 @@ is given by the value of ifNumber.]]>
 				</Positions>
 			</Display>
 			<Measurement>
-				<Type options="tab=columns:2001|0-2002|1-2004|3-2005|4-2003|2,width:100-195-126-116-105,sort:INT-INT-INT-INT-INT,lines:20,filter:true">table</Type>
+				<Type options="tab=columns:1201|0-1202|1-1204|3-1205|4,width:100-195-126-116,sort:STRING-STRING-STRING-INT,lines:20,filter:true">table</Type>
 			</Measurement>
 		</Param>
-		<Param id="2001" trending="false">
+		<Param id="1201" trending="false">
 			<Name>interfaceTableIndex</Name>
 			<Description>Index [IDX] (Interface Table)</Description>
 			<Information>
@@ -279,7 +351,7 @@ management system to the next re-initialization.
 				<Type>string</Type>
 			</Measurement>
 		</Param>
-		<Param id="2002" trending="false">
+		<Param id="1202" trending="false">
 			<Name>interfaceTableType</Name>
 			<Description>Type (Interface Table)</Description>
 			<Information>
@@ -1406,7 +1478,7 @@ IANAifType textual convention.]]>
 				</Discreets>
 			</Measurement>
 		</Param>
-		<Param id="2003" trending="false">
+		<Param id="1203" trending="false">
 			<Name>interfaceTableSpeed</Name>
 			<Description>Speed (Interface Table)</Description>
 			<Information>
@@ -1436,7 +1508,7 @@ zero.]]>
 				<Type>gauge32</Type>
 			</SNMP>
 			<Display>
-				<RTDisplay>true</RTDisplay>
+				<RTDisplay>false</RTDisplay>
 				<Range>
 					<Low>0</Low>
 					<High>4294967295</High>
@@ -1447,7 +1519,7 @@ zero.]]>
 				<Type>number</Type>
 			</Measurement>
 		</Param>
-		<Param id="2004" trending="false">
+		<Param id="1204" trending="false">
 			<Name>interfaceTableAdminStatus</Name>
 			<Description>Administration Status (Interface Table)</Description>
 			<Information>
@@ -1495,7 +1567,7 @@ the down(2) state).]]>
 				</Discreets>
 			</Measurement>
 		</Param>
-		<Param id="2104" snmpSetAndGet="true">
+		<Param id="1254" snmpSetAndGet="true">
 			<Name>interfaceTableAdminStatus</Name>
 			<Description>Administration Status (Interface Table)</Description>
 			<Type>write</Type>
@@ -1530,7 +1602,7 @@ the down(2) state).]]>
 				</Discreets>
 			</Measurement>
 		</Param>
-		<Param id="2005" trending="true">
+		<Param id="1205" trending="true">
 			<Name>interfaceTableCalculatedInterfaceSpeed</Name>
 			<Description>Interface Speed (Interface Table)</Description>
 			<Information>
@@ -1570,7 +1642,7 @@ zero.]]>
 				<Type>number</Type>
 			</Measurement>
 		</Param>
-		<Param id="3000" trending="true">
+		<Param id="1300" trending="true">
 			<Name>xupsBatteryCapacity</Name>
 			<Description>UPS Battery Capacity</Description>
 			<Information>
@@ -1606,13 +1678,18 @@ zero.]]>
 						<Column>0</Column>
 						<Row>7</Row>
 					</Position>
+					<Position>
+						<Page>UPS Parameters</Page>
+						<Column>0</Column>
+						<Row>1</Row>
+					</Position>
 				</Positions>
 			</Display>
 			<Measurement>
 				<Type>analog</Type>
 			</Measurement>
 		</Param>
-		<Param id="3001" trending="true">
+		<Param id="1301" trending="true">
 			<Name>xupsInputFrequency</Name>
 			<Description>UPS Input Frequency</Description>
 			<Information>
@@ -1649,13 +1726,18 @@ zero.]]>
 						<Column>0</Column>
 						<Row>9</Row>
 					</Position>
+					<Position>
+						<Page>UPS Parameters</Page>
+						<Column>0</Column>
+						<Row>2</Row>
+					</Position>
 				</Positions>
 			</Display>
 			<Measurement>
 				<Type>number</Type>
 			</Measurement>
 		</Param>
-		<Param id="3002" trending="false">
+		<Param id="1302" trending="false">
 			<Name>xupsInputNumPhases</Name>
 			<Description>Number of UPS Input Phases</Description>
 			<Information>
@@ -1674,6 +1756,10 @@ zero.]]>
 				<OID type="complete">1.3.6.1.4.1.534.1.3.3.0</OID>
 				<Type>integer32</Type>
 			</SNMP>
+			<Alarm>
+				<Monitored>true</Monitored>
+				<Normal>1;2;3</Normal>
+			</Alarm>
 			<Display>
 				<RTDisplay>true</RTDisplay>
 				<Range>
@@ -1687,13 +1773,18 @@ zero.]]>
 						<Column>0</Column>
 						<Row>8</Row>
 					</Position>
+					<Position>
+						<Page>UPS Parameters</Page>
+						<Column>0</Column>
+						<Row>3</Row>
+					</Position>
 				</Positions>
 			</Display>
 			<Measurement>
 				<Type>number</Type>
 			</Measurement>
 		</Param>
-		<Param id="3003" trending="true">
+		<Param id="1303" trending="true">
 			<Name>xupsOutputLoad</Name>
 			<Description>UPS Output Load</Description>
 			<Information>
@@ -1730,13 +1821,18 @@ zero.]]>
 						<Column>0</Column>
 						<Row>10</Row>
 					</Position>
+					<Position>
+						<Page>UPS Parameters</Page>
+						<Column>0</Column>
+						<Row>4</Row>
+					</Position>
 				</Positions>
 			</Display>
 			<Measurement>
 				<Type>analog</Type>
 			</Measurement>
 		</Param>
-		<Param id="3004" trending="true">
+		<Param id="1304" trending="true">
 			<Name>xupsOutputFrequency</Name>
 			<Description>UPS Output Frequency</Description>
 			<Information>
@@ -1773,6 +1869,11 @@ zero.]]>
 						<Column>0</Column>
 						<Row>11</Row>
 					</Position>
+					<Position>
+						<Page>UPS Parameters</Page>
+						<Column>0</Column>
+						<Row>5</Row>
+					</Position>
 				</Positions>
 			</Display>
 			<Measurement>
@@ -1780,13 +1881,13 @@ zero.]]>
 			</Measurement>
 		</Param>
 		
-		<Param id="4000" trending="false">
+		<Param id="1400" trending="false">
 			<Name>extendedInterfaceTable</Name>
 			<Description>Extended Interface Table</Description>
 			<Type>array</Type>
 			<ArrayOptions index="0">
-				<ColumnOption idx="0" pid="4001" type="snmp" options="" />
-				<ColumnOption idx="1" pid="4002" type="snmp" options="" />
+				<ColumnOption idx="0" pid="1401" type="snmp" options="" />
+				<ColumnOption idx="1" pid="1402" type="snmp" options="" />
 			</ArrayOptions>
 			<Information>
 				<Subtext>
@@ -1806,7 +1907,7 @@ contains additional objects for the interface table.]]>
 				<Type options="tab=lines:20,filter:true">table</Type>
 			</Measurement>
 		</Param>
-		<Param id="4001" trending="false">
+		<Param id="1401" trending="false">
 			<Name>extendedInterfaceTableInstance</Name>
 			<Description>Instance [IDX] (Extended Interface Table)</Description>
 			<Information>
@@ -1835,7 +1936,7 @@ management system to the next re-initialization.
 				<Type>string</Type>
 			</Measurement>
 		</Param>
-		<Param id="4002" trending="false">
+		<Param id="1402" trending="false">
 			<Name>extendedInterfaceTableHighSpeed</Name>
 			<Description>If High Speed (Extended Interface Table)</Description>
 			<Information>
@@ -1864,6 +1965,7 @@ bandwidth, this object should be zero.]]>
 			</SNMP>
 			<Display>
 				<RTDisplay>false</RTDisplay>
+				<Units>bps</Units>
 			</Display>
 			<Measurement>
 				<Type>number</Type>
@@ -1875,7 +1977,7 @@ bandwidth, this object should be zero.]]>
 
 	<QActions>
 		<QAction id="1" name="Precompiled Code" encoding="csharp" options="precompile" />
-		<QAction id="2" name="Calculate Interface Speed" encoding="csharp" triggers="2000" row="true" >
+		<QAction id="2" name="Calculate Interface Speed" encoding="csharp" triggers="1200" row="true" >
 		</QAction>
 	</QActions>
 
@@ -1896,7 +1998,7 @@ bandwidth, this object should be zero.]]>
 			<Description>GetInterfaceTable</Description>
 			<Type>poll</Type>
 			<Content>
-				<Param>2000</Param>
+				<Param>1200</Param>
 			</Content>
 		</Group>
 		<Group id="3000">
@@ -1904,11 +2006,11 @@ bandwidth, this object should be zero.]]>
 			<Description>UPSParameters</Description>
 			<Type>poll</Type>
 			<Content multipleGet="true">
-				<Param>3000</Param>
-				<Param>3001</Param>
-				<Param>3002</Param>
-				<Param>3003</Param>
-				<Param>3004</Param>
+				<Param>1300</Param>
+				<Param>1301</Param>
+				<Param>1302</Param>
+				<Param>1303</Param>
+				<Param>1304</Param>
 			</Content>
 		</Group>
 		<Group id="4000">
@@ -1916,7 +2018,7 @@ bandwidth, this object should be zero.]]>
 			<Description>ExtendedInterfaceTable</Description>
 			<Type>poll</Type>
 			<Content>
-				<Param>4000</Param>
+				<Param>1400</Param>
 			</Content>
 		</Group>
 	</Groups>

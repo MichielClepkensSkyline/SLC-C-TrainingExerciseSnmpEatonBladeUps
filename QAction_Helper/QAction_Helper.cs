@@ -28,74 +28,74 @@ public static class Parameter
 	public const int xupsidentmodel_1003 = 1003;
 	/// <summary>PID: 1003 | Type: read</summary>
 	public const int xupsidentmodel = 1003;
-	/// <summary>PID: 3000 | Type: read</summary>
+	/// <summary>PID: 1300 | Type: read</summary>
 	[EditorBrowsable(EditorBrowsableState.Never)]
-	public const int xupsbatterycapacity_3000 = 3000;
-	/// <summary>PID: 3000 | Type: read</summary>
-	public const int xupsbatterycapacity = 3000;
-	/// <summary>PID: 3001 | Type: read</summary>
+	public const int xupsbatterycapacity_1300 = 1300;
+	/// <summary>PID: 1300 | Type: read</summary>
+	public const int xupsbatterycapacity = 1300;
+	/// <summary>PID: 1301 | Type: read</summary>
 	[EditorBrowsable(EditorBrowsableState.Never)]
-	public const int xupsinputfrequency_3001 = 3001;
-	/// <summary>PID: 3001 | Type: read</summary>
-	public const int xupsinputfrequency = 3001;
-	/// <summary>PID: 3002 | Type: read</summary>
+	public const int xupsinputfrequency_1301 = 1301;
+	/// <summary>PID: 1301 | Type: read</summary>
+	public const int xupsinputfrequency = 1301;
+	/// <summary>PID: 1302 | Type: read</summary>
 	[EditorBrowsable(EditorBrowsableState.Never)]
-	public const int xupsinputnumphases_3002 = 3002;
-	/// <summary>PID: 3002 | Type: read</summary>
-	public const int xupsinputnumphases = 3002;
-	/// <summary>PID: 3003 | Type: read</summary>
+	public const int xupsinputnumphases_1302 = 1302;
+	/// <summary>PID: 1302 | Type: read</summary>
+	public const int xupsinputnumphases = 1302;
+	/// <summary>PID: 1303 | Type: read</summary>
 	[EditorBrowsable(EditorBrowsableState.Never)]
-	public const int xupsoutputload_3003 = 3003;
-	/// <summary>PID: 3003 | Type: read</summary>
-	public const int xupsoutputload = 3003;
-	/// <summary>PID: 3004 | Type: read</summary>
+	public const int xupsoutputload_1303 = 1303;
+	/// <summary>PID: 1303 | Type: read</summary>
+	public const int xupsoutputload = 1303;
+	/// <summary>PID: 1304 | Type: read</summary>
 	[EditorBrowsable(EditorBrowsableState.Never)]
-	public const int xupsoutputfrequency_3004 = 3004;
-	/// <summary>PID: 3004 | Type: read</summary>
-	public const int xupsoutputfrequency = 3004;
+	public const int xupsoutputfrequency_1304 = 1304;
+	/// <summary>PID: 1304 | Type: read</summary>
+	public const int xupsoutputfrequency = 1304;
 	public class Write
 	{
-		/// <summary>PID: 2104 | Type: write</summary>
+		/// <summary>PID: 1254 | Type: write</summary>
 		[EditorBrowsable(EditorBrowsableState.Never)]
-		public const int interfacetableadminstatus_2104 = 2104;
-		/// <summary>PID: 2104 | Type: write</summary>
-		public const int interfacetableadminstatus = 2104;
+		public const int interfacetableadminstatus_1254 = 1254;
+		/// <summary>PID: 1254 | Type: write</summary>
+		public const int interfacetableadminstatus = 1254;
 	}
 	public class Interfacetable
 	{
-		/// <summary>PID: 2000</summary>
-		public const int tablePid = 2000;
+		/// <summary>PID: 1200</summary>
+		public const int tablePid = 1200;
 		/// <summary>IDX: 0</summary>
 		public const int indexColumn = 0;
-		/// <summary>PID: 2001</summary>
-		public const int indexColumnPid = 2001;
+		/// <summary>PID: 1201</summary>
+		public const int indexColumnPid = 1201;
 		public class Pid
 		{
-			/// <summary>PID: 2001 | Type: read</summary>
+			/// <summary>PID: 1201 | Type: read</summary>
 			[EditorBrowsable(EditorBrowsableState.Never)]
-			public const int interfacetableindex_2001 = 2001;
-			/// <summary>PID: 2001 | Type: read</summary>
-			public const int interfacetableindex = 2001;
-			/// <summary>PID: 2002 | Type: read</summary>
+			public const int interfacetableindex_1201 = 1201;
+			/// <summary>PID: 1201 | Type: read</summary>
+			public const int interfacetableindex = 1201;
+			/// <summary>PID: 1202 | Type: read</summary>
 			[EditorBrowsable(EditorBrowsableState.Never)]
-			public const int interfacetabletype_2002 = 2002;
-			/// <summary>PID: 2002 | Type: read</summary>
-			public const int interfacetabletype = 2002;
-			/// <summary>PID: 2003 | Type: read</summary>
+			public const int interfacetabletype_1202 = 1202;
+			/// <summary>PID: 1202 | Type: read</summary>
+			public const int interfacetabletype = 1202;
+			/// <summary>PID: 1203 | Type: read</summary>
 			[EditorBrowsable(EditorBrowsableState.Never)]
-			public const int interfacetablespeed_2003 = 2003;
-			/// <summary>PID: 2003 | Type: read</summary>
-			public const int interfacetablespeed = 2003;
-			/// <summary>PID: 2004 | Type: read</summary>
+			public const int interfacetablespeed_1203 = 1203;
+			/// <summary>PID: 1203 | Type: read</summary>
+			public const int interfacetablespeed = 1203;
+			/// <summary>PID: 1204 | Type: read</summary>
 			[EditorBrowsable(EditorBrowsableState.Never)]
-			public const int interfacetableadminstatus_2004 = 2004;
-			/// <summary>PID: 2004 | Type: read</summary>
-			public const int interfacetableadminstatus = 2004;
-			/// <summary>PID: 2005 | Type: read</summary>
+			public const int interfacetableadminstatus_1204 = 1204;
+			/// <summary>PID: 1204 | Type: read</summary>
+			public const int interfacetableadminstatus = 1204;
+			/// <summary>PID: 1205 | Type: read</summary>
 			[EditorBrowsable(EditorBrowsableState.Never)]
-			public const int interfacetablecalculatedinterfacespeed_2005 = 2005;
-			/// <summary>PID: 2005 | Type: read</summary>
-			public const int interfacetablecalculatedinterfacespeed = 2005;
+			public const int interfacetablecalculatedinterfacespeed_1205 = 1205;
+			/// <summary>PID: 1205 | Type: read</summary>
+			public const int interfacetablecalculatedinterfacespeed = 1205;
 			public class Write
 			{
 			}
@@ -104,51 +104,51 @@ public static class Parameter
 		{
 			/// <summary>IDX: 0 | Type: read</summary>
 			[EditorBrowsable(EditorBrowsableState.Never)]
-			public const int interfacetableindex_2001 = 0;
+			public const int interfacetableindex_1201 = 0;
 			/// <summary>IDX: 0 | Type: read</summary>
 			public const int interfacetableindex = 0;
 			/// <summary>IDX: 1 | Type: read</summary>
 			[EditorBrowsable(EditorBrowsableState.Never)]
-			public const int interfacetabletype_2002 = 1;
+			public const int interfacetabletype_1202 = 1;
 			/// <summary>IDX: 1 | Type: read</summary>
 			public const int interfacetabletype = 1;
 			/// <summary>IDX: 2 | Type: read</summary>
 			[EditorBrowsable(EditorBrowsableState.Never)]
-			public const int interfacetablespeed_2003 = 2;
+			public const int interfacetablespeed_1203 = 2;
 			/// <summary>IDX: 2 | Type: read</summary>
 			public const int interfacetablespeed = 2;
 			/// <summary>IDX: 3 | Type: read</summary>
 			[EditorBrowsable(EditorBrowsableState.Never)]
-			public const int interfacetableadminstatus_2004 = 3;
+			public const int interfacetableadminstatus_1204 = 3;
 			/// <summary>IDX: 3 | Type: read</summary>
 			public const int interfacetableadminstatus = 3;
 			/// <summary>IDX: 4 | Type: read</summary>
 			[EditorBrowsable(EditorBrowsableState.Never)]
-			public const int interfacetablecalculatedinterfacespeed_2005 = 4;
+			public const int interfacetablecalculatedinterfacespeed_1205 = 4;
 			/// <summary>IDX: 4 | Type: read</summary>
 			public const int interfacetablecalculatedinterfacespeed = 4;
 		}
 	}
 	public class Extendedinterfacetable
 	{
-		/// <summary>PID: 4000</summary>
-		public const int tablePid = 4000;
+		/// <summary>PID: 1400</summary>
+		public const int tablePid = 1400;
 		/// <summary>IDX: 0</summary>
 		public const int indexColumn = 0;
-		/// <summary>PID: 4001</summary>
-		public const int indexColumnPid = 4001;
+		/// <summary>PID: 1401</summary>
+		public const int indexColumnPid = 1401;
 		public class Pid
 		{
-			/// <summary>PID: 4001 | Type: read</summary>
+			/// <summary>PID: 1401 | Type: read</summary>
 			[EditorBrowsable(EditorBrowsableState.Never)]
-			public const int extendedinterfacetableinstance_4001 = 4001;
-			/// <summary>PID: 4001 | Type: read</summary>
-			public const int extendedinterfacetableinstance = 4001;
-			/// <summary>PID: 4002 | Type: read</summary>
+			public const int extendedinterfacetableinstance_1401 = 1401;
+			/// <summary>PID: 1401 | Type: read</summary>
+			public const int extendedinterfacetableinstance = 1401;
+			/// <summary>PID: 1402 | Type: read</summary>
 			[EditorBrowsable(EditorBrowsableState.Never)]
-			public const int extendedinterfacetablehighspeed_4002 = 4002;
-			/// <summary>PID: 4002 | Type: read</summary>
-			public const int extendedinterfacetablehighspeed = 4002;
+			public const int extendedinterfacetablehighspeed_1402 = 1402;
+			/// <summary>PID: 1402 | Type: read</summary>
+			public const int extendedinterfacetablehighspeed = 1402;
 			public class Write
 			{
 			}
@@ -157,12 +157,12 @@ public static class Parameter
 		{
 			/// <summary>IDX: 0 | Type: read</summary>
 			[EditorBrowsable(EditorBrowsableState.Never)]
-			public const int extendedinterfacetableinstance_4001 = 0;
+			public const int extendedinterfacetableinstance_1401 = 0;
 			/// <summary>IDX: 0 | Type: read</summary>
 			public const int extendedinterfacetableinstance = 0;
 			/// <summary>IDX: 1 | Type: read</summary>
 			[EditorBrowsable(EditorBrowsableState.Never)]
-			public const int extendedinterfacetablehighspeed_4002 = 1;
+			public const int extendedinterfacetablehighspeed_1402 = 1;
 			/// <summary>IDX: 1 | Type: read</summary>
 			public const int extendedinterfacetablehighspeed = 1;
 		}
@@ -170,8 +170,8 @@ public static class Parameter
 }
 public class WriteParameters
 {
-	/// <summary>PID: 2104  | Type: write | DISCREETS: Up = 1, Down = 2, Testing = 3</summary>
-	public System.Object Interfacetableadminstatus {get { return Protocol.GetParameter(2104); }set { Protocol.SetParameter(2104, value); }}
+	/// <summary>PID: 1254  | Type: write | DISCREETS: Up = 1, Down = 2, Testing = 3</summary>
+	public System.Object Interfacetableadminstatus {get { return Protocol.GetParameter(1254); }set { Protocol.SetParameter(1254, value); }}
 	public SLProtocolExt Protocol;
 	public WriteParameters(SLProtocolExt protocol)
 	{
@@ -180,10 +180,13 @@ public class WriteParameters
 }
 public interface SLProtocolExt : SLProtocol
 {
-	/// <summary>PID: 2000</summary>
+	/// <summary>PID: 1200</summary>
 	InterfacetableQActionTable interfacetable { get; set; }
-	/// <summary>PID: 4000</summary>
+	/// <summary>PID: 1400</summary>
 	ExtendedinterfacetableQActionTable extendedinterfacetable { get; set; }
+	object Title_begin_general_parameters__fixed { get; set; }
+	object Title_end_generic__fixed { get; set; }
+	object Title_begin_ups_parameters__fixed { get; set; }
 	object Systemdescription_1000 { get; set; }
 	object Systemdescription { get; set; }
 	object Systemuptime_1001 { get; set; }
@@ -192,39 +195,45 @@ public interface SLProtocolExt : SLProtocol
 	object Xupsidentmanufacturer { get; set; }
 	object Xupsidentmodel_1003 { get; set; }
 	object Xupsidentmodel { get; set; }
-	object Interfacetableindex_2001 { get; set; }
+	object Interfacetableindex_1201 { get; set; }
 	object Interfacetableindex { get; set; }
-	object Interfacetabletype_2002 { get; set; }
+	object Interfacetabletype_1202 { get; set; }
 	object Interfacetabletype { get; set; }
-	object Interfacetablespeed_2003 { get; set; }
+	object Interfacetablespeed_1203 { get; set; }
 	object Interfacetablespeed { get; set; }
-	object Interfacetableadminstatus_2004 { get; set; }
+	object Interfacetableadminstatus_1204 { get; set; }
 	object Interfacetableadminstatus { get; set; }
-	object Interfacetablecalculatedinterfacespeed_2005 { get; set; }
+	object Interfacetablecalculatedinterfacespeed_1205 { get; set; }
 	object Interfacetablecalculatedinterfacespeed { get; set; }
-	object Interfacetableadminstatus_2104 { get; set; }
-	object Xupsbatterycapacity_3000 { get; set; }
+	object Interfacetableadminstatus_1254 { get; set; }
+	object Xupsbatterycapacity_1300 { get; set; }
 	object Xupsbatterycapacity { get; set; }
-	object Xupsinputfrequency_3001 { get; set; }
+	object Xupsinputfrequency_1301 { get; set; }
 	object Xupsinputfrequency { get; set; }
-	object Xupsinputnumphases_3002 { get; set; }
+	object Xupsinputnumphases_1302 { get; set; }
 	object Xupsinputnumphases { get; set; }
-	object Xupsoutputload_3003 { get; set; }
+	object Xupsoutputload_1303 { get; set; }
 	object Xupsoutputload { get; set; }
-	object Xupsoutputfrequency_3004 { get; set; }
+	object Xupsoutputfrequency_1304 { get; set; }
 	object Xupsoutputfrequency { get; set; }
-	object Extendedinterfacetableinstance_4001 { get; set; }
+	object Extendedinterfacetableinstance_1401 { get; set; }
 	object Extendedinterfacetableinstance { get; set; }
-	object Extendedinterfacetablehighspeed_4002 { get; set; }
+	object Extendedinterfacetablehighspeed_1402 { get; set; }
 	object Extendedinterfacetablehighspeed { get; set; }
 	WriteParameters Write { get; set; }
 }
 public class ConcreteSLProtocolExt : ConcreteSLProtocol, SLProtocolExt
 {
-	/// <summary>PID: 2000</summary>
+	/// <summary>PID: 1200</summary>
 	public InterfacetableQActionTable interfacetable { get; set; }
-	/// <summary>PID: 4000</summary>
+	/// <summary>PID: 1400</summary>
 	public ExtendedinterfacetableQActionTable extendedinterfacetable { get; set; }
+	/// <summary>PID: 1  | Type: fixed</summary>
+	public System.Object Title_begin_general_parameters__fixed {get { return GetParameter(1); }set { SetParameter(1, value); }}
+	/// <summary>PID: 2  | Type: fixed</summary>
+	public System.Object Title_end_generic__fixed {get { return GetParameter(2); }set { SetParameter(2, value); }}
+	/// <summary>PID: 3  | Type: fixed</summary>
+	public System.Object Title_begin_ups_parameters__fixed {get { return GetParameter(3); }set { SetParameter(3, value); }}
 	/// <summary>PID: 1000  | Type: read</summary>
 	[EditorBrowsable(EditorBrowsableState.Never)]
 	public System.Object Systemdescription_1000 {get { return GetParameter(1000); }set { SetParameter(1000, value); }}
@@ -245,74 +254,74 @@ public class ConcreteSLProtocolExt : ConcreteSLProtocol, SLProtocolExt
 	public System.Object Xupsidentmodel_1003 {get { return GetParameter(1003); }set { SetParameter(1003, value); }}
 	/// <summary>PID: 1003  | Type: read</summary>
 	public System.Object Xupsidentmodel {get { return GetParameter(1003); }set { SetParameter(1003, value); }}
-	/// <summary>PID: 2001  | Type: read</summary>
+	/// <summary>PID: 1201  | Type: read</summary>
 	[EditorBrowsable(EditorBrowsableState.Never)]
-	public System.Object Interfacetableindex_2001 {get { return GetParameter(2001); }set { SetParameter(2001, value); }}
-	/// <summary>PID: 2001  | Type: read</summary>
-	public System.Object Interfacetableindex {get { return GetParameter(2001); }set { SetParameter(2001, value); }}
-	/// <summary>PID: 2002  | Type: read | DISCREETS: Other = 1, Regular 1822 = 2, Hdh 1822 = 3, Ddn X 25 = 4, RFC 877 X 25 = 5, Ethernet Csmacd = 6, Iso 88023 Csmacd = 7, Iso 88024 Token Bus = 8, Iso 88025 Token Ring = 9, Iso 88026 Man = 10, Star LAN = 11, Proteon 10 Mbit = 12, Proteon 80 Mbit = 13, Hyperchannel = 14, FDDI = 15, LAPB = 16, SDLC = 17, Ds 1 = 18, E 1 = 19, Basic ISDN = 20, Primary ISDN = 21, Prop Point to Point Serial = 22, PPP = 23, Software Loopback = 24, Eon = 25, Ethernet 3 Mbit = 26, Nsip = 27, Slip = 28, Ultra = 29, Ds 3 = 30, Sip = 31, Frame Relay = 32, Rs 232 = 33, Para = 34, Arcnet = 35, Arcnet Plus = 36, ATM = 37, Miox 25 = 38, Sonet = 39, X 25 Ple = 40, Iso 88022 LLC = 41, Local Talk = 42, Smds Dxi = 43, Frame Relay Service = 44, V 35 = 45, Hssi = 46, Hippi = 47, Modem = 48, Aal 5 = 49, Sonet Path = 50, Sonet VT = 51, Smds Icip = 52, Prop Virtual = 53, Prop Multiplexor = 54, IEEE 80212 = 55, Fibre Channel = 56, Hippi Interface = 57, Frame Relay Interconnect = 58, Aflane 8023 = 59, Aflane 8025 = 60, Cct Emul = 61, Fast Ether = 62, ISDN = 63, V 11 = 64, V 36 = 65, G 703 at 64 K = 66, G 703 at 2 Mb = 67, Qllc = 68, Fast Ether FX = 69, Channel = 70, IEEE 80211 = 71, Ibm 370 Par Chan = 72, Escon = 73, Dlsw = 74, Isdns = 75, Isdnu = 76, Lapd = 77, IP Switch = 78, Rsrb = 79, ATM Logical = 80, Ds 0 = 81, Ds 0 Bundle = 82, Bsc = 83, Async = 84, Cnr = 85, Iso 88025 Dtr = 86, Eplrs = 87, Arap = 88, Prop Cnls = 89, Host Pad = 90, Term Pad = 91, Frame Relay MPI = 92, X 213 = 93, ADSL = 94, Radsl = 95, Sdsl = 96, Vdsl = 97, Iso 88025 CRFP Int = 98, Myrinet = 99, Voice EM = 100, Voice FXO = 101, Voice FXS = 102, Voice Encap = 103, Voice Over IP = 104, ATM Dxi = 105, ATM Funi = 106, ATM Ima = 107, PPP Multilink Bundle = 108, IP Over Cdlc = 109, IP Over Claw = 110, Stack to Stack = 111, Virtual IP Address = 112, Mpc = 113, IP Over ATM = 114, Iso 88025 Fiber = 115, Tdlc = 116, Gigabit Ethernet = 117, HDLC = 118, LAPF = 119, V 37 = 120, X 25 Mlp = 121, X 25 Hunt Group = 122, Transp HDLC = 123, Interleave = 124, Fast = 125, IP = 126, Docs Cable Maclayer = 127, Docs Cable Downstream = 128, Docs Cable Upstream = 129, A 12 Mpp Switch = 130, Tunnel = 131, Coffee = 132, Ces = 133, ATM Sub Interface = 134, L 2 VLAN = 135, L 3 Ipvlan = 136, L 3 Ipxvlan = 137, Digital Powerline = 138, Media Mail Over IP = 139, Dtm = 140, Dcn = 141, IP Forward = 142, Msdsl = 143, IEEE 1394 = 144, If Gsn = 145, Dvb Rcc MAC Layer = 146, Dvb Rcc Downstream = 147, Dvb Rcc Upstream = 148, ATM Virtual = 149, MPLS Tunnel = 150, Srp = 151, Voice Over ATM = 152, Voice Over Frame Relay = 153, Idsl = 154, Composite Link = 155, Ss 7 Sig Link = 156, Prop Wireless P 2 P = 157, Fr Forward = 158, RFC 1483 = 159, USB = 160, IEEE 8023 Ad Lag = 161, Bgppolicyaccounting = 162, Frf 16 Mfr Bundle = 163, H 323 Gatekeeper = 164, H 323 Proxy = 165, MPLS = 166, MF Sig Link = 167, Hdsl 2 = 168, Shdsl = 169, Ds 1 FDL = 170, Pos = 171, Dvb Asi In = 172, Dvb Asi Out = 173, Plc = 174, Nfas = 175, Tr 008 = 176, Gr 303 RDT = 177, Gr 303 IDT = 178, Isup = 179, Prop Docs Wireless Maclayer = 180, Prop Docs Wireless Downstream = 181, Prop Docs Wireless Upstream = 182, Hiperlan 2 = 183, Prop BW Ap 2 Mp = 184, Sonet Overhead Channel = 185, Digital Wrapper Overhead Channel = 186, Aal 2 = 187, Radio MAC = 188, ATM Radio = 189, Imt = 190, Mvl = 191, Reach DSL = 192, Fr Dlci End Pt = 193, ATM Vci End Pt = 194, Optical Channel = 195, Optical Transport = 196, Prop ATM = 197, Voice Over Cable = 198, Infiniband = 199, Te Link = 200, Q 2931 = 201, Virtual Tg = 202, Sip Tg = 203, Sip Sig = 204, Docs Cable Upstream Channel = 205, Econet = 206, Pon 155 = 207, Pon 622 = 208, Bridge = 209, Linegroup = 210, Voice EMFGD = 211, Voice FGDEANA = 212, Voice DID = 213, Mpeg Transport = 214, Six to Four = 215, Gtp = 216, Pdn Ether Loop 1 = 217, Pdn Ether Loop 2 = 218, Optical Channel Group = 219, Homepna = 220, Gfp = 221, Cisco IS Lvlan = 222, Actelis Meta LOOP = 223, Fcip Link = 224, Rpr = 225, Qam = 226, Lmp = 227, Cbl Vecta Star = 228, Docs Cable M Cmts Downstream = 229, ADSL 2 = 230, MAC Sec Controlled IF = 231, MAC Sec Uncontrolled IF = 232, Avici Optical Ether = 233, Atmbond = 234, Voice FGDOS = 235, MoCA Version 1 = 236, IEEE 80216 WMAN = 237, ADSL 2 Plus = 238, Dvb Rcs MAC Layer = 239, Dvb TDM = 240, Dvb Rcs Tdma = 241, X 86 Laps = 242, Wwan PP = 243, Wwan PP 2 = 244, Voice EBS = 245, If PW Type = 246, Ilan = 247, Pip = 248, Alu ELP = 249, Gpon = 250, Vdsl 2 = 251, Capwap Dot 11 Profile = 252, Capwap Dot 11 BSS = 253, Capwap Wtp Virtual Radio = 254, Bits = 255, Docs Cable Upstream Rf Port = 256, Cable Downstream Rf Port = 257, VMware Virtual NIC = 258, IEEE 802154 = 259, Otn Odu = 260, Otn Otu = 261, If Vfi Type = 262, G 9981 = 263, G 9982 = 264, G 9983 = 265, Alu Epon = 266, Alu Epon Onu = 267, Alu Epon Physical Uni = 268, Alu Epon Logical Link = 269, Alu Gpon Onu = 270, Alu Gpon Physical Uni = 271, VMware NIC Team = 272, Docs Ofdm Downstream = 277, Docs Ofdma Upstream = 278</summary>
+	public System.Object Interfacetableindex_1201 {get { return GetParameter(1201); }set { SetParameter(1201, value); }}
+	/// <summary>PID: 1201  | Type: read</summary>
+	public System.Object Interfacetableindex {get { return GetParameter(1201); }set { SetParameter(1201, value); }}
+	/// <summary>PID: 1202  | Type: read | DISCREETS: Other = 1, Regular 1822 = 2, Hdh 1822 = 3, Ddn X 25 = 4, RFC 877 X 25 = 5, Ethernet Csmacd = 6, Iso 88023 Csmacd = 7, Iso 88024 Token Bus = 8, Iso 88025 Token Ring = 9, Iso 88026 Man = 10, Star LAN = 11, Proteon 10 Mbit = 12, Proteon 80 Mbit = 13, Hyperchannel = 14, FDDI = 15, LAPB = 16, SDLC = 17, Ds 1 = 18, E 1 = 19, Basic ISDN = 20, Primary ISDN = 21, Prop Point to Point Serial = 22, PPP = 23, Software Loopback = 24, Eon = 25, Ethernet 3 Mbit = 26, Nsip = 27, Slip = 28, Ultra = 29, Ds 3 = 30, Sip = 31, Frame Relay = 32, Rs 232 = 33, Para = 34, Arcnet = 35, Arcnet Plus = 36, ATM = 37, Miox 25 = 38, Sonet = 39, X 25 Ple = 40, Iso 88022 LLC = 41, Local Talk = 42, Smds Dxi = 43, Frame Relay Service = 44, V 35 = 45, Hssi = 46, Hippi = 47, Modem = 48, Aal 5 = 49, Sonet Path = 50, Sonet VT = 51, Smds Icip = 52, Prop Virtual = 53, Prop Multiplexor = 54, IEEE 80212 = 55, Fibre Channel = 56, Hippi Interface = 57, Frame Relay Interconnect = 58, Aflane 8023 = 59, Aflane 8025 = 60, Cct Emul = 61, Fast Ether = 62, ISDN = 63, V 11 = 64, V 36 = 65, G 703 at 64 K = 66, G 703 at 2 Mb = 67, Qllc = 68, Fast Ether FX = 69, Channel = 70, IEEE 80211 = 71, Ibm 370 Par Chan = 72, Escon = 73, Dlsw = 74, Isdns = 75, Isdnu = 76, Lapd = 77, IP Switch = 78, Rsrb = 79, ATM Logical = 80, Ds 0 = 81, Ds 0 Bundle = 82, Bsc = 83, Async = 84, Cnr = 85, Iso 88025 Dtr = 86, Eplrs = 87, Arap = 88, Prop Cnls = 89, Host Pad = 90, Term Pad = 91, Frame Relay MPI = 92, X 213 = 93, ADSL = 94, Radsl = 95, Sdsl = 96, Vdsl = 97, Iso 88025 CRFP Int = 98, Myrinet = 99, Voice EM = 100, Voice FXO = 101, Voice FXS = 102, Voice Encap = 103, Voice Over IP = 104, ATM Dxi = 105, ATM Funi = 106, ATM Ima = 107, PPP Multilink Bundle = 108, IP Over Cdlc = 109, IP Over Claw = 110, Stack to Stack = 111, Virtual IP Address = 112, Mpc = 113, IP Over ATM = 114, Iso 88025 Fiber = 115, Tdlc = 116, Gigabit Ethernet = 117, HDLC = 118, LAPF = 119, V 37 = 120, X 25 Mlp = 121, X 25 Hunt Group = 122, Transp HDLC = 123, Interleave = 124, Fast = 125, IP = 126, Docs Cable Maclayer = 127, Docs Cable Downstream = 128, Docs Cable Upstream = 129, A 12 Mpp Switch = 130, Tunnel = 131, Coffee = 132, Ces = 133, ATM Sub Interface = 134, L 2 VLAN = 135, L 3 Ipvlan = 136, L 3 Ipxvlan = 137, Digital Powerline = 138, Media Mail Over IP = 139, Dtm = 140, Dcn = 141, IP Forward = 142, Msdsl = 143, IEEE 1394 = 144, If Gsn = 145, Dvb Rcc MAC Layer = 146, Dvb Rcc Downstream = 147, Dvb Rcc Upstream = 148, ATM Virtual = 149, MPLS Tunnel = 150, Srp = 151, Voice Over ATM = 152, Voice Over Frame Relay = 153, Idsl = 154, Composite Link = 155, Ss 7 Sig Link = 156, Prop Wireless P 2 P = 157, Fr Forward = 158, RFC 1483 = 159, USB = 160, IEEE 8023 Ad Lag = 161, Bgppolicyaccounting = 162, Frf 16 Mfr Bundle = 163, H 323 Gatekeeper = 164, H 323 Proxy = 165, MPLS = 166, MF Sig Link = 167, Hdsl 2 = 168, Shdsl = 169, Ds 1 FDL = 170, Pos = 171, Dvb Asi In = 172, Dvb Asi Out = 173, Plc = 174, Nfas = 175, Tr 008 = 176, Gr 303 RDT = 177, Gr 303 IDT = 178, Isup = 179, Prop Docs Wireless Maclayer = 180, Prop Docs Wireless Downstream = 181, Prop Docs Wireless Upstream = 182, Hiperlan 2 = 183, Prop BW Ap 2 Mp = 184, Sonet Overhead Channel = 185, Digital Wrapper Overhead Channel = 186, Aal 2 = 187, Radio MAC = 188, ATM Radio = 189, Imt = 190, Mvl = 191, Reach DSL = 192, Fr Dlci End Pt = 193, ATM Vci End Pt = 194, Optical Channel = 195, Optical Transport = 196, Prop ATM = 197, Voice Over Cable = 198, Infiniband = 199, Te Link = 200, Q 2931 = 201, Virtual Tg = 202, Sip Tg = 203, Sip Sig = 204, Docs Cable Upstream Channel = 205, Econet = 206, Pon 155 = 207, Pon 622 = 208, Bridge = 209, Linegroup = 210, Voice EMFGD = 211, Voice FGDEANA = 212, Voice DID = 213, Mpeg Transport = 214, Six to Four = 215, Gtp = 216, Pdn Ether Loop 1 = 217, Pdn Ether Loop 2 = 218, Optical Channel Group = 219, Homepna = 220, Gfp = 221, Cisco IS Lvlan = 222, Actelis Meta LOOP = 223, Fcip Link = 224, Rpr = 225, Qam = 226, Lmp = 227, Cbl Vecta Star = 228, Docs Cable M Cmts Downstream = 229, ADSL 2 = 230, MAC Sec Controlled IF = 231, MAC Sec Uncontrolled IF = 232, Avici Optical Ether = 233, Atmbond = 234, Voice FGDOS = 235, MoCA Version 1 = 236, IEEE 80216 WMAN = 237, ADSL 2 Plus = 238, Dvb Rcs MAC Layer = 239, Dvb TDM = 240, Dvb Rcs Tdma = 241, X 86 Laps = 242, Wwan PP = 243, Wwan PP 2 = 244, Voice EBS = 245, If PW Type = 246, Ilan = 247, Pip = 248, Alu ELP = 249, Gpon = 250, Vdsl 2 = 251, Capwap Dot 11 Profile = 252, Capwap Dot 11 BSS = 253, Capwap Wtp Virtual Radio = 254, Bits = 255, Docs Cable Upstream Rf Port = 256, Cable Downstream Rf Port = 257, VMware Virtual NIC = 258, IEEE 802154 = 259, Otn Odu = 260, Otn Otu = 261, If Vfi Type = 262, G 9981 = 263, G 9982 = 264, G 9983 = 265, Alu Epon = 266, Alu Epon Onu = 267, Alu Epon Physical Uni = 268, Alu Epon Logical Link = 269, Alu Gpon Onu = 270, Alu Gpon Physical Uni = 271, VMware NIC Team = 272, Docs Ofdm Downstream = 277, Docs Ofdma Upstream = 278</summary>
 	[EditorBrowsable(EditorBrowsableState.Never)]
-	public System.Object Interfacetabletype_2002 {get { return GetParameter(2002); }set { SetParameter(2002, value); }}
-	/// <summary>PID: 2002  | Type: read | DISCREETS: Other = 1, Regular 1822 = 2, Hdh 1822 = 3, Ddn X 25 = 4, RFC 877 X 25 = 5, Ethernet Csmacd = 6, Iso 88023 Csmacd = 7, Iso 88024 Token Bus = 8, Iso 88025 Token Ring = 9, Iso 88026 Man = 10, Star LAN = 11, Proteon 10 Mbit = 12, Proteon 80 Mbit = 13, Hyperchannel = 14, FDDI = 15, LAPB = 16, SDLC = 17, Ds 1 = 18, E 1 = 19, Basic ISDN = 20, Primary ISDN = 21, Prop Point to Point Serial = 22, PPP = 23, Software Loopback = 24, Eon = 25, Ethernet 3 Mbit = 26, Nsip = 27, Slip = 28, Ultra = 29, Ds 3 = 30, Sip = 31, Frame Relay = 32, Rs 232 = 33, Para = 34, Arcnet = 35, Arcnet Plus = 36, ATM = 37, Miox 25 = 38, Sonet = 39, X 25 Ple = 40, Iso 88022 LLC = 41, Local Talk = 42, Smds Dxi = 43, Frame Relay Service = 44, V 35 = 45, Hssi = 46, Hippi = 47, Modem = 48, Aal 5 = 49, Sonet Path = 50, Sonet VT = 51, Smds Icip = 52, Prop Virtual = 53, Prop Multiplexor = 54, IEEE 80212 = 55, Fibre Channel = 56, Hippi Interface = 57, Frame Relay Interconnect = 58, Aflane 8023 = 59, Aflane 8025 = 60, Cct Emul = 61, Fast Ether = 62, ISDN = 63, V 11 = 64, V 36 = 65, G 703 at 64 K = 66, G 703 at 2 Mb = 67, Qllc = 68, Fast Ether FX = 69, Channel = 70, IEEE 80211 = 71, Ibm 370 Par Chan = 72, Escon = 73, Dlsw = 74, Isdns = 75, Isdnu = 76, Lapd = 77, IP Switch = 78, Rsrb = 79, ATM Logical = 80, Ds 0 = 81, Ds 0 Bundle = 82, Bsc = 83, Async = 84, Cnr = 85, Iso 88025 Dtr = 86, Eplrs = 87, Arap = 88, Prop Cnls = 89, Host Pad = 90, Term Pad = 91, Frame Relay MPI = 92, X 213 = 93, ADSL = 94, Radsl = 95, Sdsl = 96, Vdsl = 97, Iso 88025 CRFP Int = 98, Myrinet = 99, Voice EM = 100, Voice FXO = 101, Voice FXS = 102, Voice Encap = 103, Voice Over IP = 104, ATM Dxi = 105, ATM Funi = 106, ATM Ima = 107, PPP Multilink Bundle = 108, IP Over Cdlc = 109, IP Over Claw = 110, Stack to Stack = 111, Virtual IP Address = 112, Mpc = 113, IP Over ATM = 114, Iso 88025 Fiber = 115, Tdlc = 116, Gigabit Ethernet = 117, HDLC = 118, LAPF = 119, V 37 = 120, X 25 Mlp = 121, X 25 Hunt Group = 122, Transp HDLC = 123, Interleave = 124, Fast = 125, IP = 126, Docs Cable Maclayer = 127, Docs Cable Downstream = 128, Docs Cable Upstream = 129, A 12 Mpp Switch = 130, Tunnel = 131, Coffee = 132, Ces = 133, ATM Sub Interface = 134, L 2 VLAN = 135, L 3 Ipvlan = 136, L 3 Ipxvlan = 137, Digital Powerline = 138, Media Mail Over IP = 139, Dtm = 140, Dcn = 141, IP Forward = 142, Msdsl = 143, IEEE 1394 = 144, If Gsn = 145, Dvb Rcc MAC Layer = 146, Dvb Rcc Downstream = 147, Dvb Rcc Upstream = 148, ATM Virtual = 149, MPLS Tunnel = 150, Srp = 151, Voice Over ATM = 152, Voice Over Frame Relay = 153, Idsl = 154, Composite Link = 155, Ss 7 Sig Link = 156, Prop Wireless P 2 P = 157, Fr Forward = 158, RFC 1483 = 159, USB = 160, IEEE 8023 Ad Lag = 161, Bgppolicyaccounting = 162, Frf 16 Mfr Bundle = 163, H 323 Gatekeeper = 164, H 323 Proxy = 165, MPLS = 166, MF Sig Link = 167, Hdsl 2 = 168, Shdsl = 169, Ds 1 FDL = 170, Pos = 171, Dvb Asi In = 172, Dvb Asi Out = 173, Plc = 174, Nfas = 175, Tr 008 = 176, Gr 303 RDT = 177, Gr 303 IDT = 178, Isup = 179, Prop Docs Wireless Maclayer = 180, Prop Docs Wireless Downstream = 181, Prop Docs Wireless Upstream = 182, Hiperlan 2 = 183, Prop BW Ap 2 Mp = 184, Sonet Overhead Channel = 185, Digital Wrapper Overhead Channel = 186, Aal 2 = 187, Radio MAC = 188, ATM Radio = 189, Imt = 190, Mvl = 191, Reach DSL = 192, Fr Dlci End Pt = 193, ATM Vci End Pt = 194, Optical Channel = 195, Optical Transport = 196, Prop ATM = 197, Voice Over Cable = 198, Infiniband = 199, Te Link = 200, Q 2931 = 201, Virtual Tg = 202, Sip Tg = 203, Sip Sig = 204, Docs Cable Upstream Channel = 205, Econet = 206, Pon 155 = 207, Pon 622 = 208, Bridge = 209, Linegroup = 210, Voice EMFGD = 211, Voice FGDEANA = 212, Voice DID = 213, Mpeg Transport = 214, Six to Four = 215, Gtp = 216, Pdn Ether Loop 1 = 217, Pdn Ether Loop 2 = 218, Optical Channel Group = 219, Homepna = 220, Gfp = 221, Cisco IS Lvlan = 222, Actelis Meta LOOP = 223, Fcip Link = 224, Rpr = 225, Qam = 226, Lmp = 227, Cbl Vecta Star = 228, Docs Cable M Cmts Downstream = 229, ADSL 2 = 230, MAC Sec Controlled IF = 231, MAC Sec Uncontrolled IF = 232, Avici Optical Ether = 233, Atmbond = 234, Voice FGDOS = 235, MoCA Version 1 = 236, IEEE 80216 WMAN = 237, ADSL 2 Plus = 238, Dvb Rcs MAC Layer = 239, Dvb TDM = 240, Dvb Rcs Tdma = 241, X 86 Laps = 242, Wwan PP = 243, Wwan PP 2 = 244, Voice EBS = 245, If PW Type = 246, Ilan = 247, Pip = 248, Alu ELP = 249, Gpon = 250, Vdsl 2 = 251, Capwap Dot 11 Profile = 252, Capwap Dot 11 BSS = 253, Capwap Wtp Virtual Radio = 254, Bits = 255, Docs Cable Upstream Rf Port = 256, Cable Downstream Rf Port = 257, VMware Virtual NIC = 258, IEEE 802154 = 259, Otn Odu = 260, Otn Otu = 261, If Vfi Type = 262, G 9981 = 263, G 9982 = 264, G 9983 = 265, Alu Epon = 266, Alu Epon Onu = 267, Alu Epon Physical Uni = 268, Alu Epon Logical Link = 269, Alu Gpon Onu = 270, Alu Gpon Physical Uni = 271, VMware NIC Team = 272, Docs Ofdm Downstream = 277, Docs Ofdma Upstream = 278</summary>
-	public System.Object Interfacetabletype {get { return GetParameter(2002); }set { SetParameter(2002, value); }}
-	/// <summary>PID: 2003  | Type: read</summary>
+	public System.Object Interfacetabletype_1202 {get { return GetParameter(1202); }set { SetParameter(1202, value); }}
+	/// <summary>PID: 1202  | Type: read | DISCREETS: Other = 1, Regular 1822 = 2, Hdh 1822 = 3, Ddn X 25 = 4, RFC 877 X 25 = 5, Ethernet Csmacd = 6, Iso 88023 Csmacd = 7, Iso 88024 Token Bus = 8, Iso 88025 Token Ring = 9, Iso 88026 Man = 10, Star LAN = 11, Proteon 10 Mbit = 12, Proteon 80 Mbit = 13, Hyperchannel = 14, FDDI = 15, LAPB = 16, SDLC = 17, Ds 1 = 18, E 1 = 19, Basic ISDN = 20, Primary ISDN = 21, Prop Point to Point Serial = 22, PPP = 23, Software Loopback = 24, Eon = 25, Ethernet 3 Mbit = 26, Nsip = 27, Slip = 28, Ultra = 29, Ds 3 = 30, Sip = 31, Frame Relay = 32, Rs 232 = 33, Para = 34, Arcnet = 35, Arcnet Plus = 36, ATM = 37, Miox 25 = 38, Sonet = 39, X 25 Ple = 40, Iso 88022 LLC = 41, Local Talk = 42, Smds Dxi = 43, Frame Relay Service = 44, V 35 = 45, Hssi = 46, Hippi = 47, Modem = 48, Aal 5 = 49, Sonet Path = 50, Sonet VT = 51, Smds Icip = 52, Prop Virtual = 53, Prop Multiplexor = 54, IEEE 80212 = 55, Fibre Channel = 56, Hippi Interface = 57, Frame Relay Interconnect = 58, Aflane 8023 = 59, Aflane 8025 = 60, Cct Emul = 61, Fast Ether = 62, ISDN = 63, V 11 = 64, V 36 = 65, G 703 at 64 K = 66, G 703 at 2 Mb = 67, Qllc = 68, Fast Ether FX = 69, Channel = 70, IEEE 80211 = 71, Ibm 370 Par Chan = 72, Escon = 73, Dlsw = 74, Isdns = 75, Isdnu = 76, Lapd = 77, IP Switch = 78, Rsrb = 79, ATM Logical = 80, Ds 0 = 81, Ds 0 Bundle = 82, Bsc = 83, Async = 84, Cnr = 85, Iso 88025 Dtr = 86, Eplrs = 87, Arap = 88, Prop Cnls = 89, Host Pad = 90, Term Pad = 91, Frame Relay MPI = 92, X 213 = 93, ADSL = 94, Radsl = 95, Sdsl = 96, Vdsl = 97, Iso 88025 CRFP Int = 98, Myrinet = 99, Voice EM = 100, Voice FXO = 101, Voice FXS = 102, Voice Encap = 103, Voice Over IP = 104, ATM Dxi = 105, ATM Funi = 106, ATM Ima = 107, PPP Multilink Bundle = 108, IP Over Cdlc = 109, IP Over Claw = 110, Stack to Stack = 111, Virtual IP Address = 112, Mpc = 113, IP Over ATM = 114, Iso 88025 Fiber = 115, Tdlc = 116, Gigabit Ethernet = 117, HDLC = 118, LAPF = 119, V 37 = 120, X 25 Mlp = 121, X 25 Hunt Group = 122, Transp HDLC = 123, Interleave = 124, Fast = 125, IP = 126, Docs Cable Maclayer = 127, Docs Cable Downstream = 128, Docs Cable Upstream = 129, A 12 Mpp Switch = 130, Tunnel = 131, Coffee = 132, Ces = 133, ATM Sub Interface = 134, L 2 VLAN = 135, L 3 Ipvlan = 136, L 3 Ipxvlan = 137, Digital Powerline = 138, Media Mail Over IP = 139, Dtm = 140, Dcn = 141, IP Forward = 142, Msdsl = 143, IEEE 1394 = 144, If Gsn = 145, Dvb Rcc MAC Layer = 146, Dvb Rcc Downstream = 147, Dvb Rcc Upstream = 148, ATM Virtual = 149, MPLS Tunnel = 150, Srp = 151, Voice Over ATM = 152, Voice Over Frame Relay = 153, Idsl = 154, Composite Link = 155, Ss 7 Sig Link = 156, Prop Wireless P 2 P = 157, Fr Forward = 158, RFC 1483 = 159, USB = 160, IEEE 8023 Ad Lag = 161, Bgppolicyaccounting = 162, Frf 16 Mfr Bundle = 163, H 323 Gatekeeper = 164, H 323 Proxy = 165, MPLS = 166, MF Sig Link = 167, Hdsl 2 = 168, Shdsl = 169, Ds 1 FDL = 170, Pos = 171, Dvb Asi In = 172, Dvb Asi Out = 173, Plc = 174, Nfas = 175, Tr 008 = 176, Gr 303 RDT = 177, Gr 303 IDT = 178, Isup = 179, Prop Docs Wireless Maclayer = 180, Prop Docs Wireless Downstream = 181, Prop Docs Wireless Upstream = 182, Hiperlan 2 = 183, Prop BW Ap 2 Mp = 184, Sonet Overhead Channel = 185, Digital Wrapper Overhead Channel = 186, Aal 2 = 187, Radio MAC = 188, ATM Radio = 189, Imt = 190, Mvl = 191, Reach DSL = 192, Fr Dlci End Pt = 193, ATM Vci End Pt = 194, Optical Channel = 195, Optical Transport = 196, Prop ATM = 197, Voice Over Cable = 198, Infiniband = 199, Te Link = 200, Q 2931 = 201, Virtual Tg = 202, Sip Tg = 203, Sip Sig = 204, Docs Cable Upstream Channel = 205, Econet = 206, Pon 155 = 207, Pon 622 = 208, Bridge = 209, Linegroup = 210, Voice EMFGD = 211, Voice FGDEANA = 212, Voice DID = 213, Mpeg Transport = 214, Six to Four = 215, Gtp = 216, Pdn Ether Loop 1 = 217, Pdn Ether Loop 2 = 218, Optical Channel Group = 219, Homepna = 220, Gfp = 221, Cisco IS Lvlan = 222, Actelis Meta LOOP = 223, Fcip Link = 224, Rpr = 225, Qam = 226, Lmp = 227, Cbl Vecta Star = 228, Docs Cable M Cmts Downstream = 229, ADSL 2 = 230, MAC Sec Controlled IF = 231, MAC Sec Uncontrolled IF = 232, Avici Optical Ether = 233, Atmbond = 234, Voice FGDOS = 235, MoCA Version 1 = 236, IEEE 80216 WMAN = 237, ADSL 2 Plus = 238, Dvb Rcs MAC Layer = 239, Dvb TDM = 240, Dvb Rcs Tdma = 241, X 86 Laps = 242, Wwan PP = 243, Wwan PP 2 = 244, Voice EBS = 245, If PW Type = 246, Ilan = 247, Pip = 248, Alu ELP = 249, Gpon = 250, Vdsl 2 = 251, Capwap Dot 11 Profile = 252, Capwap Dot 11 BSS = 253, Capwap Wtp Virtual Radio = 254, Bits = 255, Docs Cable Upstream Rf Port = 256, Cable Downstream Rf Port = 257, VMware Virtual NIC = 258, IEEE 802154 = 259, Otn Odu = 260, Otn Otu = 261, If Vfi Type = 262, G 9981 = 263, G 9982 = 264, G 9983 = 265, Alu Epon = 266, Alu Epon Onu = 267, Alu Epon Physical Uni = 268, Alu Epon Logical Link = 269, Alu Gpon Onu = 270, Alu Gpon Physical Uni = 271, VMware NIC Team = 272, Docs Ofdm Downstream = 277, Docs Ofdma Upstream = 278</summary>
+	public System.Object Interfacetabletype {get { return GetParameter(1202); }set { SetParameter(1202, value); }}
+	/// <summary>PID: 1203  | Type: read</summary>
 	[EditorBrowsable(EditorBrowsableState.Never)]
-	public System.Object Interfacetablespeed_2003 {get { return GetParameter(2003); }set { SetParameter(2003, value); }}
-	/// <summary>PID: 2003  | Type: read</summary>
-	public System.Object Interfacetablespeed {get { return GetParameter(2003); }set { SetParameter(2003, value); }}
-	/// <summary>PID: 2004  | Type: read | DISCREETS: Up = 1, Down = 2, Testing = 3</summary>
+	public System.Object Interfacetablespeed_1203 {get { return GetParameter(1203); }set { SetParameter(1203, value); }}
+	/// <summary>PID: 1203  | Type: read</summary>
+	public System.Object Interfacetablespeed {get { return GetParameter(1203); }set { SetParameter(1203, value); }}
+	/// <summary>PID: 1204  | Type: read | DISCREETS: Up = 1, Down = 2, Testing = 3</summary>
 	[EditorBrowsable(EditorBrowsableState.Never)]
-	public System.Object Interfacetableadminstatus_2004 {get { return GetParameter(2004); }set { SetParameter(2004, value); }}
-	/// <summary>PID: 2004  | Type: read | DISCREETS: Up = 1, Down = 2, Testing = 3</summary>
-	public System.Object Interfacetableadminstatus {get { return GetParameter(2004); }set { SetParameter(2004, value); }}
-	/// <summary>PID: 2005  | Type: read</summary>
+	public System.Object Interfacetableadminstatus_1204 {get { return GetParameter(1204); }set { SetParameter(1204, value); }}
+	/// <summary>PID: 1204  | Type: read | DISCREETS: Up = 1, Down = 2, Testing = 3</summary>
+	public System.Object Interfacetableadminstatus {get { return GetParameter(1204); }set { SetParameter(1204, value); }}
+	/// <summary>PID: 1205  | Type: read</summary>
 	[EditorBrowsable(EditorBrowsableState.Never)]
-	public System.Object Interfacetablecalculatedinterfacespeed_2005 {get { return GetParameter(2005); }set { SetParameter(2005, value); }}
-	/// <summary>PID: 2005  | Type: read</summary>
-	public System.Object Interfacetablecalculatedinterfacespeed {get { return GetParameter(2005); }set { SetParameter(2005, value); }}
-	/// <summary>PID: 2104  | Type: write | DISCREETS: Up = 1, Down = 2, Testing = 3</summary>
+	public System.Object Interfacetablecalculatedinterfacespeed_1205 {get { return GetParameter(1205); }set { SetParameter(1205, value); }}
+	/// <summary>PID: 1205  | Type: read</summary>
+	public System.Object Interfacetablecalculatedinterfacespeed {get { return GetParameter(1205); }set { SetParameter(1205, value); }}
+	/// <summary>PID: 1254  | Type: write | DISCREETS: Up = 1, Down = 2, Testing = 3</summary>
 	[EditorBrowsable(EditorBrowsableState.Never)]
-	public System.Object Interfacetableadminstatus_2104 {get { return GetParameter(2104); }set { SetParameter(2104, value); }}
-	/// <summary>PID: 3000  | Type: read</summary>
+	public System.Object Interfacetableadminstatus_1254 {get { return GetParameter(1254); }set { SetParameter(1254, value); }}
+	/// <summary>PID: 1300  | Type: read</summary>
 	[EditorBrowsable(EditorBrowsableState.Never)]
-	public System.Object Xupsbatterycapacity_3000 {get { return GetParameter(3000); }set { SetParameter(3000, value); }}
-	/// <summary>PID: 3000  | Type: read</summary>
-	public System.Object Xupsbatterycapacity {get { return GetParameter(3000); }set { SetParameter(3000, value); }}
-	/// <summary>PID: 3001  | Type: read</summary>
+	public System.Object Xupsbatterycapacity_1300 {get { return GetParameter(1300); }set { SetParameter(1300, value); }}
+	/// <summary>PID: 1300  | Type: read</summary>
+	public System.Object Xupsbatterycapacity {get { return GetParameter(1300); }set { SetParameter(1300, value); }}
+	/// <summary>PID: 1301  | Type: read</summary>
 	[EditorBrowsable(EditorBrowsableState.Never)]
-	public System.Object Xupsinputfrequency_3001 {get { return GetParameter(3001); }set { SetParameter(3001, value); }}
-	/// <summary>PID: 3001  | Type: read</summary>
-	public System.Object Xupsinputfrequency {get { return GetParameter(3001); }set { SetParameter(3001, value); }}
-	/// <summary>PID: 3002  | Type: read</summary>
+	public System.Object Xupsinputfrequency_1301 {get { return GetParameter(1301); }set { SetParameter(1301, value); }}
+	/// <summary>PID: 1301  | Type: read</summary>
+	public System.Object Xupsinputfrequency {get { return GetParameter(1301); }set { SetParameter(1301, value); }}
+	/// <summary>PID: 1302  | Type: read</summary>
 	[EditorBrowsable(EditorBrowsableState.Never)]
-	public System.Object Xupsinputnumphases_3002 {get { return GetParameter(3002); }set { SetParameter(3002, value); }}
-	/// <summary>PID: 3002  | Type: read</summary>
-	public System.Object Xupsinputnumphases {get { return GetParameter(3002); }set { SetParameter(3002, value); }}
-	/// <summary>PID: 3003  | Type: read</summary>
+	public System.Object Xupsinputnumphases_1302 {get { return GetParameter(1302); }set { SetParameter(1302, value); }}
+	/// <summary>PID: 1302  | Type: read</summary>
+	public System.Object Xupsinputnumphases {get { return GetParameter(1302); }set { SetParameter(1302, value); }}
+	/// <summary>PID: 1303  | Type: read</summary>
 	[EditorBrowsable(EditorBrowsableState.Never)]
-	public System.Object Xupsoutputload_3003 {get { return GetParameter(3003); }set { SetParameter(3003, value); }}
-	/// <summary>PID: 3003  | Type: read</summary>
-	public System.Object Xupsoutputload {get { return GetParameter(3003); }set { SetParameter(3003, value); }}
-	/// <summary>PID: 3004  | Type: read</summary>
+	public System.Object Xupsoutputload_1303 {get { return GetParameter(1303); }set { SetParameter(1303, value); }}
+	/// <summary>PID: 1303  | Type: read</summary>
+	public System.Object Xupsoutputload {get { return GetParameter(1303); }set { SetParameter(1303, value); }}
+	/// <summary>PID: 1304  | Type: read</summary>
 	[EditorBrowsable(EditorBrowsableState.Never)]
-	public System.Object Xupsoutputfrequency_3004 {get { return GetParameter(3004); }set { SetParameter(3004, value); }}
-	/// <summary>PID: 3004  | Type: read</summary>
-	public System.Object Xupsoutputfrequency {get { return GetParameter(3004); }set { SetParameter(3004, value); }}
-	/// <summary>PID: 4001  | Type: read</summary>
+	public System.Object Xupsoutputfrequency_1304 {get { return GetParameter(1304); }set { SetParameter(1304, value); }}
+	/// <summary>PID: 1304  | Type: read</summary>
+	public System.Object Xupsoutputfrequency {get { return GetParameter(1304); }set { SetParameter(1304, value); }}
+	/// <summary>PID: 1401  | Type: read</summary>
 	[EditorBrowsable(EditorBrowsableState.Never)]
-	public System.Object Extendedinterfacetableinstance_4001 {get { return GetParameter(4001); }set { SetParameter(4001, value); }}
-	/// <summary>PID: 4001  | Type: read</summary>
-	public System.Object Extendedinterfacetableinstance {get { return GetParameter(4001); }set { SetParameter(4001, value); }}
-	/// <summary>PID: 4002  | Type: read</summary>
+	public System.Object Extendedinterfacetableinstance_1401 {get { return GetParameter(1401); }set { SetParameter(1401, value); }}
+	/// <summary>PID: 1401  | Type: read</summary>
+	public System.Object Extendedinterfacetableinstance {get { return GetParameter(1401); }set { SetParameter(1401, value); }}
+	/// <summary>PID: 1402  | Type: read</summary>
 	[EditorBrowsable(EditorBrowsableState.Never)]
-	public System.Object Extendedinterfacetablehighspeed_4002 {get { return GetParameter(4002); }set { SetParameter(4002, value); }}
-	/// <summary>PID: 4002  | Type: read</summary>
-	public System.Object Extendedinterfacetablehighspeed {get { return GetParameter(4002); }set { SetParameter(4002, value); }}
+	public System.Object Extendedinterfacetablehighspeed_1402 {get { return GetParameter(1402); }set { SetParameter(1402, value); }}
+	/// <summary>PID: 1402  | Type: read</summary>
+	public System.Object Extendedinterfacetablehighspeed {get { return GetParameter(1402); }set { SetParameter(1402, value); }}
 	public WriteParameters Write { get; set; }
 	public ConcreteSLProtocolExt()
 	{
-		interfacetable = new InterfacetableQActionTable(this, 2000, "interfacetable");
-		extendedinterfacetable = new ExtendedinterfacetableQActionTable(this, 4000, "extendedinterfacetable");
+		interfacetable = new InterfacetableQActionTable(this, 1200, "interfacetable");
+		extendedinterfacetable = new ExtendedinterfacetableQActionTable(this, 1400, "extendedinterfacetable");
 		Write = new WriteParameters(this);
 	}
 }
@@ -333,30 +342,30 @@ public class ExtendedinterfacetableQActionTable : QActionTable, IEnumerable<Exte
 /// <summary>IDX: 0</summary>
 public class InterfacetableQActionRow : QActionTableRow
 {
-	/// <summary>PID: 2001 | Type: read</summary>
+	/// <summary>PID: 1201 | Type: read</summary>
 	[EditorBrowsable(EditorBrowsableState.Never)]
-	public System.Object Interfacetableindex_2001 { get { if (base.Columns.ContainsKey(0)) { return base.Columns[0]; } else { return null; } } set { if (base.Columns.ContainsKey(0)) { base.Columns[0] = value; } else { base.Columns.Add(0, value); } } }
-	/// <summary>PID: 2001 | Type: read</summary>
+	public System.Object Interfacetableindex_1201 { get { if (base.Columns.ContainsKey(0)) { return base.Columns[0]; } else { return null; } } set { if (base.Columns.ContainsKey(0)) { base.Columns[0] = value; } else { base.Columns.Add(0, value); } } }
+	/// <summary>PID: 1201 | Type: read</summary>
 	public System.Object Interfacetableindex { get { if (base.Columns.ContainsKey(0)) { return base.Columns[0]; } else { return null; } } set { if (base.Columns.ContainsKey(0)) { base.Columns[0] = value; } else { base.Columns.Add(0, value); } } }
-	/// <summary>PID: 2002 | Type: read</summary>
+	/// <summary>PID: 1202 | Type: read</summary>
 	[EditorBrowsable(EditorBrowsableState.Never)]
-	public System.Object Interfacetabletype_2002 { get { if (base.Columns.ContainsKey(1)) { return base.Columns[1]; } else { return null; } } set { if (base.Columns.ContainsKey(1)) { base.Columns[1] = value; } else { base.Columns.Add(1, value); } } }
-	/// <summary>PID: 2002 | Type: read</summary>
+	public System.Object Interfacetabletype_1202 { get { if (base.Columns.ContainsKey(1)) { return base.Columns[1]; } else { return null; } } set { if (base.Columns.ContainsKey(1)) { base.Columns[1] = value; } else { base.Columns.Add(1, value); } } }
+	/// <summary>PID: 1202 | Type: read</summary>
 	public System.Object Interfacetabletype { get { if (base.Columns.ContainsKey(1)) { return base.Columns[1]; } else { return null; } } set { if (base.Columns.ContainsKey(1)) { base.Columns[1] = value; } else { base.Columns.Add(1, value); } } }
-	/// <summary>PID: 2003 | Type: read</summary>
+	/// <summary>PID: 1203 | Type: read</summary>
 	[EditorBrowsable(EditorBrowsableState.Never)]
-	public System.Object Interfacetablespeed_2003 { get { if (base.Columns.ContainsKey(2)) { return base.Columns[2]; } else { return null; } } set { if (base.Columns.ContainsKey(2)) { base.Columns[2] = value; } else { base.Columns.Add(2, value); } } }
-	/// <summary>PID: 2003 | Type: read</summary>
+	public System.Object Interfacetablespeed_1203 { get { if (base.Columns.ContainsKey(2)) { return base.Columns[2]; } else { return null; } } set { if (base.Columns.ContainsKey(2)) { base.Columns[2] = value; } else { base.Columns.Add(2, value); } } }
+	/// <summary>PID: 1203 | Type: read</summary>
 	public System.Object Interfacetablespeed { get { if (base.Columns.ContainsKey(2)) { return base.Columns[2]; } else { return null; } } set { if (base.Columns.ContainsKey(2)) { base.Columns[2] = value; } else { base.Columns.Add(2, value); } } }
-	/// <summary>PID: 2004 | Type: read</summary>
+	/// <summary>PID: 1204 | Type: read</summary>
 	[EditorBrowsable(EditorBrowsableState.Never)]
-	public System.Object Interfacetableadminstatus_2004 { get { if (base.Columns.ContainsKey(3)) { return base.Columns[3]; } else { return null; } } set { if (base.Columns.ContainsKey(3)) { base.Columns[3] = value; } else { base.Columns.Add(3, value); } } }
-	/// <summary>PID: 2004 | Type: read</summary>
+	public System.Object Interfacetableadminstatus_1204 { get { if (base.Columns.ContainsKey(3)) { return base.Columns[3]; } else { return null; } } set { if (base.Columns.ContainsKey(3)) { base.Columns[3] = value; } else { base.Columns.Add(3, value); } } }
+	/// <summary>PID: 1204 | Type: read</summary>
 	public System.Object Interfacetableadminstatus { get { if (base.Columns.ContainsKey(3)) { return base.Columns[3]; } else { return null; } } set { if (base.Columns.ContainsKey(3)) { base.Columns[3] = value; } else { base.Columns.Add(3, value); } } }
-	/// <summary>PID: 2005 | Type: read</summary>
+	/// <summary>PID: 1205 | Type: read</summary>
 	[EditorBrowsable(EditorBrowsableState.Never)]
-	public System.Object Interfacetablecalculatedinterfacespeed_2005 { get { if (base.Columns.ContainsKey(4)) { return base.Columns[4]; } else { return null; } } set { if (base.Columns.ContainsKey(4)) { base.Columns[4] = value; } else { base.Columns.Add(4, value); } } }
-	/// <summary>PID: 2005 | Type: read</summary>
+	public System.Object Interfacetablecalculatedinterfacespeed_1205 { get { if (base.Columns.ContainsKey(4)) { return base.Columns[4]; } else { return null; } } set { if (base.Columns.ContainsKey(4)) { base.Columns[4] = value; } else { base.Columns.Add(4, value); } } }
+	/// <summary>PID: 1205 | Type: read</summary>
 	public System.Object Interfacetablecalculatedinterfacespeed { get { if (base.Columns.ContainsKey(4)) { return base.Columns[4]; } else { return null; } } set { if (base.Columns.ContainsKey(4)) { base.Columns[4] = value; } else { base.Columns.Add(4, value); } } }
 	public InterfacetableQActionRow() : base(0, 5) { }
 	public InterfacetableQActionRow(System.Object[] oRow) : base(0, 5, oRow) { }
@@ -366,15 +375,15 @@ public class InterfacetableQActionRow : QActionTableRow
 /// <summary>IDX: 0</summary>
 public class ExtendedinterfacetableQActionRow : QActionTableRow
 {
-	/// <summary>PID: 4001 | Type: read</summary>
+	/// <summary>PID: 1401 | Type: read</summary>
 	[EditorBrowsable(EditorBrowsableState.Never)]
-	public System.Object Extendedinterfacetableinstance_4001 { get { if (base.Columns.ContainsKey(0)) { return base.Columns[0]; } else { return null; } } set { if (base.Columns.ContainsKey(0)) { base.Columns[0] = value; } else { base.Columns.Add(0, value); } } }
-	/// <summary>PID: 4001 | Type: read</summary>
+	public System.Object Extendedinterfacetableinstance_1401 { get { if (base.Columns.ContainsKey(0)) { return base.Columns[0]; } else { return null; } } set { if (base.Columns.ContainsKey(0)) { base.Columns[0] = value; } else { base.Columns.Add(0, value); } } }
+	/// <summary>PID: 1401 | Type: read</summary>
 	public System.Object Extendedinterfacetableinstance { get { if (base.Columns.ContainsKey(0)) { return base.Columns[0]; } else { return null; } } set { if (base.Columns.ContainsKey(0)) { base.Columns[0] = value; } else { base.Columns.Add(0, value); } } }
-	/// <summary>PID: 4002 | Type: read</summary>
+	/// <summary>PID: 1402 | Type: read</summary>
 	[EditorBrowsable(EditorBrowsableState.Never)]
-	public System.Object Extendedinterfacetablehighspeed_4002 { get { if (base.Columns.ContainsKey(1)) { return base.Columns[1]; } else { return null; } } set { if (base.Columns.ContainsKey(1)) { base.Columns[1] = value; } else { base.Columns.Add(1, value); } } }
-	/// <summary>PID: 4002 | Type: read</summary>
+	public System.Object Extendedinterfacetablehighspeed_1402 { get { if (base.Columns.ContainsKey(1)) { return base.Columns[1]; } else { return null; } } set { if (base.Columns.ContainsKey(1)) { base.Columns[1] = value; } else { base.Columns.Add(1, value); } } }
+	/// <summary>PID: 1402 | Type: read</summary>
 	public System.Object Extendedinterfacetablehighspeed { get { if (base.Columns.ContainsKey(1)) { return base.Columns[1]; } else { return null; } } set { if (base.Columns.ContainsKey(1)) { base.Columns[1] = value; } else { base.Columns.Add(1, value); } } }
 	public ExtendedinterfacetableQActionRow() : base(0, 2) { }
 	public ExtendedinterfacetableQActionRow(System.Object[] oRow) : base(0, 2, oRow) { }
