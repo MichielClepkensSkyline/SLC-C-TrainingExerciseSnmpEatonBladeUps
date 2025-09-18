@@ -55,7 +55,7 @@ Any inquiries can be addressed to:
 	<DeviceOID>000</DeviceOID>
 	<ElementType>UPS</ElementType>
 	<Type relativeTimers="true">snmpv2</Type>
-	<Display defaultPage="General" pageOrder="General;Interfaces;UPS Parameters" wideColumnPages=""/>
+	<Display defaultPage="General" pageOrder="General;Interfaces;UPS Parameters;----------;WebInterface#http://[Polling Ip]/" wideColumnPages=""/>
 	<SNMP includepages="true">auto</SNMP>
 
 	<Compliancies>
@@ -1841,16 +1841,8 @@ bandwidth, this object should be zero.]]>
 		</QAction>
 	</QActions>
 
-	<Groups>
-		<Group id="2">
-			<Name>After Startup</Name>
-			<Description>After Startup</Description>
-			<Type>poll action</Type>
-			<Content>
-				<Action>2</Action>
-			</Content>
-		</Group>
-		<Group id="100">
+	<Groups>	
+		<Group id="100" ping="true">
 			<Name>GetSysInfo</Name>
 			<Description>Get System Information</Description>
 			<Content multipleGet="true">
@@ -1885,6 +1877,14 @@ bandwidth, this object should be zero.]]>
 				<Param>304</Param>
 			</Content>
 		</Group>
+		<Group id="500">
+			<Name>After Startup</Name>
+			<Description>After Startup</Description>
+			<Type>poll action</Type>
+			<Content>
+				<Action>2</Action>
+			</Content>
+		</Group>
 	</Groups>
 
 	<Triggers>
@@ -1911,7 +1911,7 @@ bandwidth, this object should be zero.]]>
 	<Actions>
 		<Action id="1">
 			<Name>After Startup Group</Name>
-			<On id="2">group</On>
+			<On id="500">group</On>
 			<Type>execute next</Type>
 		</Action>
 		<Action id="2">
