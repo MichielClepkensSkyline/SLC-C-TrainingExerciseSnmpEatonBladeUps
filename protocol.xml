@@ -224,7 +224,7 @@ re-initialized.]]>
 				<ColumnOption idx="1" pid="2002" type="snmp" options="" />
 				<ColumnOption idx="2" pid="2003" type="snmp" options="" />
 				<ColumnOption idx="3" pid="2004" type="snmp" options="" />
-				<ColumnOption idx="4" pid="2005" type="retrieved" options="" />
+				<ColumnOption idx="4" pid="2005" type="retrieved" options=";enableHeaderSum;enableHistogram;enableHeatmap" />
 			</ArrayOptions>
 			<Information>
 				<Subtext>
@@ -234,7 +234,7 @@ is given by the value of ifNumber.]]>
 			</Information>
 			<SNMP>
 				<Enabled>true</Enabled>
-				<OID type="complete" options="instance;multipleGetNext:10">1.3.6.1.2.1.2.2</OID>
+				<OID type="complete" options="instance;bulk:10">1.3.6.1.2.1.2.2</OID>
 			</SNMP>
 			<Display>
 				<RTDisplay>true</RTDisplay>
@@ -247,7 +247,7 @@ is given by the value of ifNumber.]]>
 				</Positions>
 			</Display>
 			<Measurement>
-				<Type options="tab=columns:2001|0-2002|1-2004|3-2005|4-2003|2,width:100-195-126-107-105,sort:INT-INT-INT-INT-INT,lines:20,filter:true">table</Type>
+				<Type options="tab=columns:2001|0-2002|1-2004|3-2005|4-2003|2,width:100-195-126-116-105,sort:INT-INT-INT-INT-INT,lines:20,filter:true">table</Type>
 			</Measurement>
 		</Param>
 		<Param id="2001" trending="false">
@@ -1530,7 +1530,7 @@ the down(2) state).]]>
 				</Discreets>
 			</Measurement>
 		</Param>
-		<Param id="2005" trending="false">
+		<Param id="2005" trending="true">
 			<Name>interfaceTableCalculatedInterfaceSpeed</Name>
 			<Description>Interface Speed (Interface Table)</Description>
 			<Information>
@@ -1554,13 +1554,17 @@ zero.]]>
 				<Type>double</Type>
 				<LengthType>next param</LengthType>
 			</Interprete>
+			<Alarm>
+				<Monitored>true</Monitored>
+				<CH>20000</CH>
+			</Alarm>
 			<Display>
 				<RTDisplay>true</RTDisplay>
 				<Range>
 					<Low>0</Low>
 					<High>4294967295</High>
 				</Range>
-				<Units>bps</Units>
+				<Units>Mbps</Units>
 			</Display>
 			<Measurement>
 				<Type>number</Type>
@@ -1648,7 +1652,7 @@ zero.]]>
 				</Positions>
 			</Display>
 			<Measurement>
-				<Type>analog</Type>
+				<Type>number</Type>
 			</Measurement>
 		</Param>
 		<Param id="3002" trending="false">
@@ -1718,7 +1722,7 @@ zero.]]>
 				<Units>%</Units>
 				<Range>
 					<Low>0</Low>
-					<High>200</High>
+					<High>100</High>
 				</Range>
 				<Positions>
 					<Position>
@@ -1772,7 +1776,7 @@ zero.]]>
 				</Positions>
 			</Display>
 			<Measurement>
-				<Type>analog</Type>
+				<Type>number</Type>
 			</Measurement>
 		</Param>
 		
@@ -1871,7 +1875,7 @@ bandwidth, this object should be zero.]]>
 
 	<QActions>
 		<QAction id="1" name="Precompiled Code" encoding="csharp" options="precompile" />
-		<QAction id="2" name="Calculate Interface Speed" encoding="csharp" triggers="2000">
+		<QAction id="2" name="Calculate Interface Speed" encoding="csharp" triggers="2000" row="true" >
 		</QAction>
 	</QActions>
 
@@ -1929,18 +1933,17 @@ bandwidth, this object should be zero.]]>
 			<Time initial="true">10000</Time>
 			<Interval>75</Interval>
 			<Content>
-				<Group>1000</Group>
-				
-				<Group>3000</Group>
 				<Group>4000</Group>
+				<Group>2000</Group>
+				<Group>1000</Group>
+				<Group>3000</Group>
 			</Content>
 		</Timer>
 		<Timer id="2">
 			<Name>Medium Timer (1m)</Name>
-			<Time initial="true" dataDisplay="20000">20000</Time>
+			<Time initial="true" dataDisplay="30000">60000</Time>
 			<Interval>75</Interval>
 			<Content>
-				<Group>2000</Group>
 			</Content>
 		</Timer>
 		<Timer id="3">
