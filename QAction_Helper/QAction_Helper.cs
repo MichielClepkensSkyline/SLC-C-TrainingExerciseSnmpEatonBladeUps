@@ -198,6 +198,7 @@ public interface SLProtocolExt : SLProtocol
 	object Xupsoutputfrequency { get; set; }
 	object Xupsbatcapacity_304 { get; set; }
 	object Xupsbatcapacity { get; set; }
+	object Calculatespeed_dummy { get; set; }
 	WriteParameters Write { get; set; }
 }
 public class ConcreteSLProtocolExt : ConcreteSLProtocol, SLProtocolExt
@@ -283,6 +284,8 @@ public class ConcreteSLProtocolExt : ConcreteSLProtocol, SLProtocolExt
 	public System.Object Xupsbatcapacity_304 {get { return GetParameter(304); }set { SetParameter(304, value); }}
 	/// <summary>PID: 304  | Type: read</summary>
 	public System.Object Xupsbatcapacity {get { return GetParameter(304); }set { SetParameter(304, value); }}
+	/// <summary>PID: 403  | Type: dummy</summary>
+	public System.Object Calculatespeed_dummy {get { return GetParameter(403); }set { SetParameter(403, value); }}
 	public WriteParameters Write { get; set; }
 	public ConcreteSLProtocolExt()
 	{

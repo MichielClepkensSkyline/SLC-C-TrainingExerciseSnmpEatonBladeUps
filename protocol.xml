@@ -55,7 +55,7 @@ Any inquiries can be addressed to:
 	<DeviceOID>000</DeviceOID>
 	<ElementType>UPS</ElementType>
 	<Type relativeTimers="true">snmpv2</Type>
-	<Display defaultPage="General" pageOrder="General;Interfaces;UPS parameters" wideColumnPages=""/>
+	<Display defaultPage="General" pageOrder="General;Interfaces;UPS Parameters" wideColumnPages=""/>
 	<SNMP includepages="true">auto</SNMP>
 
 	<Compliancies>
@@ -1437,7 +1437,12 @@ zero.]]>
 				<Type>gauge32</Type>
 			</SNMP>
 			<Display>
+				<Units>bps</Units>
 				<RTDisplay>true</RTDisplay>
+				<Range>
+					<Low>0</Low>
+					<High>4294967295</High>
+				</Range>
 			</Display>
 			<Measurement>
 				<Type>number</Type>
@@ -1592,6 +1597,11 @@ bandwidth, this object should be zero.]]>
 			</SNMP>
 			<Display>
 				<RTDisplay>true</RTDisplay>
+				<Units>Mbps</Units>
+				<Range>
+					<Low>0</Low>
+					<High>4294967295</High>
+				</Range>
 			</Display>
 			<Measurement>
 				<Type>number</Type>
@@ -1660,6 +1670,9 @@ bandwidth, this object should be zero.]]>
 					<Low>0</Low>
 					<High>6</High>
 				</Range>
+				<!-- SuppressValidator 2.9.4 This is the correct unit for this param -->
+				<Units>Phases</Units>
+				<!-- /SuppressValidator 2.9.4 -->
 				<Positions>
 					<Position>
 						<Page>UPS Parameters</Page>
@@ -1693,7 +1706,7 @@ bandwidth, this object should be zero.]]>
 			</SNMP>
 			<Display>
 				<RTDisplay>true</RTDisplay>
-				<Units>percent</Units>
+				<Units>%</Units>
 				<Range>
 					<Low>0</Low>
 					<High>200</High>
@@ -1750,7 +1763,7 @@ bandwidth, this object should be zero.]]>
 		</Param>
 		<Param id="304" trending="false">
 			<Name>xupsBatCapacity</Name>
-			<Description>Xups Bat Capacity</Description>
+			<Description>Xups Battery Capacity</Description>
 			<Information>
 				<Subtext>
 					<![CDATA[Battery percent charge.]]>
@@ -1769,7 +1782,7 @@ bandwidth, this object should be zero.]]>
 			</SNMP>
 			<Display>
 				<RTDisplay>true</RTDisplay>
-				<Units>percent</Units>
+				<Units>%</Units>
 				<Range>
 					<Low>0</Low>
 					<High>100</High>
@@ -1786,12 +1799,18 @@ bandwidth, this object should be zero.]]>
 				<Type>number</Type>
 			</Measurement>
 		</Param>
-		
+		<Param id="403">
+			<Name>CalculateSpeed</Name>
+			<Description>Calculate Speed</Description>
+			<Type>dummy</Type>
+		</Param>
 	</Params>
 
 	<QActions>
 		<QAction id="1" name="Precompiled Code" encoding="csharp" options="precompile" />
 		<QAction id="2" name="After Startup" encoding="csharp" triggers="2" />
+		<QAction id="3" name="Calculate Speed" encoding="csharp" triggers="403">
+		</QAction>
 	</QActions>
 
 	<Groups>
@@ -1850,6 +1869,15 @@ bandwidth, this object should be zero.]]>
 				<Id>1</Id>
 			</Content>
 		</Trigger>
+		<Trigger id="2">
+			<Name>CalculateSpeed</Name>
+			<On id="200">group</On>
+			<Time>after</Time>
+			<Type>action</Type>
+			<Content>
+				<Id>3</Id>
+			</Content>
+		</Trigger>
 	</Triggers>
 
 	<Actions>
@@ -1861,6 +1889,11 @@ bandwidth, this object should be zero.]]>
 		<Action id="2">
 			<Name>After Startup QAction</Name>
 			<On id="2">parameter</On>
+			<Type>run actions</Type>
+		</Action>
+		<Action id="3">
+			<Name>CalculateSpeed</Name>
+			<On id="403">parameter</On>
 			<Type>run actions</Type>
 		</Action>
 	</Actions>
