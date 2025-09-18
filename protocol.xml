@@ -1703,6 +1703,7 @@ zero.]]>
 				<RawType>numeric text</RawType>
 				<Type>double</Type>
 				<LengthType>next param</LengthType>
+				<Sequence noset="true">div:10</Sequence>
 			</Interprete>
 			<SNMP>
 				<Enabled>true</Enabled>
@@ -1711,8 +1712,8 @@ zero.]]>
 			</SNMP>
 			<Alarm>
 				<Monitored>true</Monitored>
-				<CH>1200</CH>
-				<Normal>800</Normal>
+				<CH>100</CH>
+				<Normal>60</Normal>
 			</Alarm>
 			<Display>
 				<RTDisplay>true</RTDisplay>
@@ -1848,6 +1849,7 @@ zero.]]>
 				<RawType>numeric text</RawType>
 				<Type>double</Type>
 				<LengthType>next param</LengthType>
+				<Sequence noset="true">div:10</Sequence>
 			</Interprete>
 			<SNMP>
 				<Enabled>true</Enabled>
@@ -1856,8 +1858,8 @@ zero.]]>
 			</SNMP>
 			<Alarm>
 				<Monitored>true</Monitored>
-				<CH>1200</CH>
-				<Normal>800</Normal>
+				<CH>100</CH>
+				<Normal>60</Normal>
 			</Alarm>
 			<Display>
 				<RTDisplay>true</RTDisplay>
