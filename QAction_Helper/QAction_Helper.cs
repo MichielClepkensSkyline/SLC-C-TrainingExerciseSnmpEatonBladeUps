@@ -211,6 +211,9 @@ public interface SLProtocolExt : SLProtocol
 	object Xupsbatcapacity_304 { get; set; }
 	object Xupsbatcapacity { get; set; }
 	object Calculatespeed_dummy { get; set; }
+	object Title_begin_systeminfo__fixed { get; set; }
+	object Title_begin_interfacestables__fixed { get; set; }
+	object Title_begin_upsparamters__fixed { get; set; }
 	WriteParameters Write { get; set; }
 }
 public class ConcreteSLProtocolExt : ConcreteSLProtocol, SLProtocolExt
@@ -303,6 +306,12 @@ public class ConcreteSLProtocolExt : ConcreteSLProtocol, SLProtocolExt
 	public System.Object Xupsbatcapacity {get { return GetParameter(304); }set { SetParameter(304, value); }}
 	/// <summary>PID: 403  | Type: dummy</summary>
 	public System.Object Calculatespeed_dummy {get { return GetParameter(403); }set { SetParameter(403, value); }}
+	/// <summary>PID: 404  | Type: fixed</summary>
+	public System.Object Title_begin_systeminfo__fixed {get { return GetParameter(404); }set { SetParameter(404, value); }}
+	/// <summary>PID: 405  | Type: fixed</summary>
+	public System.Object Title_begin_interfacestables__fixed {get { return GetParameter(405); }set { SetParameter(405, value); }}
+	/// <summary>PID: 406  | Type: fixed</summary>
+	public System.Object Title_begin_upsparamters__fixed {get { return GetParameter(406); }set { SetParameter(406, value); }}
 	public WriteParameters Write { get; set; }
 	public ConcreteSLProtocolExt()
 	{
