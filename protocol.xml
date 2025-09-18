@@ -2000,7 +2000,7 @@ bandwidth, this object should be zero.]]>
 		</Trigger>
 		<Trigger id="2">
 			<Name>CalculateSpeed</Name>
-			<On id="200">group</On>
+			<On id="300">group</On>
 			<Time>after</Time>
 			<Type>action</Type>
 			<Content>
