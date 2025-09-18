@@ -55,7 +55,7 @@ Any inquiries can be addressed to:
 	<DeviceOID>0</DeviceOID>
 	<ElementType>UPS</ElementType>
 	<Type relativeTimers="true">snmpv2</Type>
-	<Display defaultPage="General" pageOrder="General;Interface table;UPS Parameters;----------;WebInterface#" wideColumnPages="UPS Parameters"/>
+	<Display defaultPage="General" pageOrder="General;Interface Table;UPS Parameters;----------;WebInterface#" wideColumnPages="UPS Parameters"/>
 	<SNMP includepages="true">auto</SNMP>
 
 	<Compliancies>
@@ -308,7 +308,7 @@ is given by the value of ifNumber.]]>
 				<RTDisplay>true</RTDisplay>
 				<Positions>
 					<Position>
-						<Page>Interface table</Page>
+						<Page>Interface Table</Page>
 						<Column>0</Column>
 						<Row>0</Row>
 					</Position>
@@ -1767,7 +1767,9 @@ zero.]]>
 					<Low>0</Low>
 					<High>6</High>
 				</Range>
+				<!-- SuppressValidator 2.9.4 There is no provided unit needed for this parameter -->
 				<Units>phases</Units>
+				<!-- /SuppressValidator 2.9.4 -->
 				<Positions>
 					<Position>
 						<Page>UPS Parameters</Page>
