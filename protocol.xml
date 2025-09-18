@@ -462,13 +462,14 @@ re-initialized.]]>
 			<Name>interfaceTable</Name>
 			<Description>Interface Table</Description>
 			<Type>array</Type>
-			<ArrayOptions index="0">
+			<ArrayOptions index="0" options=";naming=/1201,1202">
 				<ColumnOption idx="0" pid="1201" type="snmp" options=""/>
 				<ColumnOption idx="1" pid="1202" type="snmp" options=""/>
 				<ColumnOption idx="2" pid="1203" type="snmp" options=""/>
 				<ColumnOption idx="3" pid="1204" type="snmp" options=""/>
-				<ColumnOption idx="4" pid="1205" type="retrieved" options=";enableHeaderSum;enableHistogram;enableHeatmap"/>
+				<ColumnOption idx="4" pid="1205" type="retrieved" options=";disableHeaderSum;disableHistogram;disableHeatmap"/>
 				<ColumnOption idx="5" pid="1206" type="snmp" options=""/>
+				<ColumnOption idx="6" pid="1207" type="displaykey" options="" />
 			</ArrayOptions>
 			<Information>
 				<Subtext>
@@ -490,12 +491,12 @@ re-initialized.]]>
 				</Positions>
 			</Display>
 			<Measurement>
-				<Type options="tab=columns:1201|0-1202|1-1203|2-1204|3-1205|4-1206|5,width:0-195-0-100-116-0,sort:INT-INT-INT-INT-INT-INT,lines:20,filter:true">table</Type>
+				<Type options="tab=columns:1201|0-1202|1-1203|2-1204|3-1205|4-1206|5-1207|6,width:0-195-0-100-116-0-161,sort:INT-INT-INT-INT-INT-INT-STRING,lines:20,filter:true">table</Type>
 			</Measurement>
 		</Param>
 		<Param id="1201" trending="false">
 			<Name>interfaceTableIndex</Name>
-			<Description>Index [IDX] (Interface Table)</Description>
+			<Description>Index (Interface Table)</Description>
 			<Information>
 				<Subtext>
 					<![CDATA[This is the SNMP instance of the table. Format: [ifIndex].
@@ -1854,6 +1855,25 @@ bandwidth, this object should be zero.]]>
 				<Type>number</Type>
 			</Measurement>
 		</Param>
+		<Param id="1207" trending="false">
+			<Name>interfaceDisplayKey</Name>
+			<Description>Display Key (Interface)</Description>
+			<Type>read</Type>
+			<Information>
+				<Subtext>This is the display key of the interface table</Subtext>
+			</Information>
+			<Interprete>
+				<RawType>other</RawType>
+				<Type>string</Type>
+				<LengthType>next param</LengthType>
+			</Interprete>
+			<Display>
+				<RTDisplay>true</RTDisplay>
+			</Display>
+			<Measurement>
+				<Type>string</Type>
+			</Measurement>
+		</Param>
 	</Params>
 
 	<QActions>
@@ -1863,14 +1883,6 @@ bandwidth, this object should be zero.]]>
 	</QActions>
 
 	<Groups>
-		<Group id="2">
-			<Name>afterStartup</Name>
-			<Description>After Startup</Description>
-			<Type>poll action</Type>
-			<Content>
-				<Action>2</Action>
-			</Content>
-		</Group>
 		<Group id="1000">
 			<Name>getGeneralParams</Name>
 			<Description>Get General Parameters</Description>
@@ -1902,6 +1914,14 @@ bandwidth, this object should be zero.]]>
 				<Param>1200</Param>
 			</Content>
 		</Group>
+		<Group id="2000">
+			<Name>afterStartup</Name>
+			<Description>After Startup</Description>
+			<Type>poll action</Type>
+			<Content>
+				<Action>2</Action>
+			</Content>
+		</Group>
 	</Groups>
 
 	<Triggers>
@@ -1919,7 +1939,7 @@ bandwidth, this object should be zero.]]>
 	<Actions>
 		<Action id="1">
 			<Name>After Startup Group</Name>
-			<On id="2">group</On>
+			<On id="2000">group</On>
 			<Type>execute next</Type>
 		</Action>
 		<Action id="2">

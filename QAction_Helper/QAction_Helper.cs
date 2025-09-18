@@ -101,6 +101,11 @@ public static class Parameter
 			public const int interfacetableifhighspeed_1206 = 1206;
 			/// <summary>PID: 1206 | Type: read</summary>
 			public const int interfacetableifhighspeed = 1206;
+			/// <summary>PID: 1207 | Type: read</summary>
+			[EditorBrowsable(EditorBrowsableState.Never)]
+			public const int interfacedisplaykey_1207 = 1207;
+			/// <summary>PID: 1207 | Type: read</summary>
+			public const int interfacedisplaykey = 1207;
 			public class Write
 			{
 			}
@@ -137,6 +142,11 @@ public static class Parameter
 			public const int interfacetableifhighspeed_1206 = 5;
 			/// <summary>IDX: 5 | Type: read</summary>
 			public const int interfacetableifhighspeed = 5;
+			/// <summary>IDX: 6 | Type: read</summary>
+			[EditorBrowsable(EditorBrowsableState.Never)]
+			public const int interfacedisplaykey_1207 = 6;
+			/// <summary>IDX: 6 | Type: read</summary>
+			public const int interfacedisplaykey = 6;
 		}
 	}
 }
@@ -185,6 +195,8 @@ public interface SLProtocolExt : SLProtocol
 	object Interfacetableinterfacespeed { get; set; }
 	object Interfacetableifhighspeed_1206 { get; set; }
 	object Interfacetableifhighspeed { get; set; }
+	object Interfacedisplaykey_1207 { get; set; }
+	object Interfacedisplaykey { get; set; }
 	object Interfacetableadminstatus_1304 { get; set; }
 	WriteParameters Write { get; set; }
 }
@@ -269,6 +281,11 @@ public class ConcreteSLProtocolExt : ConcreteSLProtocol, SLProtocolExt
 	public System.Object Interfacetableifhighspeed_1206 {get { return GetParameter(1206); }set { SetParameter(1206, value); }}
 	/// <summary>PID: 1206  | Type: read</summary>
 	public System.Object Interfacetableifhighspeed {get { return GetParameter(1206); }set { SetParameter(1206, value); }}
+	/// <summary>PID: 1207  | Type: read</summary>
+	[EditorBrowsable(EditorBrowsableState.Never)]
+	public System.Object Interfacedisplaykey_1207 {get { return GetParameter(1207); }set { SetParameter(1207, value); }}
+	/// <summary>PID: 1207  | Type: read</summary>
+	public System.Object Interfacedisplaykey {get { return GetParameter(1207); }set { SetParameter(1207, value); }}
 	/// <summary>PID: 1304  | Type: write | DISCREETS: Up = 1, Down = 2, Testing = 3</summary>
 	[EditorBrowsable(EditorBrowsableState.Never)]
 	public System.Object Interfacetableadminstatus_1304 {get { return GetParameter(1304); }set { SetParameter(1304, value); }}
@@ -319,8 +336,13 @@ public class InterfacetableQActionRow : QActionTableRow
 	public System.Object Interfacetableifhighspeed_1206 { get { if (base.Columns.ContainsKey(5)) { return base.Columns[5]; } else { return null; } } set { if (base.Columns.ContainsKey(5)) { base.Columns[5] = value; } else { base.Columns.Add(5, value); } } }
 	/// <summary>PID: 1206 | Type: read</summary>
 	public System.Object Interfacetableifhighspeed { get { if (base.Columns.ContainsKey(5)) { return base.Columns[5]; } else { return null; } } set { if (base.Columns.ContainsKey(5)) { base.Columns[5] = value; } else { base.Columns.Add(5, value); } } }
-	public InterfacetableQActionRow() : base(0, 6) { }
-	public InterfacetableQActionRow(System.Object[] oRow) : base(0, 6, oRow) { }
+	/// <summary>PID: 1207 | Type: read</summary>
+	[EditorBrowsable(EditorBrowsableState.Never)]
+	public System.Object Interfacedisplaykey_1207 { get { if (base.Columns.ContainsKey(6)) { return base.Columns[6]; } else { return null; } } set { if (base.Columns.ContainsKey(6)) { base.Columns[6] = value; } else { base.Columns.Add(6, value); } } }
+	/// <summary>PID: 1207 | Type: read</summary>
+	public System.Object Interfacedisplaykey { get { if (base.Columns.ContainsKey(6)) { return base.Columns[6]; } else { return null; } } set { if (base.Columns.ContainsKey(6)) { base.Columns[6] = value; } else { base.Columns.Add(6, value); } } }
+	public InterfacetableQActionRow() : base(0, 7) { }
+	public InterfacetableQActionRow(System.Object[] oRow) : base(0, 7, oRow) { }
 	public static implicit operator InterfacetableQActionRow(System.Object[] source) { return new InterfacetableQActionRow(source); }
 	public static implicit operator System.Object[](InterfacetableQActionRow source) { return source.ToObjectArray(); }
 }
