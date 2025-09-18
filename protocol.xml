@@ -227,9 +227,9 @@ re-initialized.]]>
 			<ArrayOptions index="0">
 				<ColumnOption idx="0" pid="101" type="snmp" options="" />
 				<ColumnOption idx="1" pid="102" type="snmp" options="" />
-				<ColumnOption idx="2" pid="103" type="snmp" options="" />
+				<ColumnOption idx="2" pid="103" type="snmp" options=";enableHeaderSum;enableHistogram;enableHeatmap" />
 				<ColumnOption idx="3" pid="104" type="snmp" options="" />
-				<ColumnOption idx="4" pid="105" type="retrieved" options="" />
+				<ColumnOption idx="4" pid="105" type="retrieved" options=";enableHeaderSum;enableHistogram;enableHeatmap" />
 			</ArrayOptions>
 			<Information>
 				<Subtext>
@@ -252,7 +252,7 @@ is given by the value of ifNumber.]]>
 				</Positions>
 			</Display>
 			<Measurement>
-				<Type options="tab=columns:101|0-102|1-103|2-104|3-105|4,width:100-195-105-115-115,sort:INT-STRING-INT-STRING-INT,lines:20,filter:true">table</Type>
+				<Type options="tab=columns:101|0-102|1-103|2-104|3-105|4,width:100-195-105-115-116,sort:INT-STRING-INT-STRING-INT,lines:20,filter:true">table</Type>
 			</Measurement>
 		</Param>
 		<Param id="101" trending="false">
@@ -1408,7 +1408,7 @@ IANAifType textual convention.]]>
 				</Discreets>
 			</Measurement>
 		</Param>
-		<Param id="103" trending="false">
+		<Param id="103" trending="true">
 			<Name>InterfacesifTableSpeed</Name>
 			<Description>Speed (Interfaces)</Description>
 			<Information>
@@ -1437,6 +1437,11 @@ zero.]]>
 				<OID type="complete">1.3.6.1.2.1.2.2.1.5</OID>
 				<Type>gauge32</Type>
 			</SNMP>
+			<Alarm>
+				<Monitored>true</Monitored>
+				<CL>100</CL>
+				<Normal>100000</Normal>
+			</Alarm>
 			<Display>
 				<Units>bps</Units>
 				<RTDisplay>true</RTDisplay>
@@ -1497,7 +1502,7 @@ the down(2) state).]]>
 				</Discreets>
 			</Measurement>
 		</Param>
-		<Param id="105" trending="false">
+		<Param id="105" trending="true">
 			<Name>InterfacesCalculatedSpeed</Name>
 			<Description>Calculated Speed (Interfaces)</Description>
 			<Type>read</Type>
@@ -1509,6 +1514,11 @@ the down(2) state).]]>
 				<Type>double</Type>
 				<LengthType>next param</LengthType>
 			</Interprete>
+			<Alarm>
+				<Monitored>true</Monitored>
+				<CL>1</CL>
+				<Normal>2</Normal>
+			</Alarm>
 			<Display>
 				<RTDisplay>true</RTDisplay>
 				<Units>Mbps</Units>
@@ -1528,7 +1538,7 @@ the down(2) state).]]>
 			<Type>array</Type>
 			<ArrayOptions index="0">
 				<ColumnOption idx="0" pid="201" type="snmp" options="" />
-				<ColumnOption idx="1" pid="202" type="snmp" options="" />
+				<ColumnOption idx="1" pid="202" type="snmp" options=";enableHeaderSum;enableHistogram;enableHeatmap" />
 			</ArrayOptions>
 			<Information>
 				<Subtext>
@@ -1593,7 +1603,7 @@ length string.]]>
 			</Measurement>
 		</Param>
 		
-		<Param id="202" trending="false">
+		<Param id="202" trending="true">
 			<Name>ExtendedInterfaceifXIfHighSpeed</Name>
 			<Description>Interface High Speed (Extended Interface)</Description>
 			<Information>
@@ -1620,6 +1630,11 @@ bandwidth, this object should be zero.]]>
 				<OID type="complete">1.3.6.1.2.1.31.1.1.1.15</OID>
 				<Type>gauge32</Type>
 			</SNMP>
+			<Alarm>
+				<Monitored>true</Monitored>
+				<CL>1</CL>
+				<Normal>2</Normal>
+			</Alarm>
 			<Display>
 				<RTDisplay>true</RTDisplay>
 				<Units>Mbps</Units>
