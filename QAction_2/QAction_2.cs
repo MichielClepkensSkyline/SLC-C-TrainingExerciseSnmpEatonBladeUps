@@ -16,7 +16,7 @@ public static class QAction
 		try
 		{
 			string rowPK = protocol.RowKey();
-			int oneBasedOffSet = 1;
+			const int oneBasedOffSet = 1;
 
 			uint interfaceSpeed = GetInterfaceSpeed(protocol, rowPK, oneBasedOffSet);
 			uint calculatedSpeed = GetCalculatedInterfaceSpeed(protocol, rowPK, interfaceSpeed, oneBasedOffSet);
@@ -46,15 +46,15 @@ public static class QAction
 		uint unsignedIntegerMaxValue = UInt32.MaxValue;
 		uint dividerValueFrombpsToMbps = 1000000;
 
-		if (interfaceSpeed < unsignedIntegerMaxValue)
-		{
-			interfaceSpeed = interfaceSpeed / dividerValueFrombpsToMbps;
-		}
-		else if(interfaceSpeed == unsignedIntegerMaxValue)
+		if(interfaceSpeed == unsignedIntegerMaxValue)
 		{
 			object extendedSpeed = protocol.GetParameterIndexByKey(Parameter.Extendedinterfacetable.tablePid, rowPK, Parameter.Extendedinterfacetable.Idx.extendedinterfacetablehighspeed_1402 + offset);
 
 			interfaceSpeed = Convert.ToUInt32(extendedSpeed);
+		}
+		else
+		{
+			interfaceSpeed = interfaceSpeed / dividerValueFrombpsToMbps;
 		}
 
 		return interfaceSpeed;

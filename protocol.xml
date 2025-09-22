@@ -2029,7 +2029,7 @@ This table contains additional objects for the interface table.]]>
 			<Time initial="true">60000</Time>
 			<Interval>75</Interval>
 			<Content>
-				<Group>1000</Group>
+				
 				<Group>3000</Group>
 			</Content>
 		</Timer>
@@ -2037,7 +2037,9 @@ This table contains additional objects for the interface table.]]>
 			<Name>Slow Timer (1h)</Name>
 			<Time initial="true">3600000</Time>
 			<Interval>75</Interval>
-			<Content></Content>
+			<Content>
+				<Group>1000</Group>
+			</Content>
 		</Timer>
 	</Timers>
 
