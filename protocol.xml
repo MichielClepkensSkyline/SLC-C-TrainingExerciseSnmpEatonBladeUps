@@ -1584,6 +1584,9 @@ For a sub-layer which has no concept of bandwidth, this object should be zero.]]
 			</Interprete>
 			<Alarm>
 				<Monitored>true</Monitored>
+				<CL>1</CL>
+				<MaL>20</MaL>
+				<Normal>30</Normal>
 				<CH>20000</CH>
 			</Alarm>
 			<Display>
@@ -1638,7 +1641,9 @@ For a sub-layer which has no concept of bandwidth, this object should be zero.]]
 			</SNMP>
 			<Alarm>
 				<Monitored>true</Monitored>
-				<CL>60</CL>
+				<CL>40</CL>
+				<MiL>60</MiL>
+				<Normal>80</Normal>
 			</Alarm>
 			<Display>
 				<RTDisplay>true</RTDisplay>
@@ -1682,7 +1687,10 @@ For a sub-layer which has no concept of bandwidth, this object should be zero.]]
 			<Alarm>
 				<Monitored>true</Monitored>
 				<CH>100</CH>
+				<MaH>70</MaH>
 				<Normal>60</Normal>
+				<MaL>40</MaL>
+				<CL>1</CL>
 			</Alarm>
 			<Display>
 				<RTDisplay>true</RTDisplay>
@@ -1769,7 +1777,9 @@ For a sub-layer which has no concept of bandwidth, this object should be zero.]]
 			<Alarm>
 				<Monitored>true</Monitored>
 				<CH>90</CH>
+				<MaH>80</MaH>
 				<Normal>50</Normal>
+				<MiL>30</MiL>
 			</Alarm>
 			<Display>
 				<RTDisplay>true</RTDisplay>
@@ -1813,7 +1823,10 @@ For a sub-layer which has no concept of bandwidth, this object should be zero.]]
 			<Alarm>
 				<Monitored>true</Monitored>
 				<CH>100</CH>
+				<MaH>70</MaH>
 				<Normal>60</Normal>
+				<MaL>40</MaL>
+				<CL>1</CL>
 			</Alarm>
 			<Display>
 				<RTDisplay>true</RTDisplay>
