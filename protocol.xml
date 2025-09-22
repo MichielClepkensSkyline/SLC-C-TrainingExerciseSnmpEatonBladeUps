@@ -55,7 +55,7 @@ Any inquiries can be addressed to:
 	<DeviceOID>0</DeviceOID>
 	<ElementType>UPS</ElementType>
 	<Type relativeTimers="true">snmpv2</Type>
-	<Display defaultPage="General" pageOrder="General;Interface Table;UPS Parameters;----------;WebInterface#http://[Polling Ip]/" wideColumnPages="UPS Parameters"/>
+	<Display defaultPage="General" pageOrder="General;----------;WebInterface#http://[Polling Ip]/" wideColumnPages=""/>
 	<SNMP includepages="true">auto</SNMP>
 
 	<Compliancies>
@@ -94,11 +94,6 @@ Any inquiries can be addressed to:
 						<Row>5</Row>
 					</Position>
 					<Position>
-						<Page>UPS Parameters</Page>
-						<Column>0</Column>
-						<Row>6</Row>
-					</Position>
-					<Position>
 						<Page>General</Page>
 						<Column>0</Column>
 						<Row>12</Row>
@@ -116,11 +111,6 @@ Any inquiries can be addressed to:
 			<Display>
 				<RTDisplay>true</RTDisplay>
 				<Positions>
-					<Position>
-						<Page>UPS Parameters</Page>
-						<Column>0</Column>
-						<Row>0</Row>
-					</Position>
 					<Position>
 						<Page>General</Page>
 						<Column>0</Column>
@@ -303,11 +293,6 @@ This value should include the full name and version identification of the system
 			<Display>
 				<RTDisplay>true</RTDisplay>
 				<Positions>
-					<Position>
-						<Page>Interface Table</Page>
-						<Column>0</Column>
-						<Row>0</Row>
-					</Position>
 					<Position>
 						<Page>General</Page>
 						<Column>1</Column>
@@ -1664,11 +1649,6 @@ For a sub-layer which has no concept of bandwidth, this object should be zero.]]
 				</Range>
 				<Positions>
 					<Position>
-						<Page>UPS Parameters</Page>
-						<Column>0</Column>
-						<Row>1</Row>
-					</Position>
-					<Position>
 						<Page>General</Page>
 						<Column>0</Column>
 						<Row>7</Row>
@@ -1712,11 +1692,6 @@ For a sub-layer which has no concept of bandwidth, this object should be zero.]]
 					<High>2147483647</High>
 				</Range>
 				<Positions>
-					<Position>
-						<Page>UPS Parameters</Page>
-						<Column>0</Column>
-						<Row>2</Row>
-					</Position>
 					<Position>
 						<Page>General</Page>
 						<Column>0</Column>
@@ -1762,11 +1737,6 @@ For a sub-layer which has no concept of bandwidth, this object should be zero.]]
 				<!-- /SuppressValidator 2.9.4 -->
 				<Positions>
 					<Position>
-						<Page>UPS Parameters</Page>
-						<Column>0</Column>
-						<Row>3</Row>
-					</Position>
-					<Position>
 						<Page>General</Page>
 						<Column>0</Column>
 						<Row>9</Row>
@@ -1809,11 +1779,6 @@ For a sub-layer which has no concept of bandwidth, this object should be zero.]]
 					<High>100</High>
 				</Range>
 				<Positions>
-					<Position>
-						<Page>UPS Parameters</Page>
-						<Column>0</Column>
-						<Row>4</Row>
-					</Position>
 					<Position>
 						<Page>General</Page>
 						<Column>0</Column>
@@ -1858,11 +1823,6 @@ For a sub-layer which has no concept of bandwidth, this object should be zero.]]
 					<High>2147483647</High>
 				</Range>
 				<Positions>
-					<Position>
-						<Page>UPS Parameters</Page>
-						<Column>0</Column>
-						<Row>5</Row>
-					</Position>
 					<Position>
 						<Page>General</Page>
 						<Column>0</Column>
@@ -1950,7 +1910,7 @@ This table contains additional objects for the interface table.]]>
 			</SNMP>
 			<Display>
 				<RTDisplay>false</RTDisplay>
-				<Units>bps</Units>
+				<Units>Mbps</Units>
 			</Display>
 			<Measurement>
 				<Type>number</Type>
