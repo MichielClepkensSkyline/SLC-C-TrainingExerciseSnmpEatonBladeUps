@@ -194,9 +194,9 @@ public interface SLProtocolExt : SLProtocol
 	InterfacetableQActionTable interfacetable { get; set; }
 	/// <summary>PID: 1400</summary>
 	ExtendedinterfacetableQActionTable extendedinterfacetable { get; set; }
-	object Title_begin_general_parameters__fixed { get; set; }
-	object Title_end_generic__fixed { get; set; }
-	object Title_begin_ups_parameters__fixed { get; set; }
+	object Titlebegingeneralparameters__fixed { get; set; }
+	object Titleendgeneric__fixed { get; set; }
+	object Titlebeginupsparameters__fixed { get; set; }
 	object Systemdescription_1000 { get; set; }
 	object Systemdescription { get; set; }
 	object Systemuptime_1001 { get; set; }
@@ -241,11 +241,11 @@ public class ConcreteSLProtocolExt : ConcreteSLProtocol, SLProtocolExt
 	/// <summary>PID: 1400</summary>
 	public ExtendedinterfacetableQActionTable extendedinterfacetable { get; set; }
 	/// <summary>PID: 1  | Type: fixed</summary>
-	public System.Object Title_begin_general_parameters__fixed {get { return GetParameter(1); }set { SetParameter(1, value); }}
+	public System.Object Titlebegingeneralparameters__fixed {get { return GetParameter(1); }set { SetParameter(1, value); }}
 	/// <summary>PID: 2  | Type: fixed</summary>
-	public System.Object Title_end_generic__fixed {get { return GetParameter(2); }set { SetParameter(2, value); }}
+	public System.Object Titleendgeneric__fixed {get { return GetParameter(2); }set { SetParameter(2, value); }}
 	/// <summary>PID: 3  | Type: fixed</summary>
-	public System.Object Title_begin_ups_parameters__fixed {get { return GetParameter(3); }set { SetParameter(3, value); }}
+	public System.Object Titlebeginupsparameters__fixed {get { return GetParameter(3); }set { SetParameter(3, value); }}
 	/// <summary>PID: 1000  | Type: read</summary>
 	[EditorBrowsable(EditorBrowsableState.Never)]
 	public System.Object Systemdescription_1000 {get { return GetParameter(1000); }set { SetParameter(1000, value); }}

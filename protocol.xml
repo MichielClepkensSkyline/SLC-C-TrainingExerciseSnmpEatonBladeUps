@@ -65,7 +65,7 @@ Any inquiries can be addressed to:
 
 	<Params>
 		<Param id="1">
-			<Name>Title_Begin_General_Parameters</Name>
+			<Name>titleBeginGeneralParameters</Name>
 			<Description>General Parameters</Description>
 			<Type>fixed</Type>
 			<Display>
@@ -83,7 +83,7 @@ Any inquiries can be addressed to:
 			</Measurement>
 		</Param>
 		<Param id="2">
-			<Name>Title_End_Generic</Name>
+			<Name>titleEndGeneric</Name>
 			<Type>fixed</Type>
 			<Display>
 				<RTDisplay>true</RTDisplay>
@@ -110,7 +110,7 @@ Any inquiries can be addressed to:
 			</Measurement>
 		</Param>
 		<Param id="3">
-			<Name>Title_Begin_UPS_Parameters</Name>
+			<Name>titleBeginUPSParameters</Name>
 			<Description>UPS Parameters</Description>
 			<Type>fixed</Type>
 			<Display>
@@ -137,10 +137,8 @@ Any inquiries can be addressed to:
 			<Description>System Description</Description>
 			<Information>
 				<Subtext>
-					<![CDATA[A textual description of the entity.  This value should
-include the full name and version identification of
-the system's hardware type, software operating-system,
-and networking software.]]>
+					<![CDATA[A textual description of the entity.  
+This value should include the full name and version identification of the system's hardware type, software operating-system, and networking software.]]>
 				</Subtext>
 			</Information>
 			<Type>read</Type>
@@ -177,9 +175,7 @@ and networking software.]]>
 			<Description>System up Time</Description>
 			<Information>
 				<Subtext>
-					<![CDATA[The time (in hundredths of a second) since the
-network management portion of the system was last
-re-initialized.]]>
+					<![CDATA[The time since the network management portion of the system was last re-initialized.]]>
 				</Subtext>
 			</Information>
 			<Type>read</Type>
@@ -297,8 +293,7 @@ re-initialized.]]>
 			</ArrayOptions>
 			<Information>
 				<Subtext>
-					<![CDATA[A list of interface entries.  The number of entries
-is given by the value of ifNumber.]]>
+					<![CDATA[A list of interface entries.  The number of entries is given by the value of ifNumber.]]>
 				</Subtext>
 			</Information>
 			<SNMP>
@@ -330,13 +325,9 @@ is given by the value of ifNumber.]]>
 			<Information>
 				<Subtext>
 					<![CDATA[This is the SNMP instance of the table. Format: [ifIndex].
-
- - ifIndex: A unique value, greater than zero, for each
-interface.  It is recommended that values are assigned
-contiguously starting from 1.  The value for each
-interface sub-layer must remain constant at least from
-one re-initialization of the entity's network
-management system to the next re-initialization.
+ - ifIndex: A unique value, greater than zero, for each interface.  
+	It is recommended that values are assigned contiguously starting from 1.  
+	The value for each interface sub-layer must remain constant at least from one re-initialization of the entity's network management system to the next re-initialization.
 ]]>
 				</Subtext>
 			</Information>
@@ -358,10 +349,8 @@ management system to the next re-initialization.
 			<Description>Type (Interface Table)</Description>
 			<Information>
 				<Subtext>
-					<![CDATA[The type of interface.  Additional values for ifType
-are assigned by the Internet Assigned Numbers
-Authority (IANA), through updating the syntax of the
-IANAifType textual convention.]]>
+					<![CDATA[The type of interface.  
+Additional values for ifType are assigned by the Internet Assigned Numbers Authority (IANA), through updating the syntax of the IANAifType textual convention.]]>
 				</Subtext>
 			</Information>
 			<Type>read</Type>
@@ -1485,17 +1474,10 @@ IANAifType textual convention.]]>
 			<Description>Speed (Interface Table)</Description>
 			<Information>
 				<Subtext>
-					<![CDATA[An estimate of the interface's current bandwidth in
-bits per second.  For interfaces which do not vary in
-bandwidth or for those where no accurate estimation
-can be made, this object should contain the nominal
-bandwidth.  If the bandwidth of the interface is
-greater than the maximum value reportable by this
-object then this object should report its maximum
-value (4,294,967,295) and ifHighSpeed must be used to
-report the interace's speed.  For a sub-layer which
-has no concept of bandwidth, this object should be
-zero.]]>
+					<![CDATA[An estimate of the interface's current bandwidth in bits per second.  
+For interfaces which do not vary in bandwidth or for those where no accurate estimation can be made, this object should contain the nominal bandwidth.  
+If the bandwidth of the interface is greater than the maximum value reportable by this object then this object should report its maximum value (4,294,967,295) and ifHighSpeed must be used to report the interace's speed.  
+For a sub-layer which has no concept of bandwidth, this object should be zero.]]>
 				</Subtext>
 			</Information>
 			<Type>read</Type>
@@ -1526,15 +1508,9 @@ zero.]]>
 			<Description>Administration Status (Interface Table)</Description>
 			<Information>
 				<Subtext>
-					<![CDATA[The desired state of the interface.  The testing(3)
-state indicates that no operational packets can be
-passed.  When a managed system initializes, all
-interfaces start with ifAdminStatus in the down(2)
-state.  As a result of either explicit management
-action or per configuration information retained by
-the managed system, ifAdminStatus is then changed to
-either the up(1) or testing(3) states (or remains in
-the down(2) state).]]>
+					<![CDATA[The desired state of the interface.  The testing(3) state indicates that no operational packets can be passed.  
+When a managed system initializes, all interfaces start with ifAdminStatus in the down(2) state.  
+As a result of either explicit management action or per configuration information retained by the managed system, ifAdminStatus is then changed to either the up(1) or testing(3) states (or remains in the down(2) state).]]>
 				</Subtext>
 			</Information>
 			<Type>read</Type>
@@ -1609,17 +1585,10 @@ the down(2) state).]]>
 			<Description>Interface Speed (Interface Table)</Description>
 			<Information>
 				<Subtext>
-					<![CDATA[A estimate of the interface's current bandwidth in
-bits per second.  For interfaces which do not vary in
-bandwidth or for those where no accurate estimation
-can be made, this object should contain the nominal
-bandwidth.  If the bandwidth of the interface is
-greater than the maximum value reportable by this
-object then this object should report its maximum
-value (4,294,967,295) and ifHighSpeed must be used to
-report the interace's speed.  For a sub-layer which
-has no concept of bandwidth, this object should be
-zero.]]>
+					<![CDATA[A estimate of the interface's current bandwidth in bits per second.  
+For interfaces which do not vary in bandwidth or for those where no accurate estimation can be made, this object should contain the nominal bandwidth.  
+If the bandwidth of the interface is greater than the maximum value reportable by this object then this object should report its maximum value (4,294,967,295) and ifHighSpeed must be used to report the interace's speed.  
+For a sub-layer which has no concept of bandwidth, this object should be zero.]]>
 				</Subtext>
 			</Information>
 			<Type>read</Type>
@@ -1715,7 +1684,7 @@ zero.]]>
 			<Description>UPS Input Frequency</Description>
 			<Information>
 				<Subtext>
-					<![CDATA[The utility line frequency in tenths of Hz.]]>
+					<![CDATA[The utility line frequency in Hz.]]>
 				</Subtext>
 			</Information>
 			<Type>read</Type>
@@ -1861,7 +1830,7 @@ zero.]]>
 			<Description>UPS Output Frequency</Description>
 			<Information>
 				<Subtext>
-					<![CDATA[The measured UPS output frequency in tenths of Hz.]]>
+					<![CDATA[The measured UPS output frequency in Hz.]]>
 				</Subtext>
 			</Information>
 			<Type>read</Type>
@@ -1916,9 +1885,8 @@ zero.]]>
 			</ArrayOptions>
 			<Information>
 				<Subtext>
-					<![CDATA[A list of interface entries.  The number of entries
-is given by the value of ifNumber.  This table
-contains additional objects for the interface table.]]>
+					<![CDATA[A list of interface entries.  The number of entries is given by the value of ifNumber.  
+This table contains additional objects for the interface table.]]>
 				</Subtext>
 			</Information>
 			<SNMP>
@@ -1938,13 +1906,10 @@ contains additional objects for the interface table.]]>
 			<Information>
 				<Subtext>
 					<![CDATA[This is the SNMP instance of the table. Format: [ifIndex].
-
- - ifIndex: A unique value, greater than zero, for each
-interface.  It is recommended that values are assigned
-contiguously starting from 1.  The value for each
-interface sub-layer must remain constant at least from
-one re-initialization of the entity's network
-management system to the next re-initialization.
+ - ifIndex: 
+ A unique value, greater than zero, for each interface.  
+ It is recommended that values are assigned contiguously starting from 1.  
+ The value for each interface sub-layer must remain constant at least from one re-initialization of the entity's network management system to the next re-initialization.
 ]]>
 				</Subtext>
 			</Information>
@@ -1966,15 +1931,10 @@ management system to the next re-initialization.
 			<Description>If High Speed (Extended Interface Table)</Description>
 			<Information>
 				<Subtext>
-					<![CDATA[An estimate of the interface's current bandwidth in
-units of 1,000,000 bits per second.  If this object
-reports a value of `n' then the speed of the interface
-is somewhere in the range of `n-500,000' to
-`n+499,999'.  For interfaces which do not vary in
-bandwidth or for those where no accurate estimation
-can be made, this object should contain the nominal
-bandwidth.  For a sub-layer which has no concept of
-bandwidth, this object should be zero.]]>
+					<![CDATA[An estimate of the interface's current bandwidth in units of 1,000,000 bits per second.  
+					If this object reports a value of `n' then the speed of the interface is somewhere in the range of `n-500,000' to `n+499,999'.  
+					For interfaces which do not vary in bandwidth or for those where no accurate estimation can be made, this object should contain the nominal bandwidth.  
+					For a sub-layer which has no concept of bandwidth, this object should be zero.]]>
 				</Subtext>
 			</Information>
 			<Type>read</Type>
