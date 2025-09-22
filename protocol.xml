@@ -1968,8 +1968,8 @@ This table contains additional objects for the interface table.]]>
 
 	<Groups>
 		<Group id="1000">
-			<Name>GeneralParameters</Name>
-			<Description>General Parameters</Description>
+			<Name>getGeneralParameters</Name>
+			<Description>Get General Parameters</Description>
 			<Type>poll</Type>
 			<Content multipleGet="true">
 				<Param>1000</Param>
@@ -1979,16 +1979,16 @@ This table contains additional objects for the interface table.]]>
 			</Content>
 		</Group>
 		<Group id="2000">
-			<Name>GetInterfaceTable</Name>
-			<Description>GetInterfaceTable</Description>
+			<Name>getInterfaceTable</Name>
+			<Description>Get Interface Table</Description>
 			<Type>poll</Type>
 			<Content>
 				<Param>1200</Param>
 			</Content>
 		</Group>
 		<Group id="3000">
-			<Name>UPSParameters</Name>
-			<Description>UPSParameters</Description>
+			<Name>getUPSParameters</Name>
+			<Description>Get UPS Parameters</Description>
 			<Type>poll</Type>
 			<Content multipleGet="true">
 				<Param>1300</Param>
@@ -1999,8 +1999,8 @@ This table contains additional objects for the interface table.]]>
 			</Content>
 		</Group>
 		<Group id="4000">
-			<Name>ExtendedInterfaceTable</Name>
-			<Description>ExtendedInterfaceTable</Description>
+			<Name>getExtendedInterfaceTable</Name>
+			<Description>Get Extended Interface Table</Description>
 			<Type>poll</Type>
 			<Content>
 				<Param>1400</Param>
