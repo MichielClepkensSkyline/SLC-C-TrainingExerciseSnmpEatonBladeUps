@@ -93,9 +93,9 @@ public static class Parameter
 			public const int interfacetableadminstatus = 1204;
 			/// <summary>PID: 1205 | Type: read</summary>
 			[EditorBrowsable(EditorBrowsableState.Never)]
-			public const int interfacetableinterfacespeed_1205 = 1205;
+			public const int interfacetablecalculatedspeed_1205 = 1205;
 			/// <summary>PID: 1205 | Type: read</summary>
-			public const int interfacetableinterfacespeed = 1205;
+			public const int interfacetablecalculatedspeed = 1205;
 			/// <summary>PID: 1206 | Type: read</summary>
 			[EditorBrowsable(EditorBrowsableState.Never)]
 			public const int interfacetableifhighspeed_1206 = 1206;
@@ -134,9 +134,9 @@ public static class Parameter
 			public const int interfacetableadminstatus = 3;
 			/// <summary>IDX: 4 | Type: read</summary>
 			[EditorBrowsable(EditorBrowsableState.Never)]
-			public const int interfacetableinterfacespeed_1205 = 4;
+			public const int interfacetablecalculatedspeed_1205 = 4;
 			/// <summary>IDX: 4 | Type: read</summary>
-			public const int interfacetableinterfacespeed = 4;
+			public const int interfacetablecalculatedspeed = 4;
 			/// <summary>IDX: 5 | Type: read</summary>
 			[EditorBrowsable(EditorBrowsableState.Never)]
 			public const int interfacetableifhighspeed_1206 = 5;
@@ -191,8 +191,8 @@ public interface SLProtocolExt : SLProtocol
 	object Interfacetablespeed { get; set; }
 	object Interfacetableadminstatus_1204 { get; set; }
 	object Interfacetableadminstatus { get; set; }
-	object Interfacetableinterfacespeed_1205 { get; set; }
-	object Interfacetableinterfacespeed { get; set; }
+	object Interfacetablecalculatedspeed_1205 { get; set; }
+	object Interfacetablecalculatedspeed { get; set; }
 	object Interfacetableifhighspeed_1206 { get; set; }
 	object Interfacetableifhighspeed { get; set; }
 	object Interfacedisplaykey_1207 { get; set; }
@@ -273,9 +273,9 @@ public class ConcreteSLProtocolExt : ConcreteSLProtocol, SLProtocolExt
 	public System.Object Interfacetableadminstatus {get { return GetParameter(1204); }set { SetParameter(1204, value); }}
 	/// <summary>PID: 1205  | Type: read</summary>
 	[EditorBrowsable(EditorBrowsableState.Never)]
-	public System.Object Interfacetableinterfacespeed_1205 {get { return GetParameter(1205); }set { SetParameter(1205, value); }}
+	public System.Object Interfacetablecalculatedspeed_1205 {get { return GetParameter(1205); }set { SetParameter(1205, value); }}
 	/// <summary>PID: 1205  | Type: read</summary>
-	public System.Object Interfacetableinterfacespeed {get { return GetParameter(1205); }set { SetParameter(1205, value); }}
+	public System.Object Interfacetablecalculatedspeed {get { return GetParameter(1205); }set { SetParameter(1205, value); }}
 	/// <summary>PID: 1206  | Type: read</summary>
 	[EditorBrowsable(EditorBrowsableState.Never)]
 	public System.Object Interfacetableifhighspeed_1206 {get { return GetParameter(1206); }set { SetParameter(1206, value); }}
@@ -328,9 +328,9 @@ public class InterfacetableQActionRow : QActionTableRow
 	public System.Object Interfacetableadminstatus { get { if (base.Columns.ContainsKey(3)) { return base.Columns[3]; } else { return null; } } set { if (base.Columns.ContainsKey(3)) { base.Columns[3] = value; } else { base.Columns.Add(3, value); } } }
 	/// <summary>PID: 1205 | Type: read</summary>
 	[EditorBrowsable(EditorBrowsableState.Never)]
-	public System.Object Interfacetableinterfacespeed_1205 { get { if (base.Columns.ContainsKey(4)) { return base.Columns[4]; } else { return null; } } set { if (base.Columns.ContainsKey(4)) { base.Columns[4] = value; } else { base.Columns.Add(4, value); } } }
+	public System.Object Interfacetablecalculatedspeed_1205 { get { if (base.Columns.ContainsKey(4)) { return base.Columns[4]; } else { return null; } } set { if (base.Columns.ContainsKey(4)) { base.Columns[4] = value; } else { base.Columns.Add(4, value); } } }
 	/// <summary>PID: 1205 | Type: read</summary>
-	public System.Object Interfacetableinterfacespeed { get { if (base.Columns.ContainsKey(4)) { return base.Columns[4]; } else { return null; } } set { if (base.Columns.ContainsKey(4)) { base.Columns[4] = value; } else { base.Columns.Add(4, value); } } }
+	public System.Object Interfacetablecalculatedspeed { get { if (base.Columns.ContainsKey(4)) { return base.Columns[4]; } else { return null; } } set { if (base.Columns.ContainsKey(4)) { base.Columns[4] = value; } else { base.Columns.Add(4, value); } } }
 	/// <summary>PID: 1206 | Type: read</summary>
 	[EditorBrowsable(EditorBrowsableState.Never)]
 	public System.Object Interfacetableifhighspeed_1206 { get { if (base.Columns.ContainsKey(5)) { return base.Columns[5]; } else { return null; } } set { if (base.Columns.ContainsKey(5)) { base.Columns[5] = value; } else { base.Columns.Add(5, value); } } }

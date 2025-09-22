@@ -26,7 +26,11 @@ public static class QAction
             string rowKey = protocol.RowKey();
             uint speed = CalculateSpeed(protocol, rowKey);
 
-            protocol.SetCell(protocol.interfacetable.TableId, rowKey, Parameter.Interfacetable.Idx.interfacetableinterfacespeed, speed);
+            bool hasSucceeded = protocol.SetCell(protocol.interfacetable.TableId, rowKey, Parameter.Interfacetable.Idx.interfacetablecalculatedspeed, speed);
+            if (!hasSucceeded)
+			{
+				protocol.Log($"QA{protocol.QActionID}|Run|The calculated speed was not set correctly", LogType.Error, LogLevel.NoLogging);
+			}
 		}
 		catch (Exception ex)
 		{
@@ -46,9 +50,16 @@ public static class QAction
         }
 		else
 		{
-			speed = speed / 1000000; // Convert from bps to Mbps
+			speed = ConvertbpsToMbps(speed);
 		}
 
         return speed;
+    }
+
+	private static UInt32 ConvertbpsToMbps(UInt32 speed)
+	{
+		uint convertBpsToMbps = 1000000;
+		return speed / convertBpsToMbps;
+
     }
 }
