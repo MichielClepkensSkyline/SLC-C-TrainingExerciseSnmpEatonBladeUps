@@ -293,6 +293,7 @@ re-initialized.]]>
 				<ColumnOption idx="2" pid="1203" type="snmp" options="" />
 				<ColumnOption idx="3" pid="1204" type="snmp" options="" />
 				<ColumnOption idx="4" pid="1205" type="retrieved" options=";enableHeaderSum;enableHistogram;enableHeatmap" />
+				<ColumnOption idx="5" pid="1206" type="displaykey" options=""/>
 			</ArrayOptions>
 			<Information>
 				<Subtext>
@@ -325,7 +326,7 @@ is given by the value of ifNumber.]]>
 		</Param>
 		<Param id="1201" trending="false">
 			<Name>interfaceTableIndex</Name>
-			<Description>Index [IDX] (Interface Table)</Description>
+			<Description>Index (Interface Table)</Description>
 			<Information>
 				<Subtext>
 					<![CDATA[This is the SNMP instance of the table. Format: [ifIndex].
@@ -1641,6 +1642,25 @@ zero.]]>
 			</Display>
 			<Measurement>
 				<Type>number</Type>
+			</Measurement>
+		</Param>
+		<Param id="1206" trending="false">
+			<Name>interfaceTableDisplayKey</Name>
+			<Description>Display Key (Interface)</Description>
+			<Type>read</Type>
+			<Information>
+				<Subtext>This is the parameter for display key for the Interface table.</Subtext>
+			</Information>
+			<Interprete>
+				<RawType>other</RawType>
+				<Type>string</Type>
+				<LengthType>next param</LengthType>
+			</Interprete>
+			<Display>
+				<RTDisplay>false</RTDisplay>
+			</Display>
+			<Measurement>
+				<Type>string</Type>
 			</Measurement>
 		</Param>
 		<Param id="1300" trending="true">
