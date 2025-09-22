@@ -96,6 +96,11 @@ public static class Parameter
 			public const int interfacetablecalculatedinterfacespeed_1205 = 1205;
 			/// <summary>PID: 1205 | Type: read</summary>
 			public const int interfacetablecalculatedinterfacespeed = 1205;
+			/// <summary>PID: 1206 | Type: read</summary>
+			[EditorBrowsable(EditorBrowsableState.Never)]
+			public const int interfacetabledisplaykey_1206 = 1206;
+			/// <summary>PID: 1206 | Type: read</summary>
+			public const int interfacetabledisplaykey = 1206;
 			public class Write
 			{
 			}
@@ -127,6 +132,11 @@ public static class Parameter
 			public const int interfacetablecalculatedinterfacespeed_1205 = 4;
 			/// <summary>IDX: 4 | Type: read</summary>
 			public const int interfacetablecalculatedinterfacespeed = 4;
+			/// <summary>IDX: 5 | Type: read</summary>
+			[EditorBrowsable(EditorBrowsableState.Never)]
+			public const int interfacetabledisplaykey_1206 = 5;
+			/// <summary>IDX: 5 | Type: read</summary>
+			public const int interfacetabledisplaykey = 5;
 		}
 	}
 	public class Extendedinterfacetable
@@ -205,6 +215,8 @@ public interface SLProtocolExt : SLProtocol
 	object Interfacetableadminstatus { get; set; }
 	object Interfacetablecalculatedinterfacespeed_1205 { get; set; }
 	object Interfacetablecalculatedinterfacespeed { get; set; }
+	object Interfacetabledisplaykey_1206 { get; set; }
+	object Interfacetabledisplaykey { get; set; }
 	object Interfacetableadminstatus_1254 { get; set; }
 	object Xupsbatterycapacity_1300 { get; set; }
 	object Xupsbatterycapacity { get; set; }
@@ -279,6 +291,11 @@ public class ConcreteSLProtocolExt : ConcreteSLProtocol, SLProtocolExt
 	public System.Object Interfacetablecalculatedinterfacespeed_1205 {get { return GetParameter(1205); }set { SetParameter(1205, value); }}
 	/// <summary>PID: 1205  | Type: read</summary>
 	public System.Object Interfacetablecalculatedinterfacespeed {get { return GetParameter(1205); }set { SetParameter(1205, value); }}
+	/// <summary>PID: 1206  | Type: read</summary>
+	[EditorBrowsable(EditorBrowsableState.Never)]
+	public System.Object Interfacetabledisplaykey_1206 {get { return GetParameter(1206); }set { SetParameter(1206, value); }}
+	/// <summary>PID: 1206  | Type: read</summary>
+	public System.Object Interfacetabledisplaykey {get { return GetParameter(1206); }set { SetParameter(1206, value); }}
 	/// <summary>PID: 1254  | Type: write | DISCREETS: Up = 1, Down = 2, Testing = 3</summary>
 	[EditorBrowsable(EditorBrowsableState.Never)]
 	public System.Object Interfacetableadminstatus_1254 {get { return GetParameter(1254); }set { SetParameter(1254, value); }}
@@ -367,8 +384,13 @@ public class InterfacetableQActionRow : QActionTableRow
 	public System.Object Interfacetablecalculatedinterfacespeed_1205 { get { if (base.Columns.ContainsKey(4)) { return base.Columns[4]; } else { return null; } } set { if (base.Columns.ContainsKey(4)) { base.Columns[4] = value; } else { base.Columns.Add(4, value); } } }
 	/// <summary>PID: 1205 | Type: read</summary>
 	public System.Object Interfacetablecalculatedinterfacespeed { get { if (base.Columns.ContainsKey(4)) { return base.Columns[4]; } else { return null; } } set { if (base.Columns.ContainsKey(4)) { base.Columns[4] = value; } else { base.Columns.Add(4, value); } } }
-	public InterfacetableQActionRow() : base(0, 5) { }
-	public InterfacetableQActionRow(System.Object[] oRow) : base(0, 5, oRow) { }
+	/// <summary>PID: 1206 | Type: read</summary>
+	[EditorBrowsable(EditorBrowsableState.Never)]
+	public System.Object Interfacetabledisplaykey_1206 { get { if (base.Columns.ContainsKey(5)) { return base.Columns[5]; } else { return null; } } set { if (base.Columns.ContainsKey(5)) { base.Columns[5] = value; } else { base.Columns.Add(5, value); } } }
+	/// <summary>PID: 1206 | Type: read</summary>
+	public System.Object Interfacetabledisplaykey { get { if (base.Columns.ContainsKey(5)) { return base.Columns[5]; } else { return null; } } set { if (base.Columns.ContainsKey(5)) { base.Columns[5] = value; } else { base.Columns.Add(5, value); } } }
+	public InterfacetableQActionRow() : base(0, 6) { }
+	public InterfacetableQActionRow(System.Object[] oRow) : base(0, 6, oRow) { }
 	public static implicit operator InterfacetableQActionRow(System.Object[] source) { return new InterfacetableQActionRow(source); }
 	public static implicit operator System.Object[](InterfacetableQActionRow source) { return source.ToObjectArray(); }
 }

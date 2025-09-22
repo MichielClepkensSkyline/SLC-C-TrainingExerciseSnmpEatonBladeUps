@@ -55,7 +55,7 @@ Any inquiries can be addressed to:
 	<DeviceOID>0</DeviceOID>
 	<ElementType>UPS</ElementType>
 	<Type relativeTimers="true">snmpv2</Type>
-	<Display defaultPage="General" pageOrder="General;Interface Table;UPS Parameters;----------;WebInterface#" wideColumnPages="UPS Parameters"/>
+	<Display defaultPage="General" pageOrder="General;Interface Table;UPS Parameters;----------;WebInterface#http://[Polling Ip]/" wideColumnPages="UPS Parameters"/>
 	<SNMP includepages="true">auto</SNMP>
 
 	<Compliancies>
@@ -321,7 +321,7 @@ is given by the value of ifNumber.]]>
 				</Positions>
 			</Display>
 			<Measurement>
-				<Type options="tab=columns:1201|0-1202|1-1204|3-1205|4,width:100-195-126-116,sort:STRING|ASC|0-STRING-STRING|DESC|1-INT,lines:20,filter:true">table</Type>
+				<Type options="tab=columns:1201|0-1202|1-1204|3-1205|4-1206|5,width:100-195-126-116-146,sort:STRING|ASC|0-STRING-STRING|DESC|1-INT-STRING,lines:20,filter:true">table</Type>
 			</Measurement>
 		</Param>
 		<Param id="1201" trending="false">
@@ -1657,7 +1657,7 @@ zero.]]>
 				<LengthType>next param</LengthType>
 			</Interprete>
 			<Display>
-				<RTDisplay>false</RTDisplay>
+				<RTDisplay>true</RTDisplay>
 			</Display>
 			<Measurement>
 				<Type>string</Type>
