@@ -1844,7 +1844,7 @@ For a sub-layer which has no concept of bandwidth, this object should be zero.]]
 	</Params>
 
 	<QActions>
-		<QAction id="3" name="Calculate Interface Speed" encoding="csharp" triggers="1203" row="true"/>
+		<QAction id="3" name="Calculate Interface Speed" encoding="csharp" triggers="1203;1206" row="true"/>
 	</QActions>
 
 	<Groups>
