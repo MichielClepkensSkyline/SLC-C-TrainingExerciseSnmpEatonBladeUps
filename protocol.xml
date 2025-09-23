@@ -70,7 +70,7 @@ Any inquiries can be addressed to:
 			<Type>dummy</Type>
 		</Param>
 		<Param id="3" trending="false">
-			<Name>sysDescr</Name>
+			<Name>SysDescr</Name>
 			<Description>System Description</Description>
 			<Information>
 				<Subtext>
@@ -110,7 +110,7 @@ and networking software.]]>
 			</Measurement>
 		</Param>
 		<Param id="4" trending="false">
-			<Name>sysUpTime</Name>
+			<Name>SysUpTime</Name>
 			<Description>System up Time</Description>
 			<Information>
 				<Subtext>
@@ -146,7 +146,7 @@ re-initialized.]]>
 			</Measurement>
 		</Param>
 		<Param id="5" trending="false">
-			<Name>xupsIdentManufacturer</Name>
+			<Name>XupsIdentManufacturer</Name>
 			<Description>Manufacturer</Description>
 			<Information>
 				<Subtext>
@@ -183,7 +183,7 @@ re-initialized.]]>
 			</Measurement>
 		</Param>
 		<Param id="6" trending="false">
-			<Name>xupsIdentModel</Name>
+			<Name>XupsIdentModel</Name>
 			<Description>Model</Description>
 			<Information>
 				<Subtext>
@@ -1648,7 +1648,7 @@ bandwidth, this object should be zero.]]>
 			</Measurement>
 		</Param>
 		<Param id="300" trending="true">
-			<Name>xupsInputFrequency</Name>
+			<Name>XupsInputFrequency</Name>
 			<Description>Input Frequency</Description>
 			<Information>
 				<Subtext>
@@ -1692,7 +1692,7 @@ bandwidth, this object should be zero.]]>
 			</Measurement>
 		</Param>
 		<Param id="301" trending="true">
-			<Name>xupsInputNumPhases</Name>
+			<Name>XupsInputNumPhases</Name>
 			<Description>Xups Input Number Phases</Description>
 			<Information>
 				<Subtext>
@@ -1738,7 +1738,7 @@ bandwidth, this object should be zero.]]>
 			</Measurement>
 		</Param>
 		<Param id="302" trending="true">
-			<Name>xupsOutputLoad</Name>
+			<Name>XupsOutputLoad</Name>
 			<Description>Xups Output Load</Description>
 			<Information>
 				<Subtext>
@@ -1783,7 +1783,7 @@ bandwidth, this object should be zero.]]>
 			</Measurement>
 		</Param>
 		<Param id="303" trending="true">
-			<Name>xupsOutputFrequency</Name>
+			<Name>XupsOutputFrequency</Name>
 			<Description>Xups Output Frequency</Description>
 			<Information>
 				<Subtext>
@@ -1827,7 +1827,7 @@ bandwidth, this object should be zero.]]>
 			</Measurement>
 		</Param>
 		<Param id="304" trending="true">
-			<Name>xupsBatCapacity</Name>
+			<Name>XupsBatCapacity</Name>
 			<Description>Xups Battery Capacity</Description>
 			<Information>
 				<Subtext>
@@ -1880,7 +1880,7 @@ bandwidth, this object should be zero.]]>
 			</Measurement>
 		</Param>
 		<Param id="404">
-			<Name>Title_Begin_SystemInfo</Name>
+			<Name>TitleBeginSystemInfo</Name>
 			<Description>System Information</Description>
 			<Type>fixed</Type>
 			<Display>
@@ -1898,7 +1898,7 @@ bandwidth, this object should be zero.]]>
 			</Measurement>
 		</Param>
 		<Param id="405">
-			<Name>Title_Begin_InterfacesTables</Name>
+			<Name>TitleBeginInterfacesTables</Name>
 			<Description>Interfaces Tables</Description>
 			<Type>fixed</Type>
 			<Display>
@@ -1916,7 +1916,7 @@ bandwidth, this object should be zero.]]>
 			</Measurement>
 		</Param>
 		<Param id="406">
-			<Name>Title_Begin_UPSParamters</Name>
+			<Name>TitleBeginUPSParamters</Name>
 			<Description>UPS Paramters</Description>
 			<Type>fixed</Type>
 			<Display>
