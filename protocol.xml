@@ -1935,7 +1935,7 @@ This table contains additional objects for the interface table.]]>
 
 	<QActions>
 		<QAction id="1" name="Precompiled Code" encoding="csharp" options="precompile" />
-		<QAction id="2" name="Calculate Interface Speed" encoding="csharp" triggers="1200" row="true" >
+		<QAction id="2" name="Calculate Interface Speed" encoding="csharp" triggers="1203" row="true" >
 		</QAction>
 	</QActions>
 
